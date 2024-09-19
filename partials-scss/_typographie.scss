@@ -1,0 +1,101 @@
+@use "variables";
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../sources/fonts/Nunito.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "Nunito Italic";
+  src: url(../sources/fonts/NunitoItallic.ttf) format(truetype);
+}
+
+@mixin nunito {
+  font-family: "Nunito";
+}
+
+@mixin italic {
+  font-family: "Nunito Italic";
+}
+
+h1 {
+  color: variables.$vertAlgue;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: variables.$vertAlgue;
+}
+
+h3 {
+  color: variables.$vertAmande;
+}
+
+h4 {
+  color: variables.$argile;
+}
+
+h5 {
+  color: variables.$encre;
+  font-size: 30px;
+}
+
+h6 {
+  color: variables.$encre;
+  font-size: 24px;
+}
+
+@mixin lien {
+  font-family: "Nunito Italic";
+  font-weight: bold;
+  color: variables.$vertAmande;
+  font-size: 16px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: variables.$vertAmande;
+  }
+}
+
+@mixin lien-pdf {
+  font-family: "Nunito Italic";
+  font-weight: bold;
+  color: variables.$vertAmande;
+  font-size: 24px;
+  text-decoration: underline;
+  text-decoration-color: variables.$vertAmande;
+}
+
+@mixin text {
+  font-family: "Nunito";
+  color: variables.$vertAlgue;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+@mixin lien-nav {
+  font-family: "Nunito";
+  color: variables.$vertAlgue;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: capitalize;
+  &:focus {
+    color: variables.$vertAmande;
+  }
+}
+
+@mixin text-header {
+  font-family: "Nunito";
+  color: variables.$argile;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+@mixin text-bannier-scholaire {
+  font-family: "Nunito";
+  color: variables.$argile;
+  font-weight: bolder;
+  font-size: 24px;
+  text-transform: capitalize;
+}
