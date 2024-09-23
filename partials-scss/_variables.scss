@@ -1,5 +1,31 @@
-$encre: #0C0909;
+$encre: #0c0909;
 $vertAlgue: #273922;
-$vertAmande: #88B07E;
-$argile: #F7F7FF;
-$baguette: #C4B091;
+$vertAmande: #88b07e;
+$argile: #f7f7ff;
+$baguette: #c4b091;
+
+
+$version-mobile: 375px;
+
+$version-tablette: 768px;
+
+$version-ordinateur: 1400px;
+
+
+@media (min-width: $version-mobile) {
+    body{
+        min-width: $version-mobile;
+    }
+}
+
+@media (min-width: $version-tablette) {
+    body{
+        min-width: $version-tablette;
+    }
+}
+
+@media (min-width: $version-ordinateur) {
+    body{
+        min-width: $version-ordinateur;
+    }
+}
