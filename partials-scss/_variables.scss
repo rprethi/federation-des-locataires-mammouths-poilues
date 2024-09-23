@@ -4,28 +4,39 @@ $vertAmande: #88b07e;
 $argile: #f7f7ff;
 $baguette: #c4b091;
 
-
 $version-mobile: 375px;
 
 $version-tablette: 768px;
 
 $version-ordinateur: 1400px;
 
+body {
+  background-color: $argile;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "nav nav nav
+  content content content footer footer footer";
+}
+
+header { grid-area: nav; }
+footer { grid-area: content; }
+footer { grid-area: footer; }
 
 @media (min-width: $version-mobile) {
-    body{
-        min-width: $version-mobile;
-    }
+  body {
+    min-width: $version-mobile;
+  }
 }
 
 @media (min-width: $version-tablette) {
-    body{
-        min-width: $version-tablette;
-    }
+  body {
+    min-width: $version-tablette;
+  }
 }
 
 @media (min-width: $version-ordinateur) {
-    body{
-        min-width: $version-ordinateur;
-    }
+  body {
+    min-width: $version-ordinateur;
+  }
 }
