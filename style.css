@@ -1,3 +1,18 @@
+@media (min-width: 375px) {
+  body {
+    min-width: 375px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    min-width: 1400px;
+  }
+}
 @font-face {
   font-family: "Nunito";
   src: url(../sources/fonts/Nunito.ttf) format(truetype);
@@ -16,24 +31,24 @@ h2 {
 }
 
 h3 {
-  color: #88B07E;
+  color: #88b07e;
 }
 
 h4 {
-  color: #F7F7FF;
+  color: #f7f7ff;
 }
 
 h5 {
-  color: #0C0909;
+  color: #0c0909;
   font-size: 30px;
 }
 
 h6 {
-  color: #0C0909;
+  color: #0c0909;
   font-size: 24px;
 }
 
-.banniere {
+#banniere {
   width: 100%;
   background-color: #273922;
   display: flex;
@@ -46,10 +61,10 @@ h6 {
   z-index: 999;
   transition: transform 0.4s ease;
 }
-.banniere span, .banniere #closeBanner, .banniere a {
+#banniere span, #banniere #closeBanner, #banniere a {
   display: flex;
   align-items: center;
-  color: #F7F7FF;
+  color: #f7f7ff;
 }
 
 #closeBanner {
@@ -60,10 +75,10 @@ h6 {
 }
 
 .navbar {
-  background-color: #F7F7FF;
+  background-color: #f7f7ff;
   padding: 10px;
   width: 100%;
-  position: fixed;
-  margin: 90px 0;
+  position: relative;
+  top: 100px;
   z-index: 998;
 }/*# sourceMappingURL=style.css.map */
