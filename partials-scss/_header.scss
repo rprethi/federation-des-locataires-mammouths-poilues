@@ -1,2 +1,42 @@
 @use "variables";
 @use "typographie";
+
+
+.banniere {
+    width: 100%;
+    background-color: variables.$vertAlgue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: transform 0.4s ease;
+    span, #closeBanner, a {
+        display: flex;
+        align-items: center;
+        color: variables.$argile;
+    }
+}
+
+
+#closeBanner {
+    background: none;
+    border: none;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+
+.navbar {
+    background-color: variables.$argile;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    margin: 90px 0;
+    z-index: 998;
+
+}
+
