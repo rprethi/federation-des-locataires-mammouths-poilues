@@ -20,7 +20,7 @@ body {
 }
 
 header { grid-area: nav; }
-footer { grid-area: content; }
+section { grid-area: content; }
 footer { grid-area: footer; }
 
 @media (min-width: $version-mobile) {
