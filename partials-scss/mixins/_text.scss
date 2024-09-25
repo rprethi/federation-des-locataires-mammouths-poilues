@@ -1,16 +1,13 @@
-@use "../typographie";
-@use "../variables";
+@use "./fonts";
 
 @mixin text {
   @include typographie.nunito;
-  color: variables.$vertAlgue;
   font-size: 24px;
   text-transform: capitalize;
 }
 
 @mixin text-header {
   @include typographie.nunito;
-  color: variables.$argile;
   font-weight: bold;
   font-size: 24px;
   text-transform: capitalize;
@@ -18,7 +15,6 @@
 
 @mixin text-bannier-scholaire {
   @include typographie.nunito;
-  color: variables.$argile;
   font-weight: bolder;
   font-size: 24px;
   text-transform: capitalize;

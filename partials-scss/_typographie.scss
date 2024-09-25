@@ -1,46 +1,36 @@
-@use "variables";
+@use "./mixins/couleurs";
+@use "./mixins//text";
+@use "./mixins//liens";
 
-@font-face {
-  font-family: "Nunito";
-  src: url(./sources/fonts/Nunito.ttf) format(truetype);
-}
-
-@font-face {
-  font-family: "Nunito Italic";
-  src: url(./sources/fonts/NunitoItallic.ttf) format(truetype);
-}
-
-@mixin nunito {
-  font-family: "Nunito";
-}
-
-@mixin italic {
-  font-family: "Nunito Italic";
-}
 
 h1 {
-  color: variables.$vertAlgue;
+  color: couleur.$vertAlgue;
   text-transform: uppercase;
 }
 
 h2 {
-  color: variables.$vertAlgue;
+  color: couleur.$vertAlgue;
 }
 
 h3 {
-  color: variables.$vertAmande;
+  color: couleur.$vertAmande;
 }
 
 h4 {
-  color: variables.$argile;
+  color: couleur.$argile;
 }
 
 h5 {
-  color: variables.$encre;
+  color: couleur.$encre;
   font-size: 30px;
 }
 
 h6 {
-  color: variables.$encre;
+  color: couleur.$encre;
   font-size: 24px;
+}
+
+p{
+  @include text.text;
+  color: couleur.$vertAlgue;
 }

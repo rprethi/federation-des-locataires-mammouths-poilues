@@ -1,8 +1,4 @@
-$encre: #0c0909;
-$vertAlgue: #273922;
-$vertAmande: #88b07e;
-$argile: #f7f7ff;
-$baguette: #c4b091;
+@use "./mixins/couleurs";
 
 $version-mobile: 375px;
 
@@ -11,7 +7,7 @@ $version-tablette: 768px;
 $version-ordinateur: 1400px;
 
 body {
-  background-color: $argile;
+  background-color: couleurs.$argile;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;

@@ -1,10 +1,8 @@
-@use "../typographie";
-@use "../variables";
+@use "./fonts";
 
 @mixin lien {
   @include italic;
   font-weight: bold;
-  color: variables.$vertAmande;
   font-size: 16px;
   text-decoration: none;
   &:hover {
@@ -16,7 +14,6 @@
 @mixin lien-pdf {
   @include italic;
   font-weight: bold;
-  color: variables.$vertAmande;
   font-size: 24px;
   text-decoration: underline;
   text-decoration-color: variables.$vertAmande;
@@ -24,7 +21,6 @@
 
 @mixin lien-nav {
   @include nunito;
-  color: variables.$vertAlgue;
   font-weight: bold;
   font-size: 24px;
   text-transform: capitalize;
