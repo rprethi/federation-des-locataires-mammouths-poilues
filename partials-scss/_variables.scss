@@ -1,10 +1,5 @@
 @use "./mixins/couleurs";
-
-$version-mobile: 375px;
-
-$version-tablette: 768px;
-
-$version-ordinateur: 1400px;
+@use "./mixins/formatecran";
 
 body {
   background-color: couleurs.$argile;
@@ -15,24 +10,30 @@ body {
   content content content footer footer footer";
 }
 
-header { grid-area: nav; }
-section { grid-area: content; }
-footer { grid-area: footer; }
+header {
+  grid-area: nav;
+}
+section {
+  grid-area: content;
+}
+footer {
+  grid-area: footer;
+}
 
-@media (min-width: $version-mobile) {
+@media (min-width: formatecran.$version-mobile) {
   body {
-    min-width: $version-mobile;
+    min-width: formatecran.$version-mobile;
   }
 }
 
-@media (min-width: $version-tablette) {
+@media (min-width: formatecran.$version-tablette) {
   body {
-    min-width: $version-tablette;
+    min-width: formatecran.$version-tablette;
   }
 }
 
-@media (min-width: $version-ordinateur) {
+@media (min-width: formatecran.$version-ordinateur) {
   body {
-    min-width: $version-ordinateur;
+    min-width: formatecran.$version-ordinateur;
   }
 }
