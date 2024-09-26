@@ -1,11 +1,12 @@
 @use "variables";
 @use "typographie";
 
+
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto 1fr;
-    background-color: #273922;
+    background-color: variables.$vertAlgue;
     font-family: "Nunito";
     column-gap: 10px;
     padding: 20px;
@@ -17,20 +18,21 @@
       h4 {
         font-size: 16px;
         font-weight: bold;
-        color: #f7f7ff;
+        color: variables.$argile;
       }
   
-      li,
+      li a,
       .footer__bottom p,
       .footer__membre {
         font-size: 12px;
-        color: #f7f7ff;
+        color: $argile;
         list-style-type: none;
+        text-decoration: none;
       }
   
       button {
         border-radius: 50px;
-        background-color: #88b07e;
+        background-color: variables.$vertAmande;
         color: inherit;
         border: none;
         font-weight: bold;
@@ -52,7 +54,7 @@
   
     &__logo {
       a {
-        color: #f7f7ff;
+        color: variables.$argile;
         text-decoration: none;
         font-size: 12px;
       }
@@ -89,7 +91,7 @@
       margin-top: 0;
   
       svg {
-        fill: #f7f7ff;
+        fill: variables.$argile;
         height: 21px;
         width: 21px;
       }
@@ -112,9 +114,10 @@
   // Media Queries
   @media (min-width: 768px) {
     .footer__section button {
-      width: 192px;
-      height: 52px;
-      font-size: 17px;
+      border-radius: 50px;
+      width: 150px;
+      height: 40px;
+      font-size: 16px;
     }
   
     .footer a {
@@ -122,7 +125,7 @@
     }
   
     .footer__section h4 {
-      font-size: 24px;
+      font-size: 20px;
     }
   
     .footer__section li {
@@ -130,8 +133,8 @@
     }
   
     .footer__social-icons svg {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
     }
   
     .logo-footer {
@@ -145,6 +148,12 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       row-gap: 50px;
+
+      &__section button {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+      }
   
       &__membre {
         grid-column: 4;
@@ -166,23 +175,17 @@
         height: 59px;
       }
   
-      &__section button {
-        width: 320px;
-        height: 69px;
-        font-size: 24px;
-      }
-  
       &__section h4 {
-        font-size: 32px;
+        font-size: 24px;
       }
   
       &__section li {
-        font-size: 24px;
+        font-size: 16px;
       }
   
       .footer__social-icons svg {
-        height: 40px;
-        width: 40px;
+        height: 24px;
+        width: 24px;
       }
   
       footer a {

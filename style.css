@@ -102,12 +102,13 @@ footer {
   color: #f7f7ff;
 }
 
-.footer-section li,
+.footer-section li a,
 .footer-bottom p,
 .membre {
   font-size: 12px;
   color: #f7f7ff;
   list-style-type: none;
+  text-decoration: none;
 }
 
 .footer-section button {
@@ -195,15 +196,15 @@ footer {
 @media (min-width: 768px) {
   .footer-section button {
     border-radius: 50px;
-    width: 192px;
-    height: 52px;
-    font-size: 17px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
   }
   footer a {
     font-size: 12px !important;
   }
   .footer-section h4 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .footer-section li {
@@ -213,8 +214,8 @@ footer {
   }
 
   .footer-social-icons svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
 
   .footer-bottom p {
@@ -257,26 +258,25 @@ footer {
     height: 59px;
   }
   .footer-section button {
-    border-radius: 50px;
-    width: 320px;
-    height: 69px;
-    font-size: 24px;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
   }
 
   .footer-section h4 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .footer-section li {
     padding-left: 0;
     margin-left: 0;
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .footer-social-icons svg {
     fill: #f7f7ff;
-    height: 40px;
-    width: 40px;
+    height: 24px;
+    width: 24px;
   }
   footer a {
     font-size: 16px !important;
