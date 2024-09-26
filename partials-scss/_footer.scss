@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto 1fr;
-    background-color: couleur.$vertAlgue;
+    background-color: couleurs.$vertAlgue;
     font-family: "Nunito";
     column-gap: 10px;
     padding: 20px;
@@ -20,14 +20,14 @@
       h4 {
         font-size: 16px;
         font-weight: bold;
-        color: couleur.$argile;
+        color: couleurs.$argile;
       }
   
       li a,
       .footer__bottom p,
       .footer__membre {
         font-size: 12px;
-        color: $argile;
+        color: couleurs.$argile;
         list-style-type: none;
         text-decoration: none;
       }
@@ -56,7 +56,7 @@
   
     &__logo {
       a {
-        color: couleur.$argile;
+        color: couleurs.$argile;
         text-decoration: none;
         font-size: 12px;
       }
@@ -93,7 +93,7 @@
       margin-top: 0;
   
       svg {
-        fill: couleur.$argile;
+        fill: couleurs.$argile;
         height: 21px;
         width: 21px;
       }

@@ -1,36 +1,36 @@
 @use "./mixins/couleurs";
-@use "./mixins//text";
-@use "./mixins//liens";
+@use "./mixins/text";
+@use "./mixins/lien";
 
 
 h1 {
-  color: couleur.$vertAlgue;
+  color: couleurs.$vertAlgue;
   text-transform: uppercase;
 }
 
 h2 {
-  color: couleur.$vertAlgue;
+  color: couleurs.$vertAlgue;
 }
 
 h3 {
-  color: couleur.$vertAmande;
+  color: couleurs.$vertAmande;
 }
 
 h4 {
-  color: couleur.$argile;
+  color: couleurs.$argile;
 }
 
 h5 {
-  color: couleur.$encre;
+  color: couleurs.$encre;
   font-size: 30px;
 }
 
 h6 {
-  color: couleur.$encre;
+  color: couleurs.$encre;
   font-size: 24px;
 }
 
 p{
   @include text.text;
-  color: couleur.$vertAlgue;
+  color: couleurs.$vertAlgue;
 }

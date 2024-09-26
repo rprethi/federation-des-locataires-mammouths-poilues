@@ -1,4 +1,5 @@
-@use "./fonts";
+@use "fonts";
+@use "couleurs";
 
 @mixin lien {
   @include italic;
@@ -7,7 +8,7 @@
   text-decoration: none;
   &:hover {
     text-decoration: underline;
-    text-decoration-color: variables.$vertAmande;
+    text-decoration-color: couleurs.$vertAmande;
   }
 }
 
@@ -16,15 +17,16 @@
   font-weight: bold;
   font-size: 24px;
   text-decoration: underline;
-  text-decoration-color: variables.$vertAmande;
+  text-decoration-color: couleurs.$vertAmande;
 }
 
 @mixin lien-nav {
-  @include nunito;
+  @include fonts.nunito;
   font-weight: bold;
-  font-size: 24px;
-  text-transform: capitalize;
+  font-size: 16px;
+  text-decoration: none;
+  color: couleurs.$vertAlgue;
   &:focus {
-    color: variables.$vertAmande;
+    color: couleurs.$baguette;
   }
 }

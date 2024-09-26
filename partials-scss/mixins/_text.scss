@@ -1,20 +1,20 @@
-@use "./fonts";
+@use "fonts";
 
 @mixin text {
-  @include typographie.nunito;
+  @include fonts.nunito;
   font-size: 24px;
   text-transform: capitalize;
 }
 
 @mixin text-header {
-  @include typographie.nunito;
+  @include fonts.nunito;
   font-weight: bold;
   font-size: 24px;
   text-transform: capitalize;
 }
 
 @mixin text-bannier-scholaire {
-  @include typographie.nunito;
+  @include fonts.nunito;
   font-weight: bolder;
   font-size: 24px;
   text-transform: capitalize;

@@ -1,14 +1,18 @@
 @use "variables";
 @use "typographie";
 @use "buttons";
+@use "./mixins/lien";
+@use "./mixins/couleurs";
 
 
-#banniere {
+
+.nav__banniere {
     width: 100%;
-    background-color: variables.$vertAlgue;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
+    height: 80px;
+    background-color: couleurs.$vertAlgue;
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
     position: fixed;
     top: 0;
@@ -18,25 +22,57 @@
     span, #closeBanner, a {
         display: flex;
         align-items: center;
-        color: variables.$argile;
+        color: couleurs.$argile;
+    }
+    &-left{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 7%;
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+    &-right{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 7%;
+    }
+
+    .banner__close {
+        background: none;
+        border: none;
+        font-size: 40px;
+        padding-bottom: 10px;
+        color: couleurs.$argile;
     }
 }
 
-
-#closeBanner {
-    background: none;
-    border: none;
-    font-size: 40px;
-    padding-bottom: 10px;
-}
-
-
 .navbar {
-    background-color: variables.$argile;
+    background-color: couleurs.$argile;
+    color: couleurs.$vertAlgue;
     padding: 10px;
     width: 100%;
     position: relative;
-    top: 100px;
+    top: 80px;
     z-index: 998;
+    .navbar-brand {
+        width: 6em
+    }
+
+    .nav-connection {
+
+        & a {
+        @include lien.lien-nav;
+        }
+        svg {
+            fill: couleurs.$vertAlgue;
+        }
+    }
+    .nav-search {
+        border: none;
+        background-color: transparent;
+    }
 }
+
 

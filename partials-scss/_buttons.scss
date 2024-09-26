@@ -1,15 +1,23 @@
 @use "variables";
 @use "typographie";
+@use "./mixins/couleurs";
 
 
 
 //Boutton remplis arrière dark
-.button-filled {
+.btn-filled {
   border-radius: 50px;
-  background-color: vert;
+  background-color: couleurs.$vertAmande;
   color: inherit;
   border: none;
   font-weight: bold;
-  width: 119px;
-  height: 30px;
+  width: 30%;
+  height: 50%;
+  padding: 10px 0;
 }
+
+.btn-langue {
+  background-color: transparent;
+  border: none;
+}
+

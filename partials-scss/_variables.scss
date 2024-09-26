@@ -6,19 +6,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "nav nav nav
-  content content content footer footer footer";
 }
 
-header {
-  grid-area: nav;
-}
-section {
-  grid-area: content;
-}
-footer {
-  grid-area: footer;
-}
+
+
 
 @media (min-width: formatecran.$version-mobile) {
   body {
