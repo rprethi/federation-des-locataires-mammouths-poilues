@@ -1,2 +1,15 @@
 @use "variables";
 @use "typographie";
+
+
+
+//Boutton remplis arrière dark
+.button-filled {
+  border-radius: 50px;
+  background-color: vert;
+  color: inherit;
+  border: none;
+  font-weight: bold;
+  width: 119px;
+  height: 30px;
+}
