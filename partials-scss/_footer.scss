@@ -5,194 +5,200 @@
 @use "./mixins/formatecran";
 
 .footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
-    background-color: couleurs.$vertAlgue;
-    font-family: "Nunito";
-    column-gap: 10px;
-    padding: 20px;
-    row-gap: 30px;
-  
-    &__section {
+  display: grid;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-column: 1/4;
+  background-color: couleurs.$vertAlgue;
+  font-family: "Nunito";
+  column-gap: 10px;
+  padding: 20px;
+  row-gap: 30px;
+
+  &__section {
+    text-decoration: none;
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+      color: couleurs.$argile;
+    }
+
+    li a,
+    .footer__bottom p,
+    .footer__membre {
+      font-size: 12px;
+      color: couleurs.$argile;
+      list-style-type: none;
       text-decoration: none;
-  
-      h4 {
-        font-size: 16px;
-        font-weight: bold;
-        color: couleurs.$argile;
-      }
-  
-      li a,
-      .footer__bottom p,
-      .footer__membre {
-        font-size: 12px;
-        color: couleurs.$argile;
-        list-style-type: none;
-        text-decoration: none;
-      }
-  
-      button {
-        border-radius: 50px;
-        background-color: couleurs.$vertAmande;
-        color: inherit;
-        border: none;
-        font-weight: bold;
-        width: 119px;
-        height: 30px;
-      }
-  
-      ul {
-        list-style: none;
+    }
+
+    button {
+      border-radius: 50px;
+      background-color: couleurs.$vertAmande;
+      color: inherit;
+      border: none;
+      font-weight: bold;
+      width: 119px;
+      height: 30px;
+      font-size: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+
+      li {
         padding-left: 0;
         margin-left: 0;
-  
-        li {
-          padding-left: 0;
-          margin-left: 0;
-        }
       }
     }
-  
-    &__logo {
-      a {
-        color: couleurs.$argile;
-        text-decoration: none;
-        font-size: 12px;
-      }
-      .logo-footer {
-        width: 65px;
-        height: 20px;
-      }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: couleurs.$argile;
+      text-decoration: none;
+      font-size: 12px;
     }
-  
-    &__addrese {
+    .logo-footer {
+      width: 65px;
+      height: 24px;
+    }
+    .footer__addrese {
+
       display: block;
       line-height: 1;
       margin: 0;
       padding: 0;
       font-weight: bold;
     }
-  
-    &__bottom {
-      grid-column: 1 / span 2;
-      grid-row: 3;
-  
-      p {
-        font-size: 12px;
-      }
-    }
-  
-    &__social-icons {
-      grid-column: 3;
-      grid-row: 3;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-      gap: 10px;
-      margin-top: 0;
-  
-      svg {
-        fill: couleurs.$argile;
-        height: 21px;
-        width: 21px;
-      }
-    }
-  
-    &__membre {
-      grid-column: 2;
-      grid-row: 2;
-    }
-  
-    .mail-flhlmq,
-    .tel-flhlmq {
-      line-height: 1;
-      margin: 0;
-      padding: 0;
-      display: block;
+  }
+
+  &__bottom {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+
+    p {
+      font-size: 12px;
     }
   }
-  
-  // Media Queries
-  @media (min-width: 768px) {
-    .footer__section button {
-      border-radius: 50px;
-      width: 150px;
+
+  &__social-icons {
+    grid-column: 3;
+    grid-row: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 0;
+
+    svg {
+      fill: couleurs.$argile;
+      height: 21px;
+      width: 21px;
+    }
+  }
+
+  &__membre {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .mail-flhlmq,
+  .tel-flhlmq {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+}
+
+// Media Queries
+@media (min-width: 768px) {
+  .footer__section button {
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .footer a {
+    font-size: 12px !important;
+  }
+
+  .footer__section h4 {
+    font-size: 20px;
+  }
+
+  .footer__section li {
+    font-size: 16px;
+  }
+
+  .footer__social-icons svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-footer {
+    width: 108px;
+    height: 35px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+
+    &__section button {
+      width: 200px;
       height: 40px;
       font-size: 16px;
     }
-  
-    .footer a {
-      font-size: 12px !important;
+
+    &__membre {
+      grid-column: 4;
+      grid-row: 1;
     }
-  
-    .footer__section h4 {
-      font-size: 20px;
+
+    &__social-icons {
+      grid-column: 4;
+      grid-row: 2;
     }
-  
-    .footer__section li {
+
+    &__bottom {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .logo-footer {
+      width: 183px;
+      height: 59px;
+    }
+
+    &__section h4 {
+      font-size: 24px;
+    }
+
+    &__section li {
       font-size: 16px;
     }
-  
-    .footer__social-icons svg {
-      width: 20px;
-      height: 20px;
-    }
-  
-    .logo-footer {
-      width: 108px;
-      height: 35px;
-    }
-  }
-  
-  @media (min-width: 1440px) {
-    .footer {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      row-gap: 50px;
 
-      &__section button {
-        width: 200px;
-        height: 40px;
-        font-size: 16px;
-      }
-  
-      &__membre {
-        grid-column: 4;
-        grid-row: 1;
-      }
-  
-      &__social-icons {
-        grid-column: 4;
-        grid-row: 2;
-      }
-  
-      &__bottom {
-        grid-column: 1;
-        grid-row: 2;
-      }
-  
-      .logo-footer {
-        width: 183px;
-        height: 59px;
-      }
-  
-      &__section h4 {
-        font-size: 24px;
-      }
-  
-      &__section li {
-        font-size: 16px;
-      }
-  
-      .footer__social-icons svg {
-        height: 24px;
-        width: 24px;
-      }
-  
-      footer a {
-        font-size: 16px !important;
-      }
+    .footer__social-icons svg {
+      height: 24px;
+      width: 24px;
+    }
+
+    footer a {
+      font-size: 16px !important;
     }
   }
-  
+}
