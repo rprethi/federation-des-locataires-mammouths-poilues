@@ -41,7 +41,7 @@
         }
     }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: formatecran.$version-ordinateur) {
         .membre {
             width: 100%;
             display: grid;

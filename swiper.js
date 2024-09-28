@@ -1,6 +1,5 @@
 var swiper3 = new Swiper(".mySwiper3", {
   centeredSlides: true,
-  grabCursor: true,
   effect: "creative",
   autoplay: {
     delay: 8000,

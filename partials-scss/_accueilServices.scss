@@ -43,7 +43,7 @@
         }
     }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: formatecran.$version-ordinateur) {
         .services {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
