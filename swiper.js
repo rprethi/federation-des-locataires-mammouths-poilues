@@ -1,16 +1,22 @@
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+var swiper3 = new Swiper(".mySwiper3", {
+  centeredSlides: true,
+  grabCursor: true,
+  effect: "creative",
+  autoplay: {
+    delay: 8000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: ["-20%", 0, -1],
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    next: {
+      translate: ["100%", 0, 0],
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  },
+});
