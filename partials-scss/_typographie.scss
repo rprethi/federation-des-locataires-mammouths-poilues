@@ -30,7 +30,8 @@ h6 {
   font-size: 24px;
 }
 
-p{
+p, button {
   @include text.text;
   color: couleurs.$vertAlgue;
+  font-size: 16px;
 }
