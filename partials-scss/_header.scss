@@ -4,11 +4,13 @@
 @use "./mixins/lien";
 @use "./mixins/couleurs";
 
-
+nav {
+    border-bottom: 2px solid couleurs.$vertAlgue
+}
 
 .nav__banniere {
     width: 100%;
-    height: 80px;
+    height: 80px;;
     background-color: couleurs.$vertAlgue;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -48,7 +50,7 @@
 }
 
 .navbar {
-    background-color: couleurs.$argile;
+    background-color: couleurs.$argileNav;
     color: couleurs.$vertAlgue;
     padding: 10px;
     width: 100%;
@@ -72,9 +74,18 @@
         border: none;
         background-color: transparent;
     }
-}
 
+    .nav-item {
+        transition: border-bottom, 1s;
+        &:hover {
+            color: couleurs.$vertAmande;
+            border-bottom: 1px solid couleurs.$vertAmande;
+        }
+        
+    }
+} 
 
+//------ SEARCHBAR ------
 //https://codepen.io/matthieuSolente/pen/azVaNM
 .nav__search {
     position: relative;
@@ -125,5 +136,15 @@ input[type = 'search']::-webkit-search-cancel-button{
     -webkit-appearance: none;
     content: url();
     cursor: pointer;
+}
+
+.dropdown-menu {
+    text-transform: none;
+    border: none;
+    display: none;
+    position: absolute;
+    top: -10px;
+    width: 220px;
+    background-color: couleurs.$argile;
 }
 

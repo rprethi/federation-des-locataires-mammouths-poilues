@@ -8,7 +8,7 @@
 
     .services {
         display: grid;
-        
+
         grid-template-rows: repeat(auto-fit, minmax(200px, auto));
         gap: 15px;
         justify-items: center;
@@ -26,11 +26,13 @@
             grid-template-rows: 2fr 1fr;
             padding: 20px;
             box-sizing: border-box;
-            transition: background-color, color, box-shadow  0.5s;
+            transition: background-color, color, box-shadow,  0.25s;
             &:hover {
                 background-color: couleurs.$vertAmande;
                 color: couleurs.$vertAlgue;
                 box-shadow: 5px 5px 10px 5px rgba(29, 59, 9, 0.5);
+                transform: scale(1.005) translateY(1%);
+                
             }
 
             &-top {

@@ -28,6 +28,7 @@
         }
 
         &__item-texte {
+            padding: 10px;
             display: flex;
             margin: 30px 10px;
             flex-direction: column;
@@ -41,7 +42,7 @@
         }
     }
 
-    @media screen and (min-width: formatecran.$version-ordinateur) {
+    @media screen and (min-width: formatecran.$version-tablette) {
         .membre {
             width: 100%;
             display: grid;
