@@ -8,9 +8,9 @@
   display: grid;
   bottom: 0;
   width: 100%;
+  grid-column: 1 / 4;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
-  grid-column: 1 / 4;
   background-color: couleurs.$vertAlgue;
   font-family: "Nunito";
   column-gap: 10px;
@@ -98,13 +98,12 @@
       color: couleurs.$argile;
       margin: 0;
       padding: 0;
-
     }
   }
 
   &__social-icons {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 4; 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -132,16 +131,16 @@
   }
 }
 
-.footer__section .lien {
-  grid-column: 2;
-  grid-row: 2;
+.footer__section.footer_partenaires {
+  grid-column: 1 / -1;
+  grid-row: 3;
 }
 
 .footer__section.footer_partenaires img {
-  width: 100px !important;
-  height: auto !important;
+  width: 100px !important; 
+  height: auto !important; 
+  margin: 5px;           
 }
-
 
 // Media Queries
 @media (min-width: 768px) {
