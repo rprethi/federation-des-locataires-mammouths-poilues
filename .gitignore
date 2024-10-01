@@ -1,1 +1,7 @@
 node_modules/
+*.php
+wordpress/wp-admin
+wordpress/wp-includes
+wordpress/license.txt
+wordpress/readme.html
+ 
