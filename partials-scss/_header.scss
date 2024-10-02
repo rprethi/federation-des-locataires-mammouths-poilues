@@ -3,7 +3,10 @@
 @use "buttons";
 @use "./mixins/lien";
 @use "./mixins/couleurs";
-
+header {
+    width: 100%;
+    height: 200px;
+}
 nav {
     border-bottom: 2px solid couleurs.$vertAlgue
 }

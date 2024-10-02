@@ -9,6 +9,12 @@
     top: 0;
     section {
         margin: 5% 0;
+        &.section-center {
+            margin: auto;
+            max-width: 1500px;
+        }
     }
+
+
 
 }
