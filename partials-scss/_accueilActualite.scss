@@ -1,0 +1,88 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/text";
+@use "./mixins/lien";
+@use "./mixins/formatecran";
+
+// mobile à switch
+
+#accueil {
+  .actualite {
+    & a {
+      @include lien.lien;
+    }
+    &__title__lien {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__item {
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      grid-template-columns: 1fr 1fr 2fr 4fr;
+      &__date {
+        @include text.text;
+        color: couleurs.$vertAmande;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__img {
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      &__title {
+        @include text.text;
+        padding: 0 50px 0 50px;
+        color: couleurs.$vertAlgue;
+        font-size: 16px;
+        justify-items: center;
+        text-wrap: wrap;
+        font-weight: bold;
+        & p {
+          display: none;
+          position: relative;
+          top: 5%;
+
+          font-weight: normal;
+          color: couleurs.$encre;
+        }
+      }
+      hr {
+        width: 100%;
+        grid-column: 2 / 2;
+        border-top: 5px couleurs.$vertAmande solid;
+      }
+    }
+  }
+
+  @media screen and (min-width: formatecran.$version-tablette) {
+    .actualite {
+      grid-template-columns: 1fr 1fr 3fr 1fr;
+      &__item {
+        &__date {
+          font-size: 24px;
+        }
+        &__img {
+          width: 100%;
+          height: auto;
+        }
+
+        &__title {
+          font-size: 24px;
+          text-wrap: balance;
+          & p {
+            display: block;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

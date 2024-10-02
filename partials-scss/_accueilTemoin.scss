@@ -5,58 +5,58 @@
 @use "./mixins/formatecran";
 
 .contenue__temoin {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.temoignage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+}
+
+// Style des témoignages
+.temoin__commentaire {
+  border: 5px solid couleurs.$vertAlgue;
+  padding: 30px;
+  border-radius: 53px;
+  background-color: couleurs.$argile;
+
+  &-1 {
+    grid-column: 1;
+    background-color: couleurs.$vertAmande;
   }
-  
-  .temoignage {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
+
+  &-2 {
+    grid-column: 2;
   }
-  
-  // Style des témoignages
-  .temoin__commentaire {
-    border: 5px solid $vertAlgue;
-    padding: 30px;
-    border-radius: 53px;
-    background-color: $argile;
-  
-    &-1 {
-      grid-column: 1;
-      background-color: $vertAmande;
+
+  &-3 {
+    grid-column: 3;
+  }
+
+  &-4 {
+    grid-column: 4;
+  }
+
+  // Styles pour chaque span
+  span {
+    display: block;
+
+    &:nth-child(1) {
+      font-size: 16px;
+      font-weight: bold;
     }
-  
-    &-2 {
-      grid-column: 2;
+
+    &:nth-child(2) {
+      font-size: 12px;
+      font-weight: 300;
     }
-  
-    &-3 {
-      grid-column: 3;
-    }
-  
-    &-4 {
-      grid-column: 4;
-    }
-  
-    // Styles pour chaque span
-    span {
-      display: block;
-  
-      &:nth-child(1) {
-        font-size: 16px;
-        font-weight: bold;
-      }
-  
-      &:nth-child(2) {
-        font-size: 12px;
-        font-weight: 300; 
-      }
-  
-      &:nth-child(3) {
-        font-size: 12px;
-        font-weight: 500; 
-      }
+
+    &:nth-child(3) {
+      font-size: 12px;
+      font-weight: 500;
     }
   }
+}
