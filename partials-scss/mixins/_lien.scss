@@ -2,7 +2,8 @@
 @use "couleurs";
 
 @mixin lien {
-  @include italic;
+  @include fonts.italic;
+  color: couleurs.$vertAmande;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
@@ -13,7 +14,7 @@
 }
 
 @mixin lien-pdf {
-  @include italic;
+  @include fonts.italic;
   font-weight: bold;
   font-size: 24px;
   text-decoration: underline;
