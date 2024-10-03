@@ -27,9 +27,11 @@ body {
   font-family: "Nunito Italic";
   src: url(./sources/fonts/NunitoItallic.ttf) format(truetype);
 }
-h1 {
-  color: #273922;
+h1, .h1-green {
+  color: #f7f7ff;
   text-transform: uppercase;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 h2 {
@@ -54,7 +56,7 @@ h6 {
   font-size: 24px;
 }
 
-p, button {
+p, button, span {
   font-family: "Nunito";
   font-size: 24px;
   text-transform: capitalize;
@@ -67,9 +69,49 @@ p, button {
   height: 100%;
   margin-top: 0;
 }
+.swiper .swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  position: relative;
+}
+.swiper .swiper-text {
+  position: absolute;
+}
+.swiper .swiper-text-top {
+  top: 40%;
+  left: 5%;
+  width: 60%;
+}
+.swiper .swiper-text-bottom {
+  bottom: 5%;
+  right: 5%;
+  width: 40%;
+  height: 20%;
+}
+.swiper .swiper-text-bottom p {
+  color: white;
+  font-weight: bold;
+}
 
 .swiper-slide {
   display: flex;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.swiper-slide .gradient-hero {
+  background-image: linear-gradient(to top, #273922, rgba(255, 255, 255, 0));
+  background-size: 500px 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 85%;
 }
 
 .swiper-slide img {
