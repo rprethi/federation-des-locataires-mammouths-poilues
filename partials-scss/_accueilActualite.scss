@@ -10,7 +10,6 @@
 
 #accueil {
   .actualite {
-
     img {
       height: 275px;
       object-fit: cover;
@@ -24,7 +23,6 @@
       align-items: center;
     }
     &__item {
-
       display: grid;
       justify-items: start;
       align-items: start;
@@ -63,6 +61,7 @@
       }
       hr {
         width: 100%;
+        opacity: 75%;
         grid-column: 2 / 2;
         border-top: 5px couleurs.$vertAmande solid;
       }
