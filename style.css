@@ -35,6 +35,7 @@ h1, .h1-green {
 }
 
 h2 {
+  font-size: 32px;
   color: #273922;
 }
 
@@ -111,7 +112,7 @@ p, button, span {
   left: 0;
   bottom: 0;
   right: 0;
-  opacity: 85%;
+  opacity: 65%;
 }
 
 .swiper-slide img {
