@@ -10,8 +10,9 @@
     section {
         margin: 5% 0;
         &.section-center {
-            margin: auto;
+            margin: 0 auto;
             max-width: 1500px;
+            padding: 20px;
         }
     }
 

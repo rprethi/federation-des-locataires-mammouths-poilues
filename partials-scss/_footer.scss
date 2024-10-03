@@ -14,9 +14,9 @@
   background-color: couleurs.$vertAlgue;
   font-family: "Nunito";
   column-gap: 10px;
-  /*
   padding: 20px;
-  */
+  box-sizing: border-box;
+
   row-gap: 30px;
 
   &__section {
