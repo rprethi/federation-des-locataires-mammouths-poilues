@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #f7f7ff;
   display: grid;
@@ -734,7 +735,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 .temoignage {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -moz-column-gap: 15px;
        column-gap: 15px;
   margin-bottom: 50px;
@@ -761,10 +762,12 @@ input[type=search]::-webkit-search-cancel-button {
 
 .temoin__commentaire-3 {
   grid-column: 3;
+  display: none; /* Caché par défaut sur mobile */
 }
 
 .temoin__commentaire-4 {
   grid-column: 4;
+  display: none; /* Caché par défaut sur mobile */
 }
 
 .temoin__commentaire-1 span,
@@ -775,7 +778,7 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 div[class^=temoin__commentaire] span:nth-child(2) {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
 }
 
@@ -808,4 +811,55 @@ div[class^=temoin__commentaire] span:nth-child(2) {
   content: "";
   display: block;
   margin: 10px 0;
+}
+
+/* Version mobile par défaut (375px): 2 cartes visibles */
+.temoin__commentaire-3,
+.temoin__commentaire-4 {
+  display: none; /* Cache les cartes 3 et 4 par défaut */
+}
+
+/* Version tablette (min-width: 768px): 3 cartes visibles */
+@media only screen and (min-width: 768px) {
+  .temoignage {
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .temoin__commentaire-3 {
+    display: block; /* Affiche la carte 3 */
+  }
+  .temoin__commentaire-4 {
+    display: none; /* Cache la carte 4 */
+  }
+  div[class^=temoin__commentaire] span:nth-child(2) {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .temoin-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .temoin-details span:nth-child(2) {
+    font-weight: 100 !important;
+    font-size: 16px;
+  }
+  .temoin-details span:nth-child(1) {
+    font-weight: 600 !important;
+  }
+}
+/* Version desktop (1440px et plus): 4 cartes visibles */
+@media only screen and (min-width: 1440px) {
+  .temoignage {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .temoin__commentaire-3,
+  .temoin__commentaire-4 {
+    display: block; /* Affiche toutes les cartes */
+  }
+  div[class^=temoin__commentaire] span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }/*# sourceMappingURL=style.css.map */
