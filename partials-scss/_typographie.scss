@@ -3,9 +3,11 @@
 @use "./mixins/lien";
 
 
-h1 {
-  color: couleurs.$vertAlgue;
+h1, .h1-green {
+  color: couleurs.$argile;
   text-transform: uppercase;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 h2 {
@@ -30,7 +32,7 @@ h6 {
   font-size: 24px;
 }
 
-p, button {
+p, button, span {
   @include text.text;
   color: couleurs.$vertAlgue;
   font-size: 16px;
