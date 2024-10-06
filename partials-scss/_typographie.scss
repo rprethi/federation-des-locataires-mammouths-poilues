@@ -1,40 +1,72 @@
 @use "./mixins/couleurs";
 @use "./mixins/text";
+@use "./mixins/fonts";
 @use "./mixins/lien";
+* {
+  @include fonts.nunito
+}
 
 
 h1, .h1-green {
   color: couleurs.$argile;
-  text-transform: uppercase;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 48px;
   color: couleurs.$vertAlgue;
+  font-weight: bold;
 }
 
 h3 {
+  font-size: 32px;
   color: couleurs.$vertAmande;
+  font-weight: bold;
 }
 
 h4 {
-  color: couleurs.$argile;
+  font-size: 32px;
+  color: couleurs.$vertAlgue;
+  font-weight: bold;
 }
 
 h5 {
-  color: couleurs.$encre;
-  font-size: 30px;
+  font-size: 24px;
+  color: couleurs.$vertAmande;
+  font-weight: bold;
 }
 
 h6 {
-  color: couleurs.$encre;
   font-size: 24px;
+  color: couleurs.$vertAlgue;
+  font-weight: bold;
 }
 
 p, button, span {
   @include text.text;
-  color: couleurs.$vertAlgue;
   font-size: 16px;
+}
+
+p {
+  color: couleurs.$encre
+}
+
+a {
+  font-weight: 400;
+  color: couleurs.$vertAmande;
+  font-size: 16px;
+  text-decoration: underline;
+
+  &:hover {
+    color: couleurs.$vertAlgue;
+  }
+
+  &:active {
+    color: couleurs.$baguette;
+  }
+}
+
+.vertAmande {
+  color: couleurs.$vertAmande;
 }
