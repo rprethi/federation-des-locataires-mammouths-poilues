@@ -3,19 +3,16 @@
 @mixin text {
   @include fonts.nunito;
   font-size: 24px;
-  text-transform: capitalize;
 }
 
 @mixin text-header {
   @include fonts.nunito;
   font-weight: bold;
   font-size: 24px;
-  text-transform: capitalize;
 }
 
 @mixin text-bannier-scholaire {
   @include fonts.nunito;
   font-weight: bolder;
   font-size: 24px;
-  text-transform: capitalize;
 }
