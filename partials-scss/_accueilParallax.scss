@@ -1,3 +1,5 @@
+@use "./mixins/formatecran";
+
 .section-parallax {
   overflow-x: hidden;
   overflow-y: auto;
@@ -14,7 +16,7 @@
     object-fit: cover;
     object-position: 0 100%;
     animation-name: parallax-effect;
-    animation-duration: 1s;
+    animation-duration: 4s;
     animation-direction: alternate;
     animation-timing-function: linear;
 

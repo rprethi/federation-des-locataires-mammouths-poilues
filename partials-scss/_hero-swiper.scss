@@ -1,67 +1,77 @@
 @use "./mixins/couleurs";
 .swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  .swiper {
     width: 100%;
     height: 100%;
     margin-top: 0;
-    .swiper {
-        width: 100%;
-        height: 100%;
-        margin-top: 0;
-        position: relative;
-    
-        &-text {
-            position: absolute;
-    
-        &-top {
-            top: 40%;
-            left: 5%;
-            width: 60%;
+    position: relative;
+
+    &-text {
+      position: absolute;
+
+      &-top {
+        top: 40%;
+        left: 5%;
+        width: 60%;
+      }
+
+      &-bottom {
+        & p {
+          color: white;
+          font-weight: bold;
         }
-    
-        &-bottom {
-            & p {
-                color: white;
-                font-weight: bold;
-            }
-            bottom: 5%;
-            right: 5%;
-            width: 40%;
-            height: 20%;
-        }
-        }
-        
+        bottom: 5%;
+        right: 5%;
+        width: 40%;
+        height: 20%;
+      }
     }
-    
+  }
 }
 
 .swiper-slide {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-  }
-  
-  .swiper-slide .gradient-hero {
-    background-image: linear-gradient(to top, couleurs.$vertAlgue, rgba(255, 255, 255, 0));
-    background-size: 500px 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 65%;
-  }
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.swiper-slide .gradient-hero {
+  background-image: linear-gradient(
+    to top,
+    couleurs.$vertAlgue,
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 500px 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 65%;
+}
 
 .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero {
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-pagination-bullet {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-bullet-inactive-color, couleurs.$argile);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-color, couleurs.$vertAmande);
 }

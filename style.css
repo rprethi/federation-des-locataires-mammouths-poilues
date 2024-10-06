@@ -128,6 +128,15 @@ p, button, span {
   height: 100vh;
 }
 
+.swiper-pagination-bullet {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-bullet-inactive-color, #f7f7ff);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-color, #88b07e);
+}
+
 .btn-filled {
   border-radius: 50px;
   background-color: #88b07e;
@@ -647,34 +656,34 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
-#accueil .actualite img {
+.actualite img {
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#accueil .actualite a {
+.actualite a {
   font-family: "Nunito Italic";
   color: #88b07e;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
 }
-#accueil .actualite a:hover {
+.actualite a:hover {
   text-decoration: underline;
   text-decoration-color: #88b07e;
 }
-#accueil .actualite__title__lien {
+.actualite__title__lien {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#accueil .actualite__item {
+.actualite__item {
   display: grid;
   justify-items: start;
   align-items: start;
-  grid-template-columns: 1fr 1fr 2fr 3fr;
+  grid-template-columns: 1fr 1fr 3fr 0fr;
 }
-#accueil .actualite__item__date {
+.actualite__item__date {
   font-family: "Nunito";
   font-size: 24px;
   text-transform: capitalize;
@@ -682,56 +691,57 @@ input[type=search]::-webkit-search-cancel-button {
   font-size: 16px;
   font-weight: bold;
 }
-#accueil .actualite__item__img {
+.actualite__item__img {
+  display: none;
   width: 100%;
   height: 400px;
-  -o-object-position: 0 10%;
-     object-position: 0 10%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-#accueil .actualite__item__title {
+.actualite__item__title {
   font-family: "Nunito";
   font-size: 24px;
   text-transform: capitalize;
-  padding: 0 50px 0 50px;
+  padding: 0 20px 0 20px;
   color: #273922;
   font-size: 16px;
   justify-items: center;
   text-wrap: wrap;
   font-weight: bold;
 }
-#accueil .actualite__item__title p {
+.actualite__item__title p {
   display: none;
   position: relative;
   top: 5%;
   font-weight: normal;
   color: #0c0909;
 }
-#accueil .actualite__item hr {
+.actualite__item hr {
   opacity: 75%;
   width: 100%;
   grid-column: 2/2;
   border-top: 5px #88b07e solid;
 }
 @media screen and (min-width: 768px) {
-  #accueil .actualite {
-    grid-template-columns: 1fr 1fr 3fr 1fr;
+  .actualite .actualite__item {
+    grid-template-columns: 1fr 1fr 3fr 4fr;
   }
-  #accueil .actualite__item__date {
+  .actualite .actualite__item__date {
     font-size: 24px;
   }
-  #accueil .actualite__item__img {
-    width: 100%;
-    height: auto;
+  .actualite .actualite__item__img {
+    display: block;
+    -o-object-position: 0% 10%;
+       object-position: 0% 10%;
   }
-  #accueil .actualite__item__title {
+  .actualite .actualite__item__title {
     font-size: 24px;
     text-wrap: balance;
+    padding: 0 50px 0 50px;
   }
-  #accueil .actualite__item__title p {
+  .actualite .actualite__item__title p {
     display: block;
     font-size: 13px;
   }
@@ -756,7 +766,7 @@ input[type=search]::-webkit-search-cancel-button {
   -o-object-position: 0 100%;
      object-position: 0 100%;
   animation-name: parallax-effect;
-  animation-duration: 1s;
+  animation-duration: 4s;
   animation-direction: alternate;
   animation-timing-function: linear;
   animation-timeline: scroll(root);
