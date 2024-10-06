@@ -27,42 +27,72 @@ body {
   font-family: "Nunito Italic";
   src: url(./sources/fonts/NunitoItallic.ttf) format(truetype);
 }
+* {
+  font-family: "Nunito";
+}
+
 h1, .h1-green {
   color: #f7f7ff;
-  text-transform: uppercase;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 48px;
   color: #273922;
+  font-weight: bold;
 }
 
 h3 {
+  font-size: 32px;
   color: #88b07e;
+  font-weight: bold;
 }
 
 h4 {
-  color: #f7f7ff;
+  font-size: 32px;
+  color: #273922;
+  font-weight: bold;
 }
 
 h5 {
-  color: #0c0909;
-  font-size: 30px;
+  font-size: 24px;
+  color: #88b07e;
+  font-weight: bold;
 }
 
 h6 {
-  color: #0c0909;
   font-size: 24px;
+  color: #273922;
+  font-weight: bold;
 }
 
 p, button, span {
   font-family: "Nunito";
   font-size: 24px;
   text-transform: capitalize;
-  color: #273922;
   font-size: 16px;
+}
+
+p {
+  color: #0c0909;
+}
+
+a {
+  font-weight: 400;
+  color: #88b07e;
+  font-size: 16px;
+  text-decoration: underline;
+}
+a:hover {
+  color: #273922;
+}
+a:active {
+  color: #c4b091;
+}
+
+.vertAmande {
+  color: #88b07e;
 }
 
 .swiper {
