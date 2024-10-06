@@ -2,6 +2,8 @@
 @use "./mixins/text";
 @use "./mixins/fonts";
 @use "./mixins/lien";
+@use "./mixins/formatecran";
+
 * {
   @include fonts.nunito
 }
@@ -69,4 +71,41 @@ a {
 
 .vertAmande {
   color: couleurs.$vertAmande;
+}
+
+@media (max-width: formatecran.$version-mobile) {
+  h1, .h1-green, h2 {
+    font-size: 24px;
+  }
+
+  h3, h4 {
+    font-size: 16px;
+  }
+
+  h5, h6 {
+    font-size: 12px;
+  }
+
+  p, button, span {
+    font-size: 10px;
+  }
+  
+}
+
+@media (max-width: formatecran.$version-tablette) {
+  h1, .h1-green, h2 {
+    font-size: 32px;
+  }
+
+  h3, h4 {
+    font-size: 24px;
+  }
+
+  h5, h6 {
+    font-size: 16px;
+  }
+
+  p, button, span {
+    font-size: 12px;
+  }
 }
