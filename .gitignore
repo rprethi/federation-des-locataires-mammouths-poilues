@@ -1,5 +1,6 @@
 node_modules/
 *.php
+wordpress/wp-config.php
 wordpress/wp-admin
 wordpress/wp-includes
 wordpress/license.txt
