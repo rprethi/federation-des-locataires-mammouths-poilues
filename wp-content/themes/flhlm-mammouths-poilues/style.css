@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f7f7ff;
   display: grid;
