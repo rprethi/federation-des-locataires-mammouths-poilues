@@ -133,24 +133,6 @@ a:active {
   margin-top: 0;
   position: relative;
 }
-.swiper .swiper-text {
-  position: absolute;
-}
-.swiper .swiper-text-top {
-  top: 40%;
-  left: 5%;
-  width: 60%;
-}
-.swiper .swiper-text-bottom {
-  bottom: 5%;
-  right: 5%;
-  width: 40%;
-  height: 20%;
-}
-.swiper .swiper-text-bottom p {
-  color: white;
-  font-weight: bold;
-}
 
 .swiper-slide {
   display: flex;
@@ -180,6 +162,7 @@ a:active {
 }
 
 .hero {
+  position: relative;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -192,6 +175,26 @@ a:active {
 
 .swiper-pagination-bullet-active {
   background: var(--swiper-pagination-color, #88b07e);
+}
+
+.swiper-text {
+  position: absolute;
+  z-index: 100;
+}
+.swiper-text-top {
+  top: 40%;
+  left: 5%;
+  width: 60%;
+}
+.swiper-text-bottom {
+  bottom: 5%;
+  right: 5%;
+  width: 40%;
+  height: 20%;
+}
+.swiper-text-bottom p {
+  color: white;
+  font-weight: bold;
 }
 
 .btn-filled {
@@ -626,10 +629,17 @@ input[type=search]::-webkit-search-cancel-button {
   flex-direction: column;
   justify-content: center;
 }
-#accueil .membre__item-texte h1,
-#accueil .membre__item-texte h2 {
-  margin: 0;
-  padding: 0;
+#accueil .membre__item-texte p {
+  margin: 10px 0;
+}
+#accueil .membre__item-texte button {
+  margin-top: 10px;
+}
+#accueil .membre__item-texte h1 {
+  margin-bottom: 0;
+}
+#accueil .membre__item-texte h3 {
+  margin-top: -5px;
 }
 @media screen and (min-width: 768px) {
   #accueil .membre {
@@ -654,6 +664,19 @@ input[type=search]::-webkit-search-cancel-button {
     margin: 0;
     padding: 0;
   }
+}
+
+ul.dropdown-menu.show {
+  text-align: center;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.dropdown-item:hover:hover {
+  background-color: #273922;
+  color: #f7f7ff;
 }
 
 #accueil .services {

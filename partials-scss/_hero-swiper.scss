@@ -9,26 +9,6 @@
     margin-top: 0;
     position: relative;
 
-    &-text {
-      position: absolute;
-
-      &-top {
-        top: 40%;
-        left: 5%;
-        width: 60%;
-      }
-
-      &-bottom {
-        & p {
-          color: white;
-          font-weight: bold;
-        }
-        bottom: 5%;
-        right: 5%;
-        width: 40%;
-        height: 20%;
-      }
-    }
   }
 }
 
@@ -62,6 +42,7 @@
 }
 
 .hero {
+  position: relative;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -74,4 +55,27 @@
 
 .swiper-pagination-bullet-active {
   background: var(--swiper-pagination-color, couleurs.$vertAmande);
+}
+
+
+.swiper-text {
+  position: absolute;
+  z-index: 100;
+
+  &-top {
+    top: 40%;
+    left: 5%;
+    width: 60%;
+  }
+
+  &-bottom {
+    & p {
+      color: white;
+      font-weight: bold;
+    }
+    bottom: 5%;
+    right: 5%;
+    width: 40%;
+    height: 20%;
+  }
 }

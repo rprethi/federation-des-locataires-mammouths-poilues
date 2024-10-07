@@ -34,10 +34,20 @@
             flex-direction: column;
             justify-content: center;
 
-            h1,
-            h2 {
-                margin: 0;
-                padding: 0;
+            p {
+                margin: 10px 0;
+            }
+
+            button {
+            margin-top: 10px;
+            }
+
+            h1 {
+                margin-bottom: 0;
+            }
+
+            h3 {
+                margin-top: -5px;
             }
         }
     }
@@ -69,4 +79,21 @@
         }
     }
 
+}
+
+ul.dropdown-menu.show {
+    text-align: center;
+
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.dropdown-item:hover {
+
+    &:hover {
+        background-color: couleurs.$vertAlgue;
+        color: couleurs.$argile;
+    }
 }
