@@ -725,12 +725,9 @@ ul.dropdown-menu.show {
 }
 @media screen and (min-width: 768px) {
   #accueil .services {
-    display: grid;
+    display: flex;
     max-width: 1500px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: none;
-    justify-items: center;
-    margin: auto;
+    justify-content: space-between;
   }
   #accueil .services__item {
     width: 100%;
