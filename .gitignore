@@ -1,10 +1,10 @@
 node_modules/
 *.php
-wordpress/wp-config.php
-wordpress/wp-admin
-wordpress/wp-includes
-wordpress/license.txt
-wordpress/readme.html
+wp-config.php
+wp-admin
+wp-includes
+license.txt
+readme.html
 .DS_Store
  
  
