@@ -1,0 +1,265 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/formatecran";
+
+.footer {
+  display: grid;
+  bottom: 0;
+  width: 100%;
+  grid-column: 1 / 4;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  background-color: couleurs.$vertAlgue;
+  font-family: "Nunito";
+  column-gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  row-gap: 30px;
+
+  &__section {
+    text-decoration: none;
+
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+      color: couleurs.$argile;
+    }
+
+    li {
+      line-height: 2;
+    }
+
+    li a,
+    .footer__bottom p,
+    .footer__membre {
+      font-size: 16px;
+      color: couleurs.$argile;
+      list-style-type: none;
+      text-decoration: none;
+    }
+
+    button {
+      border-radius: 50px;
+      background-color: couleurs.$vertAmande;
+      color: inherit;
+      border: none;
+      font-weight: bold;
+      width: 150px;
+      height: 50px;
+      font-size: 16px;
+      color: couleurs.$argile;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+
+      li {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: couleurs.$argile;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .logo-footer {
+      width: 75px;
+      height: 35px;
+    }
+
+    .footer__addrese {
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .mail-flhlmq {
+      margin-right: 10px;
+      text-decoration: underline; 
+      font-weight: bold;
+    }
+  }
+
+  &__bottom {
+    grid-column: 1 / -1; 
+    grid-row: 4; 
+
+    p {
+      font-size: 12px;
+      color: couleurs.$argile;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__social-icons {
+    grid-column: 2;
+    grid-row: 4; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 0;
+
+    svg {
+      fill: couleurs.$argile;
+      height: 21px;
+      width: 21px;
+    }
+  }
+
+  &__membre {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .mail-flhlmq,
+  .tel-flhlmq {
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+}
+
+.footer__section.footer_partenaires {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.footer__section.footer_partenaires img {
+  width: 100px !important; 
+  height: auto !important; 
+  margin: 5px;           
+}
+
+// Media Queries
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 50px;
+  }
+  .footer__section button {
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .footer a {
+    font-size: 16px !important;
+  }
+
+  .footer__section h4 {
+    font-size: 20px;
+  }
+
+  .footer__social-icons svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__logo .logo-footer{
+    width: 150px;
+    height: 50px;
+  }
+
+  .footer__section.footer_partenaires img {
+    width: 150px !important; 
+    height: auto !important;         
+  }
+
+  .footer__bottom p{
+    font-size: 16px;
+  }
+
+  .footer__social-icons svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto ; 
+
+    &__section button {
+      width: 200px;
+      height: 40px;
+      font-size: 16px;
+    }
+
+    &__membre {
+      grid-column: 4;
+      grid-row: 1;
+    }
+
+    &__social-icons {
+      grid-column: 4;
+      grid-row: 2; 
+    }
+
+    &__bottom {
+      grid-column: 1; 
+      grid-row: 2;
+      display: grid; 
+      align-items: end; 
+    }
+
+    .logo-footer {
+      width: 183px;
+      height: 59px;
+    }
+
+    &__section h4 {
+      font-size: 24px;
+    }
+
+    &__section li {
+      font-size: 16px;
+    }
+
+    .footer__social-icons svg {
+      height: 35px;
+      width: 35px;
+    }
+
+    footer a {
+      font-size: 16px !important;
+    }
+
+    .footer__section.footer_partenaires {
+      grid-column: 2 / -2;
+      grid-row: 2; 
+    }
+    
+    .footer__section.footer_partenaires img {
+      width: 150px !important; 
+      height: auto !important; 
+      margin: 5px;           
+    }
+
+    .footer__bottom p {
+      justify-self: start; 
+      margin: 0; 
+    }
+  }
+}

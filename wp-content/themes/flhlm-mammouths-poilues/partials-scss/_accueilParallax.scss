@@ -1,0 +1,35 @@
+@use "./mixins/formatecran";
+
+.section-parallax {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  z-index: -2;
+  height: 45vh;
+  position: relative;
+  top: 0;
+  & img {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 100%;
+    animation-name: parallax-effect;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes parallax-effect {
+  0% {
+    object-position: bottom;
+  }
+
+  100% {
+    object-position: top;
+  }
+}

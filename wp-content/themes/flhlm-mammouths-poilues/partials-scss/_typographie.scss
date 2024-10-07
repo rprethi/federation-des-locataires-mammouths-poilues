@@ -1,0 +1,111 @@
+@use "./mixins/couleurs";
+@use "./mixins/text";
+@use "./mixins/fonts";
+@use "./mixins/lien";
+@use "./mixins/formatecran";
+
+* {
+  @include fonts.nunito
+}
+
+
+h1, .h1-green {
+  color: couleurs.$argile;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 48px;
+  color: couleurs.$vertAlgue;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 32px;
+  color: couleurs.$vertAmande;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 32px;
+  color: couleurs.$vertAlgue;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 24px;
+  color: couleurs.$vertAmande;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 24px;
+  color: couleurs.$vertAlgue;
+  font-weight: bold;
+}
+
+p, button, span {
+  @include text.text;
+  font-size: 16px;
+}
+
+p {
+  color: couleurs.$encre
+}
+
+a {
+  font-weight: 400;
+  color: couleurs.$vertAmande;
+  font-size: 16px;
+  text-decoration: underline;
+
+  &:hover {
+    color: couleurs.$vertAlgue;
+  }
+
+  &:active {
+    color: couleurs.$baguette;
+  }
+}
+
+.vertAmande {
+  color: couleurs.$vertAmande;
+}
+
+@media (max-width: formatecran.$version-mobile) {
+  h1, .h1-green, h2 {
+    font-size: 24px;
+  }
+
+  h3, h4 {
+    font-size: 16px;
+  }
+
+  h5, h6 {
+    font-size: 12px;
+  }
+
+  p, button, span {
+    font-size: 10px;
+  }
+  
+}
+
+@media (max-width: formatecran.$version-tablette) {
+  h1, .h1-green, h2 {
+    font-size: 32px;
+  }
+
+  h3, h4 {
+    font-size: 24px;
+  }
+
+  h5, h6 {
+    font-size: 16px;
+  }
+
+  p, button, span {
+    font-size: 12px;
+  }
+}
