@@ -5,6 +5,7 @@
 @use "./mixins/text";
 @use "./mixins/lien";
 @use "./mixins/formatecran";
+@use "sass:color";
 
 // mobile à switch
 
@@ -21,12 +22,28 @@
     justify-content: space-between;
     align-items: center;
   }
+  ul {
+    list-style: none;
+    a:link {
+      text-decoration: none;
+    }
+  }
   &__item {
     display: grid;
     justify-items: start;
     align-items: start;
-    grid-template-columns: 1fr 1fr 3fr 0fr;
+    grid-template-columns: 1fr 1fr 2fr 0fr;
+    transition: background 0.5s;
+    &:hover {
+      transition-duration: 0.5s;
+      background: color.adjust(couleurs.$argile, $whiteness: 10%);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
     &__date {
+      text-decoration: none;
       @include text.text;
       color: couleurs.$vertAmande;
       font-size: 16px;
@@ -66,7 +83,7 @@
     }
   }
 
-  @media screen and (min-width: formatecran.$version-tablette) {
+  @media screen and (min-width: formatecran.$version-ordinateur) {
     .actualite {
       &__item {
         grid-template-columns: 1fr 1fr 3fr 4fr;
@@ -84,6 +101,7 @@
           padding: 0 50px 0 50px;
           & p {
             display: block;
+            font-size: 13px;
           }
         }
       }

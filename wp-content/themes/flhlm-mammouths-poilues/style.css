@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f7f7ff;
   display: grid;
@@ -165,7 +169,7 @@ a:active {
   position: relative;
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 }
 
 .swiper-pagination-bullet {
@@ -721,12 +725,9 @@ ul.dropdown-menu.show {
 }
 @media screen and (min-width: 768px) {
   #accueil .services {
-    display: grid;
+    display: flex;
     max-width: 1500px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: none;
-    justify-items: center;
-    margin: auto;
+    justify-content: space-between;
   }
   #accueil .services__item {
     width: 100%;
@@ -757,13 +758,29 @@ ul.dropdown-menu.show {
   justify-content: space-between;
   align-items: center;
 }
+.actualite ul {
+  list-style: none;
+}
+.actualite ul a:link {
+  text-decoration: none;
+}
 .actualite__item {
   display: grid;
   justify-items: start;
   align-items: start;
-  grid-template-columns: 1fr 1fr 3fr 0fr;
+  grid-template-columns: 1fr 1fr 2fr 0fr;
+  transition: background 0.5s;
+}
+.actualite__item:hover {
+  transition-duration: 0.5s;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .actualite__item__date {
+  text-decoration: none;
   font-family: "Nunito";
   font-size: 24px;
   color: #88b07e;
@@ -802,7 +819,7 @@ ul.dropdown-menu.show {
   grid-column: 2/2;
   border-top: 5px #88b07e solid;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1400px) {
   .actualite .actualite__item {
     grid-template-columns: 1fr 1fr 3fr 4fr;
   }
@@ -821,6 +838,7 @@ ul.dropdown-menu.show {
   }
   .actualite .actualite__item__title p {
     display: block;
+    font-size: 13px;
   }
 }
 

@@ -1,10 +1,13 @@
 @use "./mixins/couleurs";
 @use "./mixins/formatecran";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: couleurs.$argile;
   display: grid;
-
 }
 
 

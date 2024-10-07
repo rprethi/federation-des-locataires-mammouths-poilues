@@ -5,10 +5,6 @@ var swiper3 = new Swiper(".mySwiper3", {
     delay: 8000,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   creativeEffect: {
     prev: {
       shadow: true,
