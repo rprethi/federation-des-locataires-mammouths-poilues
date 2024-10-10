@@ -168,17 +168,8 @@ a:active {
 .hero {
   position: relative;
   overflow: hidden;
-  width: 100vw;
+  width: 98.9vw;
   height: 95vh;
-}
-
-.swiper-pagination-bullet {
-  opacity: var(--swiper-pagination-bullet-opacity, 1);
-  background: var(--swiper-pagination-bullet-inactive-color, #f7f7ff);
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--swiper-pagination-color, #88b07e);
 }
 
 .swiper-text {
@@ -202,21 +193,22 @@ a:active {
 }
 
 .btn-filled {
+  text-align: center;
+  text-decoration: none;
   border-radius: 50px;
   background-color: #88b07e;
   border: none;
-  font-weight: bold;
+  font-weight: bolder;
   width: 25%;
   height: 50%;
   min-width: 200px;
   max-width: 250px;
   padding: 20px 10px;
-  font-weight: bold;
-  transition: box-shadow, transform, font-weight, 0.5s;
+  color: #273922;
+  transition: box-shadow, transform, 0.5s;
 }
 .btn-filled:hover {
   box-shadow: 2px 2px 10px 5px rgba(18, 34, 7, 0.5);
-  font-weight: bolder;
   background-color: #92bb88;
 }
 
@@ -737,6 +729,9 @@ ul.dropdown-menu.show {
   }
 }
 
+.actualite {
+  padding: 20px;
+}
 .actualite img {
   height: 275px;
   -o-object-fit: cover;

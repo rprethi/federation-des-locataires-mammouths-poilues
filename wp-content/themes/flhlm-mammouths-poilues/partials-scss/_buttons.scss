@@ -2,32 +2,29 @@
 @use "typographie";
 @use "./mixins/couleurs";
 
-
-
 //Boutton remplis arrière dark
 .btn-filled {
+  text-align: center;
+  text-decoration: none;
   border-radius: 50px;
   background-color: couleurs.$vertAmande;
   border: none;
-  font-weight: bold;
+  font-weight: bolder;
   width: 25%;
   height: 50%;
   min-width: 200px;
   max-width: 250px;
   padding: 20px 10px;
-  font-weight: bold;
-  transition: box-shadow, transform, font-weight, 0.5s;
+  color: couleurs.$vertAlgue;
+  transition: box-shadow, transform, 0.5s;
 
   &:hover {
     box-shadow: 2px 2px 10px 5px rgba(18, 34, 7, 0.5);
-    font-weight: bolder;
     background-color: #92bb88; //Using lightness
   }
-  
 }
 
 .btn-langue {
   background-color: transparent;
   border: none;
 }
-
