@@ -4,92 +4,98 @@
 @use "./mixins/fonts";
 @use "./mixins/formatecran";
 
-.contenue__temoin {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
+.swiper-temoin {
+	width: 350px;
+	height: 300px;
+  }
+  
+  .silde-temoin {
 	display: flex;
-	justify-content: flex-start;
-	margin-right: 10px;
-  }
-  
-  .temoignage {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 15px;
-	margin-bottom: 50px;
-  }
-  
-  .temoin__commentaire-1,
-  .temoin__commentaire-2,
-  .temoin__commentaire-3,
-  .temoin__commentaire-4 {
+	align-items: center;
+	justify-content: center;
 	border: 5px solid couleurs.$vertAlgue;
-	padding: 30px;
-	border-radius: 53px;
+	padding: 20px;
+	border-radius: 15px;
 	background-color: couleurs.$argile;
+	box-shadow: 0 4px 15px rgba(couleurs.$encre, 0.1);
   }
   
-  .temoin__commentaire-1 {
-	grid-column: 1;
-	background-color: couleurs.$vertAmande;
+  .gradient-text {
+	font-size: 14px !important;
+	background: linear-gradient(to bottom, couleurs.$encre, couleurs.$vertAmande);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	display: inline-block;
+	transition: color 0.3s ease;
   }
   
-  .temoin__commentaire-2 {
-	grid-column: 2;
+  .black-text {
+	color: couleurs.$encre !important;
+	background: none;
+	transition: color 0.3s ease;
   }
   
-  .temoin__commentaire-3 {
-	grid-column: 3;
-	display: none; /* Caché par défaut sur mobile */
+  .hidden-text {
+	font-size: 14px !important;
+	display: none;
+	background: couleurs.$encre;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: all 0.3s ease;
   }
   
-  .temoin__commentaire-4 {
-	grid-column: 4;
-	display: none; /* Caché par défaut sur mobile */
+  .show {
+	display: inline;
+	-webkit-text-fill-color: transparent;
+	font-size: 14px !important;
   }
   
-  .temoin__commentaire-1 span,
-  .temoin__commentaire-2 span,
-  .temoin__commentaire-3 span,
-  .temoin__commentaire-4 span {
+  .voir-plus {
+	background: none;
+	border: none;
+	color: couleurs.$encre;
+	cursor: pointer;
+	font-size: 14px;
+	text-decoration: underline;
+	margin-top: 10px;
 	display: block;
   }
   
-  div[class^="temoin__commentaire"] {
-	span {
-	  &:nth-child(2) {
-		font-size: 10px;
-		font-weight: 500;
-	  }
-	}
+  .contenue__temoin {
+	width: 50px !important;
+	height: 50px !important;
+	border-radius: 50%;
+	display: flex;
+	justify-content: flex-start;
+	box-shadow: 0 4px 15px rgba(couleurs.$encre, 0.1);
   }
   
-  .personne {
+  .silde-temoin {
 	display: flex;
 	align-items: center;
-  }
-  
-  .temoin-details {
-	display: flex;
-	flex-direction: column;
-	span {
-	  &:nth-child(2) {
-		font-weight: 100 !important;
-	  }
-	  &:nth-child(1) {
-		font-weight: 600 !important;
-	  }
-	}
-  }
-  
-  .contenue__temoin,
-  .temoin-details {
-	margin-bottom: 15px;
+	justify-content: center;
+	border: 5px solid couleurs.$vertAlgue;
+	padding: 30px;
+	border-radius: 20px;
+	background-color: couleurs.$argile;
+	box-shadow: 0 4px 20px rgba(couleurs.$encre, 0.1);
   }
   
   .etoile {
+	width: 70px !important;
+	display: block;
 	margin-top: 15px;
+  }
+  
+  .active-card {
+	background-color: couleurs.$vertAmande;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .silde-temoin {
+	transition: background-color 0.9s ease;
   }
   
   .commentaire {
@@ -100,73 +106,215 @@
 	}
   }
   
-  /* Version mobile par défaut (375px): 2 cartes visibles */
-  .temoin__commentaire-3,
-  .temoin__commentaire-4 {
-	display: none; /* Cache les cartes 3 et 4 par défaut */
+  .temoin-details {
+	display: flex;
+	flex-direction: column;
+	span {
+	  &:nth-child(2) {
+		font-weight: 300 !important;
+		font-size: 12px !important;
+	  }
+	  &:nth-child(1) {
+		font-weight: 700 !important;
+		font-size: 14px !important;
+	  }
+	}
   }
   
-  /* Version tablette (min-width: 768px): 3 cartes visibles */
-  @media only screen and (min-width: 768px) {
-	.temoignage {
-	  grid-template-columns: 1fr 1fr 1fr;
-	  overflow: hidden;
-	  column-gap: 30px;
-	}
-  
-	.temoin__commentaire-3 {
-	  display: block; /* Affiche la carte 3 */
-	}
-  
-	.temoin__commentaire-4 {
-	  display: none; /* Cache la carte 4 */
-	}
-
-	div[class^="temoin__commentaire"] {
-		span {
-		  &:nth-child(2) {
-			font-size: 12px;
-			font-weight: 500;
-		  }
-		}
-	  }
-
-	  .temoin-details {
-		display: flex;
-		flex-direction: column;
-		span {
-		  &:nth-child(2) {
-			font-weight: 100 !important;
-			font-size: 16px;
-		  }
-		  &:nth-child(1) {
-			font-weight: 600 !important;
-		  }
-		}
-	  }
-	  
-	  
+  .personne {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	line-height: 1.5;
+	margin-bottom: 15px;
   }
   
-  /* Version desktop (1440px et plus): 4 cartes visibles */
-  @media only screen and (min-width: 1440px) {
-	.temoignage {
-	  grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-  
-	.temoin__commentaire-3,
-	.temoin__commentaire-4 {
-	  display: block; /* Affiche toutes les cartes */
-	}
-
-	div[class^="temoin__commentaire"] {
-		span {
-		  &:nth-child(2) {
-			font-size: 14px;
-			font-weight: 500;
-		  }
-		}
-	  }
+  .commentaire {
+	line-height: 1.5;
+	font-size: 12px !important;
   }
   
+  @media (min-width: 768px) {
+	.swiper-temoin {
+	  width: 450px;
+	  height: 300px;
+	}
+  
+	.gradient-text {
+	  font-size: 14px !important;
+	  color: couleurs.$encre;
+	}
+  
+	.hidden-text {
+	  font-size: 14px !important;
+	  color: couleurs.$encre;
+	  display: inline-block;
+	}
+  
+	.contenue__temoin {
+	  width: 50px !important;
+	  height: 50px !important;
+	  border-radius: 50%;
+	  display: flex;
+	  justify-content: flex-start;
+	}
+  
+	.silde-temoin {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  border: 5px solid couleurs.$vertAlgue;
+	  padding: 30px;
+	  border-radius: 20px;
+	  background-color: couleurs.$argile;
+	  box-shadow: 0 4px 20px rgba(couleurs.$encre, 0.1);
+	}
+  
+	.etoile {
+	  width: 100px !important;
+	  display: block;
+	  margin-top: 15px;
+	}
+  
+	.active-card {
+	  background-color: couleurs.$vertAmande;
+	  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+  
+	.silde-temoin {
+	  transition: background-color 0.9s ease;
+	}
+  
+	.commentaire {
+	  br {
+		content: "";
+		display: block;
+		margin: 10px 0;
+	  }
+	}
+  
+	.temoin-details {
+	  display: flex;
+	  flex-direction: column;
+	  span {
+		&:nth-child(2) {
+		  font-weight: 300 !important;
+		  font-size: 14px !important;
+		}
+		&:nth-child(1) {
+		  font-weight: 500 !important;
+		  font-size: 18px !important;
+		}
+	  }
+	}
+  
+	.personne {
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+	  line-height: 1.5;
+	  margin-bottom: 15px;
+	}
+  
+	.commentaire {
+	  line-height: 1.5;
+	}
+  
+	.voir-plus {
+	  display: none;
+	}
+  }
+  
+  @media (min-width: 1440px) {
+	.swiper-temoin {
+	  width: 500px;
+	  height: 300px;
+	}
+  
+	.gradient-text {
+	  font-size: 16px !important;
+	  color: couleur.$encre;
+	}
+  
+	.hidden-text {
+	  font-size: 16px !important;
+	  color: couleur.$encre;
+	  display: inline-block;
+	}
+  
+	.contenue__temoin {
+	  width: 50px !important;
+	  height: 50px !important;
+	  border-radius: 50%;
+	  display: flex;
+	  justify-content: flex-start;
+	}
+  
+	.silde-temoin {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  border: 5px solid couleurs.$vertAlgue;
+	  padding: 30px;
+	  border-radius: 20px;
+	  background-color: couleurs.$argile;
+	  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	}
+  
+	.etoile {
+	  width: 100px !important;
+	  display: block;
+	  margin-top: 15px;
+	}
+  
+	.active-card {
+	  background-color: couleurs.$vertAmande;
+	  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+  
+	.silde-temoin {
+	  transition: background-color 0.9s ease;
+	}
+  
+	.commentaire {
+	  br {
+		content: "";
+		display: block;
+		margin: 10px 0;
+	  }
+	}
+  
+	.temoin-details {
+	  display: flex;
+	  flex-direction: column;
+  
+	  span {
+		&:nth-child(2) {
+		  font-weight: 300 !important;
+		  font-size: 18px !important;
+		}
+  
+		&:nth-child(1) {
+		  font-weight: 500 !important;
+		  font-size: 20px !important;
+		}
+	  }
+	}
+	.commentaire {
+	  line-height: 1.5;
+	  font-size: 16px;
+	}
+  
+	.voir-plus {
+	  display: none;
+	}
+  }
+  
+  .personne {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+  }
   
