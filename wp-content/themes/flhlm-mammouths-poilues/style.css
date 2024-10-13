@@ -268,7 +268,7 @@ nav {
 }
 
 .navbar {
-  background-color: #f5f5fa;
+  background-color: #f7f7ff;
   color: #273922;
   padding: 10px;
   width: 100%;
@@ -294,7 +294,6 @@ nav {
 }
 .navbar .nav-search {
   border: none;
-  background-color: transparent;
 }
 .navbar .nav-item {
   transition: border-bottom, 1s;
