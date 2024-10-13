@@ -34,7 +34,11 @@ body {
   font-family: "Nunito";
 }
 
-h1, .h1-green {
+.bold {
+  font-weight: bolder;
+}
+
+h1, .h1 {
   color: #f7f7ff;
   font-size: 48px;
   font-weight: bold;
@@ -70,35 +74,25 @@ h6 {
   font-weight: bold;
 }
 
-p, button, span {
-  font-family: "Nunito";
-  font-size: 24px;
-  font-size: 16px;
+p, button, span, .p {
+  color: #273922;
+  font-size: 18px;
 }
 
 p {
   color: #0c0909;
 }
 
-a {
-  font-weight: 400;
-  color: #88b07e;
-  font-size: 16px;
-  text-decoration: underline;
-}
-a:hover {
-  color: #273922;
-}
-a:active {
-  color: #c4b091;
-}
-
 .vertAmande {
   color: #88b07e;
 }
 
+.vertAlgue {
+  color: #273922;
+}
+
 @media (max-width: 375px) {
-  h1, .h1-green, h2 {
+  h1, .h1, h2 {
     font-size: 24px;
   }
   h3, h4 {
@@ -107,12 +101,12 @@ a:active {
   h5, h6 {
     font-size: 12px;
   }
-  p, button, span {
+  p, button, span, .p {
     font-size: 10px;
   }
 }
 @media (max-width: 768px) {
-  h1, .h1-green, h2 {
+  h1, .h1, h2 {
     font-size: 32px;
   }
   h3, h4 {
@@ -121,7 +115,7 @@ a:active {
   h5, h6 {
     font-size: 16px;
   }
-  p, button, span {
+  p, button, span, .p {
     font-size: 12px;
   }
 }
@@ -135,6 +129,10 @@ a:active {
   height: 100%;
   margin-top: 0;
   position: relative;
+}
+
+a {
+  margin-top: 10px;
 }
 
 .swiper-slide {
@@ -178,9 +176,13 @@ a:active {
 .swiper-text-top {
   top: 40%;
   left: 5%;
-  width: 60%;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .swiper-text-bottom {
+  display: flex;
+  justify-content: end;
   bottom: 5%;
   right: 5%;
   width: 40%;
@@ -189,6 +191,7 @@ a:active {
 .swiper-text-bottom p {
   color: white;
   font-weight: bold;
+  max-width: 300px;
 }
 
 .btn-filled {
@@ -199,10 +202,10 @@ a:active {
   border: none;
   font-weight: bolder;
   width: 25%;
-  height: 50%;
+  height: 40%;
   min-width: 200px;
   max-width: 250px;
-  padding: 20px 10px;
+  padding: 15px 10px;
   color: #273922;
   transition: box-shadow, transform, 0.5s;
 }
@@ -744,7 +747,6 @@ ul.dropdown-menu.show {
   text-decoration: none;
 }
 .actualite a:hover {
-  text-decoration: underline;
   text-decoration-color: #88b07e;
 }
 .actualite__title__lien {
@@ -832,7 +834,6 @@ ul.dropdown-menu.show {
   }
   .actualite .actualite__item__title p {
     display: block;
-    font-size: 13px;
   }
 }
 
@@ -1070,4 +1071,79 @@ ul.dropdown-menu.show {
   .voir-plus {
     display: none;
   }
+}
+@media (min-width: 1440px) {
+  .swiper-temoin {
+    width: 500px;
+    height: 300px;
+  }
+  .gradient-text {
+    font-size: 16px !important;
+    color: #0c0909;
+  }
+  .hidden-text {
+    font-size: 16px !important;
+    color: #0c0909;
+    display: inline-block;
+  }
+  .contenue__temoin {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .silde-temoin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #273922;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #f7f7ff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .etoile {
+    width: 100px !important;
+    display: block;
+    margin-top: 15px;
+  }
+  .active-card {
+    background-color: #88b07e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .silde-temoin {
+    transition: background-color 0.9s ease;
+  }
+  .commentaire br {
+    content: "";
+    display: block;
+    margin: 10px 0;
+  }
+  .temoin-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .temoin-details span:nth-child(2) {
+    font-weight: 300 !important;
+    font-size: 18px !important;
+  }
+  .temoin-details span:nth-child(1) {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+  }
+  .commentaire {
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .voir-plus {
+    display: none;
+  }
+}
+.personne {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */

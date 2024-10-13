@@ -8,8 +8,12 @@
   @include fonts.nunito
 }
 
+.bold {
+  font-weight: bolder;
+}
 
-h1, .h1-green {
+
+h1, .h1 {
   color: couleurs.$argile;
   font-size: 48px;
   font-weight: bold;
@@ -45,36 +49,27 @@ h6 {
   font-weight: bold;
 }
 
-p, button, span {
-  @include text.text;
-  font-size: 16px;
+p, button, span, .p {
+  color: couleurs.$vertAlgue;
+  font-size: 18px;
 }
 
 p {
   color: couleurs.$encre
 }
 
-a {
-  font-weight: 400;
-  color: couleurs.$vertAmande;
-  font-size: 16px;
-  text-decoration: underline;
 
-  &:hover {
-    color: couleurs.$vertAlgue;
-  }
-
-  &:active {
-    color: couleurs.$baguette;
-  }
-}
 
 .vertAmande {
   color: couleurs.$vertAmande;
 }
 
+.vertAlgue {
+  color: couleurs.$vertAlgue;
+}
+
 @media (max-width: formatecran.$version-mobile) {
-  h1, .h1-green, h2 {
+  h1, .h1, h2 {
     font-size: 24px;
   }
 
@@ -86,14 +81,14 @@ a {
     font-size: 12px;
   }
 
-  p, button, span {
+  p, button, span, .p {
     font-size: 10px;
   }
   
 }
 
 @media (max-width: formatecran.$version-tablette) {
-  h1, .h1-green, h2 {
+  h1, .h1, h2 {
     font-size: 32px;
   }
 
@@ -105,7 +100,7 @@ a {
     font-size: 16px;
   }
 
-  p, button, span {
+  p, button, span, .p {
     font-size: 12px;
   }
 }
