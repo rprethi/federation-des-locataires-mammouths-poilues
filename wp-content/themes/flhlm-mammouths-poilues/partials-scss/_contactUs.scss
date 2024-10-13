@@ -1,0 +1,105 @@
+@use "./mixins/couleurs";
+@use "./mixins/formatecran";
+@use "./mixins/text";
+@use "./typographie";
+@use 'sass:color';
+
+.pageNousJoindre {
+  .contact {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    &__text {
+      width: 100%;
+      .informations {
+        display: flex;
+        align-items: center;
+      }
+      .icon-contour {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        margin-right: 20px;
+        box-sizing: border-box; //enlever
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+    &__form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: couleurs.$vertAlgue;
+      border-radius: 25px;
+      input {
+        width: 100%;
+        height: 15%;
+        margin: 10px 0;
+        
+        color: couleurs.$argile;
+        padding-left: 10px;
+        border-radius: 25px;
+        background-color: color.adjust(couleurs.$vertAlgue, $lightness: 15%, $saturation: -10%); 
+
+        &::placeholder {
+            color: couleurs.$argile;
+            opacity: 1;
+          }
+      }
+    }
+
+    textarea {
+        resize: none;
+        border-radius: 25px;
+        color: couleurs.$argile;
+        width: 100%;
+        height: 15%;
+        padding-left: 10px;
+        margin: 10px 0;
+        background-color: color.adjust(couleurs.$vertAlgue, $lightness: 15%, $saturation: -10%);
+        &::placeholder {
+            transform: translateY(13px);
+            color: couleurs.$argile;
+            opacity: 1;
+          } 
+
+    }
+    &__map {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    &__map {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
+    &__form {
+      justify-content: end;
+    }
+  }
+}
+
+.contact__map {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+}
+
+.contact__map iframe {
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
