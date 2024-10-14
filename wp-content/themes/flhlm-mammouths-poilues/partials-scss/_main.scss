@@ -3,10 +3,12 @@
 @use "./mixins/text";
 @use "./typographie";
 
+
+
 #accueil {
   width: 100%;
   position: relative;
-  top: 0;
+  top: -150px;
   section {
     margin: 5% 0;
     &.section-center {
@@ -15,4 +17,15 @@
       padding: 20px;
     }
   }
+}
+.section-center {
+  padding: 20px;
+}
+
+@media screen and (min-width: formatecran.$version-tablette) {
+.section-center {
+margin: 0 auto;
+max-width: 1500px;
+padding: 20px;
+}
 }

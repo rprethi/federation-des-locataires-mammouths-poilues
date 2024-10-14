@@ -17,6 +17,8 @@
   padding: 20px;
   box-sizing: border-box;
 
+
+
   row-gap: 30px;
 
   &__section {
@@ -26,6 +28,7 @@
       font-size: 18px;
       font-weight: bold;
       color: couleurs.$argile;
+      margin-bottom: 30px;
     }
 
     li {
@@ -41,17 +44,7 @@
       text-decoration: none;
     }
 
-    button {
-      border-radius: 50px;
-      background-color: couleurs.$vertAmande;
-      color: inherit;
-      border: none;
-      font-weight: bold;
-      width: 150px;
-      height: 50px;
-      font-size: 16px;
-      color: couleurs.$argile;
-    }
+
 
     ul {
       list-style: none;
@@ -156,12 +149,7 @@
   .footer {
     padding-top: 50px;
   }
-  .footer__section button {
-    border-radius: 50px;
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
-  }
+
 
   .footer a {
     font-size: 16px !important;
@@ -201,11 +189,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto ; 
 
-    &__section button {
-      width: 200px;
-      height: 40px;
-      font-size: 16px;
-    }
+
 
     &__membre {
       grid-column: 4;

@@ -4,7 +4,7 @@ document.querySelector(".banner__close").addEventListener("click", function () {
   let main = document.querySelector("main");
   banner.style.transform = "translateY(-100%)";
   nav.style.top = "0";
-  main.style.top = "- 98.9px";
+  main.style.top = "-255px";
   setTimeout(function () {
     banner.style.display = "none";
     document.body.classList.add("banner-hidden");
