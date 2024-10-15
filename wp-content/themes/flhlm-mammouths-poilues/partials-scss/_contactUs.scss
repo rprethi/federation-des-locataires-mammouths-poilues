@@ -87,7 +87,15 @@
 
   .informations {
     margin: 10px 0;
-
+    display: flex;
+    a {
+      margin-bottom: 12px;
+    }
+    span {
+      margin-bottom: 4px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
     
   }
 }

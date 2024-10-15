@@ -5,7 +5,7 @@
 @use "./mixins/formatecran";
 
 * {
-  @include fonts.nunito
+  @include fonts.nunito;
 }
 
 .bold {
@@ -49,9 +49,18 @@ h6 {
   font-weight: bold;
 }
 
-p, button, span, .p {
+p, button, span, .p, a {
   color: couleurs.$vertAlgue;
   font-size: 18px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: couleurs.$vertAmande;
+}
+
+a:active {
+  color: couleurs.$baguette;
 }
 
 p {
@@ -82,7 +91,7 @@ p {
     font-size: 12px;
   }
 
-  p, button, span, .p {
+  p, button, span, .p, a {
     font-size: 12px;
   }
   
@@ -101,7 +110,7 @@ p {
     font-size: 16px;
   }
 
-  p, button, span, .p {
+  p, button, span, .p, a {
     font-size: 14px;
   }
 }
