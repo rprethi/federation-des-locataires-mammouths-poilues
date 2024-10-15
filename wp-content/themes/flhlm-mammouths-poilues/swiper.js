@@ -31,6 +31,7 @@ var swiper = new Swiper(".temoin", {
     },
   },
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const voirPlusButtons = document.querySelectorAll(".voir-plus");
 
