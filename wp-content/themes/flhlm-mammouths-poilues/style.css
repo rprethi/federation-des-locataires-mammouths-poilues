@@ -1298,7 +1298,7 @@ ul.dropdown-menu.show {
 .services-hub .services .services__item-bottom-text {
   position: relative;
   width: 100%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   top: 20%;
 }
 .services-hub .services .services__item-bottom-text h3 {
@@ -1355,7 +1355,7 @@ ul.dropdown-menu.show {
 @media screen and (min-width: 768px) {
   .services-hub .services {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 50px;
   }
   .services-hub .services .services__item-bottom-text {
@@ -1372,7 +1372,7 @@ ul.dropdown-menu.show {
 @media screen and (min-width: 1400px) {
   .services-hub .services {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
