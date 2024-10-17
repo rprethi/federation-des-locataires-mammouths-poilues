@@ -1,3 +1,11 @@
+@charset "UTF-8";
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 * {
   box-sizing: border-box;
 }
@@ -202,6 +210,20 @@ a {
   max-width: 300px;
 }
 
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 .btn-filled {
   text-align: center;
   text-decoration: none;
@@ -396,6 +418,13 @@ input[type=search]::-webkit-search-cancel-button {
   background-color: #f7f7ff;
 }
 
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 .footer {
   display: grid;
   bottom: 0;
@@ -620,6 +649,13 @@ input[type=search]::-webkit-search-cancel-button {
     padding: 20px;
   }
 }
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 #accueil .membre {
   background-color: #273922;
   width: 100%;
@@ -697,6 +733,13 @@ ul.dropdown-menu.show {
   color: #f7f7ff;
 }
 
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 #accueil .services {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, auto));
@@ -751,6 +794,13 @@ ul.dropdown-menu.show {
   }
 }
 
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 .actualite {
   padding: 20px;
 }
@@ -892,6 +942,13 @@ ul.dropdown-menu.show {
        object-position: top;
   }
 }
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 .swiper-temoin {
   width: 350px;
   height: 300px;
@@ -1287,6 +1344,13 @@ ul.dropdown-menu.show {
   filter: grayscale(100%);
 }
 
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
 .services-hub .services {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, auto));
@@ -1375,4 +1439,26 @@ ul.dropdown-menu.show {
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 50px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*//*# sourceMappingURL=style.css.map */
