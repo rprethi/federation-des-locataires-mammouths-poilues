@@ -10,3 +10,11 @@ document.querySelector(".banner__close").addEventListener("click", function () {
     document.body.classList.add("banner-hidden");
   }, 0);
 });
+
+let btnVoirPlus = document.querySelector(".plus-info");
+let gradiantTexte = document.querySelector(".gradiant");
+
+btnVoirPlus.addEventListener("click", () => {
+  btnVoirPlus.classList.add("active");
+  gradiantTexte.classList.add("active");
+});
