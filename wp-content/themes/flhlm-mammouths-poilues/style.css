@@ -915,6 +915,7 @@ Version: 1.0
   height: 45vh;
   position: relative;
   top: 0;
+  margin: 0;
 }
 .section-parallax img {
   width: 100%;
@@ -1531,22 +1532,24 @@ Version: 1.0
   color: #88b07e;
 }
 .section-nouvelle .content-nouv {
-  max-width: 700px;
-  width: 600px;
   overflow: hidden;
-  width: 100%;
+  display: grid;
 }
 .section-nouvelle .content-nouv .nouvelles {
-  max-width: 100%;
   gap: 25px;
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(6, 32%);
+  justify-content: start;
 }
 .section-nouvelle .content-nouv .nouvelles a:link {
   text-decoration: none;
 }
 .section-nouvelle .content-nouv .nouvelles a:link:hover {
   color: #273922;
+}
+.section-nouvelle .content-nouv .nouvelles .swiper-slide {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 .section-nouvelle .content-nouv .nouvelles .cartes {
   width: 100%;
@@ -1626,6 +1629,9 @@ Version: 1.0
   }
   .section-nouvelle span a {
     font-size: 20px;
+  }
+  .section-nouvelle .content-nouv .nouvelles .cartes {
+    grid-column: 1fr;
   }
   .section-nouvelle .content-nouv .nouvelles .cartes p {
     display: none;

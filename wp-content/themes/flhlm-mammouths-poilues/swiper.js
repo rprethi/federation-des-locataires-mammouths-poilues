@@ -33,10 +33,33 @@ var swiper = new Swiper(".temoin", {
 });
 
 const swiperNouv = new Swiper(".swiperNouvelles", {
+  slidesPerView: 0.89,
   direction: "horizontal",
-  loop: true,
   grabCursor: true,
-});
+  375: {
+    slidesPerView: 0.9,
+    slidesPerGroup: 6,
+    spaceBetween: 25,
+    centeredSlides: true,
+    centeredSlidesBounds: true
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1.5,
+      slidesPerGroup: 1,
+      spaceBetween: 25,
+      centeredSlides: true,
+      centeredSlidesBounds: true
+    },
+    1200: {
+      slidesPerView: 3,
+      slidesPerGroup: 2,
+      spaceBetween: 25,
+      centeredSlides: true,
+      centeredSlidesBounds: true
+    },
+  },
+}, );
 
 document.addEventListener("DOMContentLoaded", function () {
   const voirPlusButtons = document.querySelectorAll(".voir-plus");

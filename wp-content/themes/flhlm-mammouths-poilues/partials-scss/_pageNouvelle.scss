@@ -9,11 +9,12 @@
 
 // desktop first
 
+
+
 .section-nouvelle {
   margin: 0 auto;
   padding-left: 10%;
   padding-right: 10%;
-
   overflow-x: hidden;
   .contenu {
     position: relative;
@@ -70,15 +71,13 @@
   }
 
   .content-nouv {
-    max-width: 700px;
-    width: 600px;
     overflow: hidden;
-    width: 100%;
+    display: grid;
     & .nouvelles {
-      max-width: 100%;
       gap: 25px;
-      display: flex;
-      flex-wrap: nowrap;
+      display: grid;
+      grid-template-columns: repeat(6, 32%);
+      justify-content: start;
       a:link {
         text-decoration: none;
         &:hover {
@@ -86,6 +85,10 @@
         }
       }
 
+      .swiper-slide{
+        width: fit-content !important;
+      }
+      
       & .cartes {
         width: 100%;
         height: auto;
@@ -170,6 +173,7 @@
     .content-nouv {
       .nouvelles {
         & .cartes {
+          grid-column: 1fr;
           p {
             display: none;
           }
