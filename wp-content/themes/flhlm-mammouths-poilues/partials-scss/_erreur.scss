@@ -1,0 +1,21 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/formatecran";
+
+#erreur {
+  margin-bottom: 10%;
+}
+.erreur {
+  display: grid;
+  gap: 50px;
+
+}
+
+@media screen and (min-width: formatecran.$version-tablette) {
+.erreur {
+  grid-template-columns: 1fr 1fr;
+}
+  }
+  

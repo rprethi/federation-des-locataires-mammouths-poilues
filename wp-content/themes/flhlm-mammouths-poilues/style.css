@@ -1726,4 +1726,25 @@ Version: 1.0
   .section-service span a {
     font-size: 20px;
   }
+}
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
+#erreur {
+  margin-bottom: 10%;
+}
+
+.erreur {
+  display: grid;
+  gap: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .erreur {
+    grid-template-columns: 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

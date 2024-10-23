@@ -18,3 +18,5 @@ btnVoirPlus.addEventListener("click", () => {
   btnVoirPlus.classList.add("active");
   gradiantTexte.classList.add("active");
 });
+
+
