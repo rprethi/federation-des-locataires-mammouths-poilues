@@ -45,8 +45,20 @@
   }
 
   &-empty {
+
     background-color: transparent;
     border: none;
+
+    &:hover {
+      a {
+        color: couleurs.$vertAmande;
+        font-weight: bold;
+      }
+      color: couleurs.$vertAmande;
+        font-weight: bold;
+    }
+
+    
   }
 
   &-footer {
