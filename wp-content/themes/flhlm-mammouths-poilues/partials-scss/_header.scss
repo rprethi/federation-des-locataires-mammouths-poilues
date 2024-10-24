@@ -3,10 +3,12 @@
 @use "buttons";
 @use "./mixins/lien";
 @use "./mixins/couleurs";
+
 header {
     width: 100%;
     height: 200px;
 }
+
 nav {
     border-bottom: 2px solid couleurs.$vertAlgue
 }
@@ -14,15 +16,52 @@ nav {
 .nav__banniere {
     display: flex;
     align-items: center;
+
     .ban__centre {
         width: 100%;
-    margin: 0 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    }
+        margin: 0 5%;
+        display: flex;
         align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-left {
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 7px;
+            }
+    
+        }
+    
+        &-right {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-top: 0;
+                &:hover {
+                    color: couleurs.$vertAmande;
+                    font-weight: bold;
+                }
+            }
+
+            .banner__close {
+                background: none;
+                border: none;
+                font-size: 25px;
+                margin-left: 20px;
+                color: couleurs.$argile;
+
+                &:hover {
+                    color: couleurs.$vertAmande;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    align-items: center;
     color: couleurs.$argile;
     width: 100%;
     height: 80px;
@@ -31,31 +70,20 @@ nav {
     left: 0;
     z-index: 999;
     transition: transform 0.4s ease;
-    span, #closeBanner, a {
-        color: couleurs.$argile;
-    }
-    &-left {
-        display: flex;
-        align-items: center;
-    }
-    &-right {
-        display: flex;
-        align-items: center;
-    }
 
-    .banner__close {
-        background: none;
-        border: none;
-        font-size: 25px;
+    span,
+    #closeBanner,
+    a {
         color: couleurs.$argile;
     }
 }
 
 .navbar {
-.nav-centre {
-    margin: 0 5%;
-    padding: 0;
-}
+    .nav-centre {
+        margin: 0 5%;
+        padding: 0;
+    }
+
     background-color: couleurs.$argile;
     color: couleurs.$vertAlgue;
     padding: 10px;
@@ -63,12 +91,13 @@ nav {
     position: relative;
     top: 80px;
     z-index: 998;
+
     .navbar-brand {
         width: 6em
     }
 
-    .bi-person-circle{
-        margin-bottom:2px;
+    .bi-person-circle {
+        margin-bottom: 2px;
     }
 
     .nav-search {
@@ -77,19 +106,20 @@ nav {
 
     .nav-item {
         transition: border-bottom, 1s;
+
         &:hover {
             color: couleurs.$vertAmande;
             border-bottom: 1px solid couleurs.$vertAmande;
         }
-        
+
     }
 
     .nav-active {
         font-weight: bold;
         color: couleurs.$vertAmande;
-    
+
     }
-} 
+}
 
 //------ SEARCHBAR ------
 //https://codepen.io/matthieuSolente/pen/azVaNM
@@ -97,40 +127,45 @@ nav {
     position: relative;
 }
 
-.container{height:100px;line-height:100px;text-align:center} 
-.search-form {
-	right: 200px;
-	top: 200px;
+.container {
+    height: 100px;
+    line-height: 100px;
+    text-align: center
 }
 
- .search-field {
-	background-color: transparent;
-	background-image: url(https://wp-themes.com/wp-content/themes/twentythirteen/images/search-icon.png);
-	background-position: 5px  center;
-	background-repeat: no-repeat;
-	background-size: 24px 24px;
-	border: none;
-	cursor: pointer;
-	height: 40px;
-	margin: 3px 0;
-	padding: 0 0 0 34px;
-	position: relative;
-	-webkit-transition: width 400ms ease, background 400ms ease;
-	transition:         width 400ms ease, background 400ms ease;
-	width:0px;
-   cursor: pointer;
+.search-form {
+    right: 200px;
+    top: 200px;
 }
-.search-form
-.search-submit { 
-display: none;
+
+.search-field {
+    background-color: transparent;
+    background-image: url(https://wp-themes.com/wp-content/themes/twentythirteen/images/search-icon.png);
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin: 3px 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition: width 400ms ease, background 400ms ease;
+    width: 0px;
+    cursor: pointer;
+}
+
+.search-form .search-submit {
+    display: none;
 }
 
 
 .search-field:focus {
-	border-bottom: 2px solid couleurs.$vertAlgue;
-	cursor: text;
-	outline: 0;
-	width: 250px;
+    border-bottom: 2px solid couleurs.$vertAlgue;
+    cursor: text;
+    outline: 0;
+    width: 250px;
 
     & .search-submit {
         display: inline;
@@ -138,7 +173,7 @@ display: none;
 
 }
 
-input[type = 'search']::-webkit-search-cancel-button{
+input[type='search']::-webkit-search-cancel-button {
     -webkit-appearance: none;
     content: url();
     cursor: pointer;
@@ -153,4 +188,3 @@ input[type = 'search']::-webkit-search-cancel-button{
     width: 220px;
     background-color: couleurs.$argile;
 }
-

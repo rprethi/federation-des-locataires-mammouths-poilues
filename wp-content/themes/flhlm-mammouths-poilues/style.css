@@ -310,21 +310,38 @@ nav {
   flex-direction: row;
   justify-content: space-between;
 }
-.nav__banniere span, .nav__banniere #closeBanner, .nav__banniere a {
-  color: #f7f7ff;
-}
-.nav__banniere-left {
+.nav__banniere .ban__centre-left {
   display: flex;
   align-items: center;
 }
-.nav__banniere-right {
+.nav__banniere .ban__centre-left svg {
+  margin-right: 7px;
+}
+.nav__banniere .ban__centre-right {
   display: flex;
   align-items: center;
 }
-.nav__banniere .banner__close {
+.nav__banniere .ban__centre-right a {
+  margin-top: 0;
+}
+.nav__banniere .ban__centre-right a:hover {
+  color: #88b07e;
+  font-weight: bold;
+}
+.nav__banniere .ban__centre-right .banner__close {
   background: none;
   border: none;
   font-size: 25px;
+  margin-left: 20px;
+  color: #f7f7ff;
+}
+.nav__banniere .ban__centre-right .banner__close:hover {
+  color: #88b07e;
+  font-weight: bold;
+}
+.nav__banniere span,
+.nav__banniere #closeBanner,
+.nav__banniere a {
   color: #f7f7ff;
 }
 
