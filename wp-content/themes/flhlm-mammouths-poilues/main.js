@@ -11,7 +11,7 @@ let bannerStorage = localStorage.getItem("banner");
     nav.style.top = "0";
     main.style.top = "-255px";
   }
-
+/*---------- SET LOCAL STORAGE * ----------*/
 bannerClose.addEventListener("click", function () {
   banner.style.display = "none";
   document.body.classList.add("banner-hidden");
@@ -20,13 +20,13 @@ bannerClose.addEventListener("click", function () {
     localStorage.setItem('banner', true);
     console.log(bannerStorage);
 });
-/*---------- SET LOCAL STORAGE * ----------*/
-
-
-
-
 
 /*--------------------------------------*/
+
+
+
+
+
 
 /*---------- GSAP MENU BURGER* ----------*/
 let burgerIcon = document.getElementById("burgerMenu");
@@ -62,9 +62,6 @@ burgerIcon.addEventListener("mouseleave", () => {
 /*--------------------------------------*/
 
 
-
-/*
-
 let btnVoirPlus = document.querySelector(".plus-info");
 let gradiantTexte = document.querySelector(".gradiant");
 
@@ -77,4 +74,3 @@ btnVoirPlus.addEventListener("click", () => {
 });
 
 
-*/
