@@ -1,16 +1,31 @@
 /*---------- BANNIÈRE ----------*/
-document.querySelector(".banner__close").addEventListener("click", function () {
-  let banner = document.querySelector(".nav__banniere");
+let bannerClose = document.querySelector(".banner__close");
+let banner = document.querySelector(".nav__banniere");
+let bannerStorage = localStorage.getItem("banner");
   let nav = document.querySelector("nav");
   let main = document.querySelector("main");
-  banner.style.transform = "translateY(-100%)";
-  nav.style.top = "0";
-  main.style.top = "-255px";
-  setTimeout(function () {
+
+  if(bannerStorage) {
     banner.style.display = "none";
     document.body.classList.add("banner-hidden");
-  }, 0);
+    nav.style.top = "0";
+    main.style.top = "-255px";
+  }
+
+bannerClose.addEventListener("click", function () {
+  banner.style.display = "none";
+  document.body.classList.add("banner-hidden");
+  nav.style.top = "0";
+  main.style.top = "-255px";
+    localStorage.setItem('banner', true);
+    console.log(bannerStorage);
 });
+/*---------- SET LOCAL STORAGE * ----------*/
+
+
+
+
+
 /*--------------------------------------*/
 
 /*---------- GSAP MENU BURGER* ----------*/
@@ -46,6 +61,10 @@ burgerIcon.addEventListener("mouseleave", () => {
 
 /*--------------------------------------*/
 
+
+
+/*
+
 let btnVoirPlus = document.querySelector(".plus-info");
 let gradiantTexte = document.querySelector(".gradiant");
 
@@ -58,3 +77,4 @@ btnVoirPlus.addEventListener("click", () => {
 });
 
 
+*/
