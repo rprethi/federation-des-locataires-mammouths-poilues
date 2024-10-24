@@ -638,6 +638,15 @@ Version: 1.0
   padding: 20px;
 }
 
+#burgerMenu path {
+  fill: #88b07e;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .section-center {
   padding: 20px;
 }

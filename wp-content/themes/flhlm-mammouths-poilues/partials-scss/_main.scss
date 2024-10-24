@@ -18,6 +18,16 @@
     }
   }
 }
+
+#burgerMenu path {
+  fill: couleurs.$vertAmande;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .section-center {
   padding: 20px;
 }
