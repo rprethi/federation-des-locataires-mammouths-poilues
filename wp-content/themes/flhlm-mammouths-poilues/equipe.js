@@ -46,3 +46,48 @@ function goToPrevSlide() {
 setInterval(goToNextSlide, 8000);
 next.addEventListener("click", goToNextSlide);
 prev.addEventListener("click", goToPrevSlide);
+
+function sortArticles() {
+  const sortOrder = document.getElementById("sortOrder").value;
+  const actualitesList = document.getElementById("actualitesList");
+  const articles = Array.from(actualitesList.getElementsByTagName("li"));
+
+  const months = {
+    janvier: "January",
+    février: "February",
+    mars: "March",
+    avril: "April",
+    mai: "May",
+    juin: "June",
+    juillet: "July",
+    août: "August",
+    septembre: "September",
+    octobre: "October",
+    novembre: "November",
+    décembre: "December",
+  };
+
+  articles.sort((a, b) => {
+    const dateA = a
+      .querySelector(".actualite__item__date")
+      .textContent.trim()
+      .split(/\s+/);
+    const dateB = b
+      .querySelector(".actualite__item__date")
+      .textContent.trim()
+      .split(/\s+/);
+
+    const formattedDateA = new Date(
+      `${months[dateA[1]]} ${dateA[0]}, ${new Date().getFullYear()}`
+    );
+    const formattedDateB = new Date(
+      `${months[dateB[1]]} ${dateB[0]}, ${new Date().getFullYear()}`
+    );
+
+    return sortOrder === "recent"
+      ? formattedDateB - formattedDateA
+      : formattedDateA - formattedDateB;
+  });
+
+  articles.forEach((article) => actualitesList.appendChild(article));
+}
