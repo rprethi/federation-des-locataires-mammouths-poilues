@@ -41,7 +41,7 @@ const swiperNouv = new Swiper(".swiperNouvelles", {
     slidesPerGroup: 6,
     spaceBetween: 25,
     centeredSlides: true,
-    centeredSlidesBounds: true
+    centeredSlidesBounds: true,
   },
   breakpoints: {
     768: {
@@ -49,17 +49,17 @@ const swiperNouv = new Swiper(".swiperNouvelles", {
       slidesPerGroup: 1,
       spaceBetween: 25,
       centeredSlides: true,
-      centeredSlidesBounds: true
+      centeredSlidesBounds: true,
     },
     1200: {
       slidesPerView: 3,
       slidesPerGroup: 2,
       spaceBetween: 25,
       centeredSlides: true,
-      centeredSlidesBounds: true
+      centeredSlidesBounds: true,
     },
   },
-}, );
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const voirPlusButtons = document.querySelectorAll(".voir-plus");
