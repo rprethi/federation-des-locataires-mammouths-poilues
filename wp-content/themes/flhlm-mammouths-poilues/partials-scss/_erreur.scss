@@ -7,15 +7,41 @@
 #erreur {
   margin-bottom: 10%;
 }
+
 .erreur {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 50px;
 
 }
 
-@media screen and (min-width: formatecran.$version-tablette) {
-.erreur {
-  grid-template-columns: 1fr 1fr;
-}
+.erreur__img {
+  width: 100%;
+
+  & .anim {
+    height: 329px;
+    width: 329px;
+    background-position: 0;
+    animation-name: maison;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-timing-function:steps(100, end)
   }
-  
+}
+//32768px
+
+@keyframes maison {
+  from{
+    background-position: 0;
+  }
+  to{
+    background-position:-32768px;
+  }
+}
+
+@media screen and (min-width: formatecran.$version-tablette) {
+  .erreur {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -2057,9 +2057,32 @@ Version: 1.0
 
 .erreur {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
 
+.erreur__img {
+  width: 100%;
+}
+.erreur__img .anim {
+  height: 329px;
+  width: 329px;
+  background-position: 0;
+  animation-name: maison;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-timing-function: steps(100, end);
+}
+
+@keyframes maison {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -32768px;
+  }
+}
 @media screen and (min-width: 768px) {
   .erreur {
     grid-template-columns: 1fr 1fr;
