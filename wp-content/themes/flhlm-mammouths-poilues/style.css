@@ -2057,30 +2057,27 @@ Version: 1.0
 
 .erreur {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 50px;
+  align-items: start;
 }
-
-.erreur__img {
-  width: 100%;
-}
-.erreur__img .anim {
+.erreur .erreur__anim {
+  justify-self: center;
   height: 329px;
   width: 329px;
-  background-position: 0;
   animation-name: maison;
-  animation-duration: 5s;
+  animation-duration: 3.4s;
   animation-iteration-count: infinite;
-  animation-play-state: paused;
-  animation-timing-function: steps(100, end);
+  animation-play-state: running;
+  animation-timing-function: steps(96, end);
 }
 
 @keyframes maison {
   from {
-    background-position: 0;
+    background-position: 0 0;
   }
   to {
-    background-position: -32768px;
+    background-position: -32768px 0;
   }
 }
 @media screen and (min-width: 768px) {

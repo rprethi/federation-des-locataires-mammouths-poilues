@@ -10,33 +10,31 @@
 
 .erreur {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 50px;
-
-}
-
-.erreur__img {
-  width: 100%;
-
-  & .anim {
+  align-items: start;
+  & .erreur__anim {
+    justify-self: center;
     height: 329px;
     width: 329px;
-    background-position: 0;
     animation-name: maison;
-    animation-duration: 5s;
+    animation-duration: 3.4s;
     animation-iteration-count: infinite;
-    animation-play-state: paused;
-    animation-timing-function:steps(100, end)
+    animation-play-state: running;
+    animation-timing-function: steps(96, end);
   }
 }
+
+
 //32768px
 
 @keyframes maison {
-  from{
-    background-position: 0;
+  from {
+    background-position: 0 0;
   }
-  to{
-    background-position:-32768px;
+
+  to {
+    background-position: -32768px 0;
   }
 }
 
