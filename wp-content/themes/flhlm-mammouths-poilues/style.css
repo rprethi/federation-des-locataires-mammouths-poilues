@@ -281,7 +281,11 @@ input, textarea {
 
 header {
   width: 100vw;
-  height: 160px;
+  height: 175px;
+}
+
+.header-hero {
+  height: 0px;
 }
 
 nav {
