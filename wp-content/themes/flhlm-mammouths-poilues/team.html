@@ -347,7 +347,6 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title">Robert Pilon</h5>
                     <button
                       type="button"
                       class="btn-close"
@@ -372,7 +371,10 @@
               </div>
             </div>
             <div class="swiper-slide swiper-slide-equipe">
-              <div class="equipe-membres-box">
+              <div
+                class="equipe-membres-box"
+                onclick="openModal('fewouhewouf')"
+              >
                 <div class="content-membre">
                   <div class="details">
                     <div class="ImgBx">
@@ -441,6 +443,33 @@
                         />
                       </svg>
                     </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      onclick="closeModal()"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-x"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p id="modal-description"></p>
                   </div>
                 </div>
               </div>
@@ -651,7 +680,7 @@
       <div class="footer__section footer__membre">
         <h4>Membre</h4>
         <a
-          class="btn-filled  "
+          class="btn-filled"
           target="_blank"
           href="https://flhlmq.com/fr/publication/adhesion-et-abonnement"
           >Devenir membre</a

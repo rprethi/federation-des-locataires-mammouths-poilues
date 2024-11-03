@@ -3,7 +3,9 @@
 @use "./mixins/text";
 @use "./typographie";
 
-
+body {
+  overflow-x: hidden;
+}
 
 #accueil {
   width: 100%;
@@ -33,9 +35,9 @@
 }
 
 @media screen and (min-width: formatecran.$version-tablette) {
-.section-center {
-margin: 0 auto;
-max-width: 1500px;
-padding: 20px;
-}
+  .section-center {
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 20px;
+  }
 }

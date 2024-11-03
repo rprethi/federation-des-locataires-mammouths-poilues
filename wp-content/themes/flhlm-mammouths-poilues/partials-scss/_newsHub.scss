@@ -18,3 +18,8 @@ label {
     margin-left: 10px;
     margin-bottom: 20px;
   }
+
+  #loadMoreBtn {
+    display: block !important; /* Forcer l'affichage du bouton */
+    margin-top: 20px;
+}

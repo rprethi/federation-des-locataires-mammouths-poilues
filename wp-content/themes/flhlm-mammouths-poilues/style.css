@@ -646,6 +646,10 @@ Version: 1.0
     margin: 0;
   }
 }
+body {
+  overflow-x: hidden;
+}
+
 #accueil {
   width: 100%;
   position: relative;
@@ -1636,6 +1640,11 @@ label {
   margin-bottom: 20px;
 }
 
+#loadMoreBtn {
+  display: block !important; /* Forcer l'affichage du bouton */
+  margin-top: 20px;
+}
+
 /*
 Theme Name: FLHLMQ
 Author: Delphine, Kristy, Prethiah
@@ -1643,97 +1652,6 @@ Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilu
 Description: Thème pour FLHLMQ.
 Version: 1.0
 */
-.liste-equipe {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.swiper-container-equipe {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide-equipe {
-  background-position: center;
-  background-size: cover;
-  width: 350px;
-  background-color: #88b07e;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
-  filter: blur(2px);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide-active {
-  filter: blur(0px);
-  background-color: #f7f7ff;
-}
-
-.equipe-membres-box {
-  position: relative;
-  width: 100%;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.equipe-membres-box .details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.equipe-membres-box .details .ImgBx {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-}
-
-.equipe-membres-box .details .ImgBx img {
-  width: 100%; /* Ensures the image takes up the full width of the container */
-  height: auto; /* Maintains the aspect ratio of the image */
-  border-radius: 50%;
-}
-
-.content-membre p {
-  text-align: center;
-  font-size: 16px;
-}
-
-.membres-socials {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-}
-
-.membres-socials a svg {
-  width: 25px;
-  height: 25px;
-  fill: #273922;
-  cursor: pointer;
-}
-
-.membres-socials svg:hover {
-  fill: #88b07e;
-}
-
-.liste-equipe h5 {
-  text-align: center;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -1762,12 +1680,6 @@ Version: 1.0
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.modal-title {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
 .btn-close {
   border: none;
   background: transparent;
@@ -1780,6 +1692,270 @@ Version: 1.0
   padding: 1rem;
 }
 
+.liste-equipe {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-container-equipe {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide-equipe {
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  background-color: #88b07e;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(2px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide-equipe.swiper-slide-active {
+  filter: blur(0px);
+  background-color: #f7f7ff;
+}
+
+.equipe-membres-box {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipe-membres-box .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipe-membres-box .details .ImgBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.equipe-membres-box .details .ImgBx img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.content-membre p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.membres-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.membres-socials a svg {
+  width: 15px;
+  height: 15px;
+  fill: #273922;
+  cursor: pointer;
+}
+
+.membres-socials svg:hover {
+  fill: #88b07e;
+}
+
+.liste-equipe h5 {
+  text-align: center;
+}
+
+.details h5 {
+  color: #273922;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .liste-equipe {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .swiper-container-equipe {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide-equipe {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    background-color: #88b07e;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    filter: blur(2px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide-equipe.swiper-slide-active {
+    filter: blur(0px);
+    background-color: #f7f7ff;
+  }
+  .equipe-membres-box {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details .ImgBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+  }
+  .equipe-membres-box .details .ImgBx img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  .content-membre p {
+    text-align: center;
+    font-size: 16px;
+  }
+  .membres-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  .membres-socials a svg {
+    width: 20px;
+    height: 20px;
+    fill: #273922;
+    cursor: pointer;
+  }
+  .membres-socials svg:hover {
+    fill: #88b07e;
+  }
+  .liste-equipe h5 {
+    text-align: center;
+  }
+  .details h5 {
+    color: #273922;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .liste-equipe {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .swiper-container-equipe {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide-equipe {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    background-color: #88b07e;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    filter: blur(2px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide-equipe.swiper-slide-active {
+    filter: blur(0px);
+    background-color: #f7f7ff;
+  }
+  .equipe-membres-box {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details .ImgBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .equipe-membres-box .details .ImgBx img {
+    width: 100%; /* Ensures the image takes up the full width of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 50%;
+  }
+  .content-membre p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .membres-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  .membres-socials a svg {
+    width: 25px;
+    height: 25px;
+    fill: #273922;
+    cursor: pointer;
+  }
+  .membres-socials svg:hover {
+    fill: #88b07e;
+  }
+  .liste-equipe h5 {
+    text-align: center;
+  }
+  .details h5 {
+    color: #273922;
+    font-size: 24px;
+  }
+}
 /*
 Theme Name: FLHLMQ
 Author: Delphine, Kristy, Prethiah
