@@ -26,7 +26,8 @@
 
 .slider {
   position: absolute;
-  inset: 80px 30px 80px 30px;
+  width: 90vw;
+  height: 100vh;
 }
 
 .slider .slides {
@@ -55,31 +56,31 @@
 }
 
 .slider .slides:nth-child(3) {
-  left: calc(50% + 250px);
+  left: calc(50% + 300px);
   background-size: cover;
 }
 
 .slider .slides:nth-child(4) {
-  left: calc(50% + 500px);
+  left: calc(50% + 600px);
   background-size: cover;
 }
 
 .slider .slides:nth-child(5) {
-  left: calc(50% + 750px);
+  left: calc(50% + 900px);
   background-size: cover;
 }
 
 .buttons-heros {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 
 .buttons-heros span {
-  width: 50px;
-  height: 50px;
-  background: couleurs.$vertAlgue;
+  width: 80px;
+  height: 80px;
+  background: couleurs.$vertAmande;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,8 +91,8 @@
 .buttons-heros .prev::before,
 .buttons-heros .next::before {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border-top: 4px solid couleurs.$argile;
   border-left: 4px solid couleurs.$argile;
   transform: rotate(315deg) translate(2px, 2px);
@@ -106,45 +107,81 @@
 }
 
 .section-about .texte {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .section-about {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-
 @media (max-width: 768px) {
+  .container-hero {
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 0 !important;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero.about-hero {
+    height: 80vh;
+  }
   .slider {
     position: absolute;
-    inset: 200px 30px 200px 30px;
+    width: 100vh;
+    height: 80vh;
     border-radius: 10px;
   }
 
   .slider .slides {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     top: initial;
-    bottom: -170px;
+    bottom: 5vh;
+    z-index: 132;
   }
   .slider .slides:nth-child(1),
-.slider .slides:nth-child(2){
-  top: initial;
-  bottom: 0px;
+  .slider .slides:nth-child(2) {
+    top: initial;
+    bottom: 0px;
+  }
+
+  .slider .slides:nth-child(3) {
+    left: 150px;
+  }
+
+  .slider .slides:nth-child(4) {
+    left: 350px;
+  }
+
+  .slider .slides:nth-child(5) {
+    left: 550px;
+  }
+  .buttons-heros {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 50px;
+    z-index: 500;
+  }
+  .buttons-heros {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .buttons-heros span {
+    width: 60px;
+    height: 60px;
+  }
+
+  .buttons-heros .prev::before,
+  .buttons-heros .next::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+  }
 }
 
-.slider .slides:nth-child(3){
-  left: 0;
-}
-
-.slider .slides:nth-child(4){
-  left: 150px;
-}
-
-.slider .slides:nth-child(5){
-  left: 300px;
-}
-}
-
-.telechargement-pdf {
-margin-top: 50px;
-}
