@@ -1509,7 +1509,6 @@ Version: 1.0
   width: 90vw;
   height: 100vh;
 }
-
 .slider .slides {
   position: absolute;
   top: 50%;
@@ -1523,10 +1522,7 @@ Version: 1.0
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
-
-.slider .slides:nth-child(1),
-.slider .slides:nth-child(2) {
-  position: absolute;
+.slider .slides:nth-child(1), .slider .slides:nth-child(2) {
   top: 0;
   left: 0;
   width: 100%;
@@ -1535,17 +1531,14 @@ Version: 1.0
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
   background-size: cover;
 }
-
 .slider .slides:nth-child(3) {
   left: calc(50% + 300px);
   background-size: cover;
 }
-
 .slider .slides:nth-child(4) {
   left: calc(50% + 600px);
   background-size: cover;
 }
-
 .slider .slides:nth-child(5) {
   left: calc(50% + 900px);
   background-size: cover;
@@ -1557,7 +1550,6 @@ Version: 1.0
   display: flex;
   gap: 50px;
 }
-
 .buttons-heros span {
   width: 80px;
   height: 80px;
@@ -1568,31 +1560,29 @@ Version: 1.0
   border-radius: 50%;
   cursor: pointer;
 }
-
-.buttons-heros .prev::before,
-.buttons-heros .next::before {
+.buttons-heros span:active {
+  opacity: 0.7;
+}
+.buttons-heros span.prev::before, .buttons-heros span.next::before {
   content: "";
   width: 20px;
   height: 20px;
   border-top: 4px solid #f7f7ff;
   border-left: 4px solid #f7f7ff;
+  position: absolute;
+}
+.buttons-heros span.prev::before {
   transform: rotate(315deg) translate(2px, 2px);
 }
-
-.buttons-heros .next::before {
-  transform: rotate(135deg) translate(2px, 2px); /* Rotation pour le bouton next */
-}
-
-.buttons-heros span:active {
-  opacity: 0.7;
-}
-
-.section-about .texte {
-  margin-bottom: 50px;
+.buttons-heros span.next::before {
+  transform: rotate(135deg) translate(2px, 2px);
 }
 
 .section-about {
   margin-top: 20px;
+}
+.section-about .texte {
+  margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {
@@ -1622,8 +1612,7 @@ Version: 1.0
     bottom: 5vh;
     z-index: 132;
   }
-  .slider .slides:nth-child(1),
-  .slider .slides:nth-child(2) {
+  .slider .slides:nth-child(1), .slider .slides:nth-child(2) {
     top: initial;
     bottom: 0px;
   }
@@ -1638,16 +1627,10 @@ Version: 1.0
   }
   .buttons-heros {
     position: absolute;
-    bottom: 20px;
-    display: flex;
-    gap: 50px;
-    z-index: 500;
-  }
-  .buttons-heros {
-    position: absolute;
     bottom: 10px;
     display: flex;
     gap: 20px;
+    z-index: 500;
   }
   .buttons-heros span {
     width: 60px;
@@ -1686,7 +1669,7 @@ label {
 }
 
 .first-article {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Inner shadow with equal dimensions */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 30px;
   padding-top: 0;
@@ -1709,8 +1692,7 @@ Version: 1.0
   height: 100%;
   border: none;
 }
-
-.modal-content {
+.modal .modal-content {
   background-color: #f7f7ff;
   border-radius: 10px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -1718,24 +1700,21 @@ Version: 1.0
   width: 100%;
   text-align: justify;
 }
-
-.modal-header {
+.modal .modal-content .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
-
-.btn-close {
+.modal .modal-content .modal-header .btn-close {
   border: none;
   background: transparent;
   cursor: pointer;
   font-size: 1.5rem;
   line-height: 1;
 }
-
-.modal-body {
+.modal .modal-content .modal-body {
   padding: 1rem;
 }
 
@@ -1746,6 +1725,9 @@ Version: 1.0
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+.liste-equipe h5 {
+  text-align: center;
 }
 
 .swiper-container-equipe {
@@ -1766,9 +1748,8 @@ Version: 1.0
   justify-content: center;
   align-items: center;
 }
-
 .swiper-slide-equipe.swiper-slide-active {
-  filter: blur(0px);
+  filter: blur(0);
   background-color: #f7f7ff;
 }
 
@@ -1780,14 +1761,12 @@ Version: 1.0
   justify-content: center;
   align-items: center;
 }
-
 .equipe-membres-box .details {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .equipe-membres-box .details .ImgBx {
   display: flex;
   justify-content: center;
@@ -1796,7 +1775,6 @@ Version: 1.0
   height: 100px;
   overflow: hidden;
 }
-
 .equipe-membres-box .details .ImgBx img {
   width: 100%;
   height: auto;
@@ -1814,20 +1792,14 @@ Version: 1.0
   gap: 10px;
   align-items: center;
 }
-
 .membres-socials a svg {
   width: 15px;
   height: 15px;
   fill: #273922;
   cursor: pointer;
 }
-
-.membres-socials svg:hover {
+.membres-socials a svg:hover {
   fill: #88b07e;
-}
-
-.liste-equipe h5 {
-  text-align: center;
 }
 
 .details h5 {
@@ -1843,6 +1815,9 @@ Version: 1.0
     justify-content: center;
     align-items: center;
     overflow: hidden;
+  }
+  .liste-equipe h5 {
+    text-align: center;
   }
   .swiper-container-equipe {
     width: 100%;
@@ -1862,7 +1837,7 @@ Version: 1.0
     align-items: center;
   }
   .swiper-slide-equipe.swiper-slide-active {
-    filter: blur(0px);
+    filter: blur(0);
     background-color: #f7f7ff;
   }
   .equipe-membres-box {
@@ -1908,11 +1883,8 @@ Version: 1.0
     fill: #273922;
     cursor: pointer;
   }
-  .membres-socials svg:hover {
+  .membres-socials a svg:hover {
     fill: #88b07e;
-  }
-  .liste-equipe h5 {
-    text-align: center;
   }
   .details h5 {
     color: #273922;
@@ -1927,6 +1899,9 @@ Version: 1.0
     justify-content: center;
     align-items: center;
     overflow: hidden;
+  }
+  .liste-equipe h5 {
+    text-align: center;
   }
   .swiper-container-equipe {
     width: 100%;
@@ -1946,7 +1921,7 @@ Version: 1.0
     align-items: center;
   }
   .swiper-slide-equipe.swiper-slide-active {
-    filter: blur(0px);
+    filter: blur(0);
     background-color: #f7f7ff;
   }
   .equipe-membres-box {
@@ -1972,9 +1947,13 @@ Version: 1.0
     overflow: hidden;
   }
   .equipe-membres-box .details .ImgBx img {
-    width: 100%; /* Ensures the image takes up the full width of the container */
-    height: auto; /* Maintains the aspect ratio of the image */
+    width: 100%;
+    height: auto;
     border-radius: 50%;
+  }
+  .equipe-membres-box .details h5 {
+    color: #273922;
+    font-size: 24px;
   }
   .content-membre p {
     text-align: center;
@@ -1992,15 +1971,8 @@ Version: 1.0
     fill: #273922;
     cursor: pointer;
   }
-  .membres-socials svg:hover {
+  .membres-socials a svg:hover {
     fill: #88b07e;
-  }
-  .liste-equipe h5 {
-    text-align: center;
-  }
-  .details h5 {
-    color: #273922;
-    font-size: 24px;
   }
 }
 /*

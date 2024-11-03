@@ -16,35 +16,35 @@
   width: 100%;
   height: 100%;
   border: none;
-}
 
-.modal-content {
-  background-color: couleurs.$argile;
-  border-radius: 10px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  width: 100%;
-  text-align: justify;
-}
+  .modal-content {
+    background-color: couleurs.$argile;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    text-align: justify;
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 
-.btn-close {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 1;
-}
+      .btn-close {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    }
 
-.modal-body {
-  padding: 1rem;
+    .modal-body {
+      padding: 1rem;
+    }
+  }
 }
 
 .liste-equipe {
@@ -54,6 +54,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  h5 {
+    text-align: center;
+  }
 }
 
 .swiper-container-equipe {
@@ -73,11 +77,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.swiper-slide-equipe.swiper-slide-active {
-  filter: blur(0px);
-  background-color: couleurs.$argile;
+  &.swiper-slide-active {
+    filter: blur(0);
+    background-color: couleurs.$argile;
+  }
 }
 
 .equipe-membres-box {
@@ -87,28 +91,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.equipe-membres-box .details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.equipe-membres-box .details .ImgBx {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-}
+    .ImgBx {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
 
-.equipe-membres-box .details .ImgBx img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
 .content-membre p {
@@ -121,27 +125,26 @@
   justify-content: center;
   gap: 10px;
   align-items: center;
-}
 
-.membres-socials a svg {
-  width: 15px;
-  height: 15px;
-  fill: couleurs.$vertAlgue;
-  cursor: pointer;
-}
+  a {
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: couleurs.$vertAlgue;
+      cursor: pointer;
 
-.membres-socials svg:hover {
-  fill: couleurs.$vertAmande;
-}
-
-.liste-equipe h5 {
-  text-align: center;
+      &:hover {
+        fill: couleurs.$vertAmande;
+      }
+    }
+  }
 }
 
 .details h5 {
   color: couleurs.$vertAlgue;
   font-size: 18px;
 }
+
 @media (min-width: 768px) {
   .liste-equipe {
     position: relative;
@@ -150,6 +153,10 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    h5 {
+      text-align: center;
+    }
   }
 
   .swiper-container-equipe {
@@ -169,11 +176,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .swiper-slide-equipe.swiper-slide-active {
-    filter: blur(0px);
-    background-color: couleurs.$argile;
+    &.swiper-slide-active {
+      filter: blur(0);
+      background-color: couleurs.$argile;
+    }
   }
 
   .equipe-membres-box {
@@ -183,28 +190,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .equipe-membres-box .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  .equipe-membres-box .details .ImgBx {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-  }
+      .ImgBx {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
 
-  .equipe-membres-box .details .ImgBx img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 
   .content-membre p {
@@ -217,21 +224,19 @@
     justify-content: center;
     gap: 10px;
     align-items: center;
-  }
 
-  .membres-socials a svg {
-    width: 20px;
-    height: 20px;
-    fill: couleurs.$vertAlgue;
-    cursor: pointer;
-  }
+    a {
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: couleurs.$vertAlgue;
+        cursor: pointer;
 
-  .membres-socials svg:hover {
-    fill: couleurs.$vertAmande;
-  }
-
-  .liste-equipe h5 {
-    text-align: center;
+        &:hover {
+          fill: couleurs.$vertAmande;
+        }
+      }
+    }
   }
 
   .details h5 {
@@ -239,6 +244,7 @@
     font-size: 20px;
   }
 }
+
 
 @media (min-width: 1440px) {
   .liste-equipe {
@@ -248,6 +254,10 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    h5 {
+      text-align: center;
+    }
   }
 
   .swiper-container-equipe {
@@ -267,11 +277,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .swiper-slide-equipe.swiper-slide-active {
-    filter: blur(0px);
-    background-color: couleurs.$argile;
+    &.swiper-slide-active {
+      filter: blur(0);
+      background-color: couleurs.$argile;
+    }
   }
 
   .equipe-membres-box {
@@ -281,28 +291,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .equipe-membres-box .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  .equipe-membres-box .details .ImgBx {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-  }
+      .ImgBx {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
 
-  .equipe-membres-box .details .ImgBx img {
-    width: 100%; /* Ensures the image takes up the full width of the container */
-    height: auto; /* Maintains the aspect ratio of the image */
-    border-radius: 50%;
+        img {
+          width: 100%; 
+          height: auto; 
+          border-radius: 50%;
+        }
+      }
+
+      h5 {
+        color: couleurs.$vertAlgue;
+        font-size: 24px;
+      }
+    }
   }
 
   .content-membre p {
@@ -315,25 +330,18 @@
     justify-content: center;
     gap: 10px;
     align-items: center;
-  }
 
-  .membres-socials a svg {
-    width: 25px;
-    height: 25px;
-    fill: couleurs.$vertAlgue;
-    cursor: pointer;
-  }
+    a {
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: couleurs.$vertAlgue;
+        cursor: pointer;
 
-  .membres-socials svg:hover {
-    fill: couleurs.$vertAmande;
-  }
-
-  .liste-equipe h5 {
-    text-align: center;
-  }
-
-  .details h5 {
-    color: couleurs.$vertAlgue;
-    font-size: 24px;
+        &:hover {
+          fill: couleurs.$vertAmande;
+        }
+      }
+    }
   }
 }
