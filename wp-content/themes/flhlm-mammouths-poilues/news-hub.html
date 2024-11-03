@@ -125,7 +125,7 @@
                  
                 </li> -->
                   <li class="nav-item">
-                    <a href="services-hub.html" class="nav-link">Services</a> 
+                    <a href="services-hub.html" class="nav-link">Services</a>
                   </li>
 
                   <li class="nav-item">
@@ -138,9 +138,7 @@
                     <a href="#" class="nav-link">FAQ</a>
                   </li>
                   <li class="nav-item">
-                    <a href="contact-us.html" class="nav-link"
-                      >Nous joindre</a
-                    >
+                    <a href="contact-us.html" class="nav-link">Nous joindre</a>
                   </li>
                 </ul>
               </div>
@@ -244,11 +242,19 @@
           <div class="actualite__title__lien">
             <h2>Actualités</h2>
           </div>
-          <label for="sortOrder">Trier les actualités :</label>
-          <select id="sortOrder" onchange="sortArticles()">
-            <option value="recent">Des plus récentes aux plus anciennes</option>
-            <option value="oldest">Des plus anciennes aux plus récentes</option>
-          </select>
+          <div class="container-flitre">
+            <div class="filtre">
+              <label for="sortOrder">Trier les actualités :</label>
+              <select id="sortOrder" onchange="sortArticles()">
+                <option value="recent">
+                  Des plus récentes aux plus anciennes
+                </option>
+                <option value="oldest">
+                  Des plus anciennes aux plus récentes
+                </option>
+              </select>
+            </div>
+          </div>
           <br />
           <br />
           <ul id="actualitesList">
@@ -563,7 +569,9 @@
             </li>
           </ul>
           <br />
-          <a class="plus-info" id="loadMoreBtn">Voir Plus</a>
+          <div class="container-flitre">
+            <a class="plus-info" id="loadMoreBtn">Voir Plus</a>
+          </div>
         </div>
       </section>
     </main>

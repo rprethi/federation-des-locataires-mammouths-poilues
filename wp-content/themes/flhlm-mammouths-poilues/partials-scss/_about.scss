@@ -122,18 +122,12 @@
   .container-hero {
     position: absolute;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     margin-top: 0 !important;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .hero {
-    &.about-hero {
-      height: 80vh;
-    }
   }
 
   .slider {
@@ -171,7 +165,7 @@
 
   .buttons-heros {
     position: absolute;
-    bottom: 10px;
+    bottom: 80px;
     display: flex;
     gap: 20px;
     z-index: 500;
