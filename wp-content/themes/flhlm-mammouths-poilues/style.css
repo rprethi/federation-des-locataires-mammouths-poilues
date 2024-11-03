@@ -1665,19 +1665,27 @@ Version: 1.0
 */
 label {
   font-size: 1rem;
-  color: #333;
+  color: #0c0909;
 }
 
 #sortOrder {
   padding: 8px;
   font-size: 1rem;
-  margin-left: 10px;
   margin-bottom: 20px;
+  border-radius: 20px;
+  border: solid 2px;
 }
 
 #loadMoreBtn {
-  display: block !important; /* Forcer l'affichage du bouton */
+  display: block !important;
   margin-top: 20px;
+}
+
+.first-article {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Inner shadow with equal dimensions */
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 0;
 }
 
 /*

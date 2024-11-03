@@ -14,7 +14,6 @@ var swiper = new Swiper(".mySwiper2", {
   loop: true,
 });
 
-
 function openModal(description) {
   document.getElementById("modal-description").textContent = description;
   document.getElementById("modal").style.display = "block";
@@ -48,9 +47,10 @@ setInterval(goToNextSlide, 8000);
 next.addEventListener("click", goToNextSlide);
 prev.addEventListener("click", goToPrevSlide);
 
-let currentIndex = 6; // Number of articles to show at a time
-let filteredArticles = []; // This will hold the filtered and sorted articles
+let currentIndex = 6; // Nombre d'articles à afficher à la fois
+let filteredArticles = []; // Cela contiendra les articles filtrés et triés
 
+// Fonction pour trier et afficher les articles
 function sortArticles() {
   const sortOrder = document.getElementById("sortOrder").value;
   const actualitesList = document.getElementById("actualitesList");
@@ -71,58 +71,91 @@ function sortArticles() {
     décembre: "December",
   };
 
-  // Filter and sort articles based on the selected sort order
+  // Trier les articles basés sur l'ordre de tri sélectionné
   filteredArticles = articleElements.sort((a, b) => {
-    const dateA = a.querySelector(".actualite__item__date").textContent.trim().split(/\s+/);
-    const dateB = b.querySelector(".actualite__item__date").textContent.trim().split(/\s+/);
+    const dateA = a
+      .querySelector(".actualite__item__date")
+      .textContent.trim()
+      .split(/\s+/);
+    const dateB = b
+      .querySelector(".actualite__item__date")
+      .textContent.trim()
+      .split(/\s+/);
 
-    const formattedDateA = new Date(`${months[dateA[1]]} ${dateA[0]}, ${new Date().getFullYear()}`);
-    const formattedDateB = new Date(`${months[dateB[1]]} ${dateB[0]}, ${new Date().getFullYear()}`);
+    const formattedDateA = new Date(
+      `${months[dateA[1]]} ${dateA[0]}, ${new Date().getFullYear()}`
+    );
+    const formattedDateB = new Date(
+      `${months[dateB[1]]} ${dateB[0]}, ${new Date().getFullYear()}`
+    );
 
-    return sortOrder === "recent" ? formattedDateB - formattedDateA : formattedDateA - formattedDateB;
+    return sortOrder === "recent"
+      ? formattedDateB - formattedDateA
+      : formattedDateA - formattedDateB;
   });
 
-  currentIndex = 6; // Reset index to show the first 6 articles
-  displayArticles(); // Display the first set of articles
-  toggleLoadMoreButton(); // Show/hide the button based on the current state
+  currentIndex = 6; // Réinitialiser l'index pour afficher les 6 premiers articles
+  displayArticles(); // Afficher le premier ensemble d'articles
+  toggleLoadMoreButton(); // Afficher/cacher le bouton selon l'état actuel
 }
 
+// Fonction pour afficher les articles
 function displayArticles() {
   const actualitesList = document.getElementById("actualitesList");
-  actualitesList.innerHTML = ''; // Clear the list before re-adding articles
+  actualitesList.innerHTML = ""; // Vider la liste avant de réajouter les articles
 
-  // Check if filteredArticles is empty
-  if (filteredArticles.length === 0) {
-    console.warn("No articles to display!");
-    return; // Exit if there are no articles
-  }
-
-  // Show only the first `currentIndex` articles
-  filteredArticles.slice(0, currentIndex).forEach(article => {
-    actualitesList.appendChild(article);
-  });
+  // Afficher uniquement les premiers `currentIndex` articles
+  filteredArticles
+    .slice(0, currentIndex)
+    .forEach((article) => actualitesList.appendChild(article));
 }
 
+// Fonction pour basculer la visibilité du bouton "Voir plus"
 function toggleLoadMoreButton() {
   const loadMoreBtn = document.getElementById("loadMoreBtn");
   if (currentIndex >= filteredArticles.length) {
-    loadMoreBtn.style.display = 'none'; // Hide if no more articles
+    loadMoreBtn.style.display = "none"; // Masquer le bouton s'il n'y a plus d'articles
   } else {
-    loadMoreBtn.style.display = 'block'; // Show if more articles are available
+    loadMoreBtn.style.display = "block"; // Afficher le bouton s'il reste des articles
   }
 }
 
+// Fonction pour charger plus d'articles
 function loadMoreArticles() {
-  currentIndex += 6; // Increase the index to load 6 more articles
-  displayArticles(); // Update the displayed articles
-  toggleLoadMoreButton(); // Update button visibility
+  currentIndex += 6; // Augmenter l'index pour charger 6 articles supplémentaires
+  displayArticles(); // Mettre à jour les articles affichés
+  toggleLoadMoreButton(); // Mettre à jour la visibilité du bouton
+
+  // Masquer le bouton après avoir cliqué si tous les articles sont chargés
+  if (currentIndex >= filteredArticles.length) {
+    document.getElementById("loadMoreBtn").style.display = "none"; // Masquer le bouton après avoir chargé tous les articles
+  }
 }
 
-// Event listener for the "Voir plus" button
-document.getElementById("loadMoreBtn").addEventListener("click", loadMoreArticles);
+// Écouter l'événement pour le bouton "Voir plus"
+document.getElementById("loadMoreBtn").addEventListener("click", () => {
+  loadMoreArticles(); // Charger plus d'articles lorsque le bouton est cliqué
+});
 
-// Call the sorting function when the page loads or the filter changes
-document.getElementById("sortOrder").addEventListener("change", sortArticles);
-
-// Initial call to sort and display articles
+// Appeler la fonction de tri lors du chargement de la page
 sortArticles();
+function displayArticles() {
+  const actualitesList = document.getElementById("actualitesList");
+  actualitesList.innerHTML = ""; // Vider la liste avant de réajouter les articles
+
+  // Afficher uniquement les premiers `currentIndex` articles
+  filteredArticles.slice(0, currentIndex).forEach((article, index) => {
+    actualitesList.appendChild(article);
+  });
+
+  // Retirer la classe spéciale de tous les articles
+  filteredArticles.forEach((article) =>
+    article.classList.remove("first-article")
+  );
+
+  // Appliquer la classe spéciale au premier article si disponible
+  if (filteredArticles.length > 0) {
+    const firstArticle = filteredArticles[0];
+    firstArticle.classList.add("first-article"); // Ajouter la classe au premier article
+  }
+}
