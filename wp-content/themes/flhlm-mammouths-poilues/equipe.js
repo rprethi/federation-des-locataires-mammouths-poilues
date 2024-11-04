@@ -17,13 +17,18 @@ var swiper = new Swiper(".mySwiper2", {
 function openModal(description) {
   document.getElementById("modal-description").textContent = description;
   document.getElementById("modal").style.display = "block";
-  document.body.style.overflow = 'hidden'; 
 }
 
 function closeModal() {
   document.getElementById("modal").style.display = "none";
-  document.body.style.overflow = ''; 
 }
+
+window.onclick = function (event) {
+  var modal = document.getElementById("modal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
 let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
