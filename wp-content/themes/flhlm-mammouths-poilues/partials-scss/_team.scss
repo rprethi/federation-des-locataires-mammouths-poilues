@@ -95,6 +95,11 @@
     filter: blur(0);
     background-color: couleurs.$argile;
   }
+
+  &.swiper-slide-active:hover {
+    filter: blur(0);
+    background-color: couleurs.$argileNav;
+  }
 }
 
 .equipe-membres-box {
