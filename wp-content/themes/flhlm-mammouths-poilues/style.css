@@ -2260,7 +2260,7 @@ Version: 1.0
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-  align-items: start;
+  align-items: center;
 }
 .erreur .erreur__anim {
   justify-self: center;
