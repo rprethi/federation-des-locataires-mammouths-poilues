@@ -9,6 +9,15 @@
 
 // desktop first
 
+.hero__img {
+  object-position: 50% 0%;
+}
+.hero__nouvelle {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
 
 
 .section-nouvelle {
@@ -31,6 +40,7 @@
       couleurs.$argile 70%
     );
   }
+
   .plus-info {
     display: none;
     font-size: 20px;
@@ -85,10 +95,10 @@
         }
       }
 
-      .swiper-slide{
+      .swiper-slide {
         width: fit-content !important;
       }
-      
+
       & .cartes {
         width: 100%;
         height: auto;
