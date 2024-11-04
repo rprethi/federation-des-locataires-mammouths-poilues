@@ -2,9 +2,23 @@
 @use "typographie";
 @use "./mixins/couleurs";
 @use "./mixins/fonts";
+@use "./mixins/text";
+@use "./mixins/lien";
 @use "./mixins/formatecran";
+@use "sass:color";
 
 #accueil {
+  .section-services {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      @include lien.lien;
+      align-self: end;
+      margin-bottom: 3%;
+    }
+  }
+
   .services {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(200px, auto));
@@ -12,6 +26,8 @@
     justify-items: center;
     color: white;
     width: 100%;
+
+
 
     &__item {
       width: 100%;

@@ -364,6 +364,31 @@ nav {
 .navbar .navbar-brand {
   width: 6em;
 }
+.navbar .nav-bottom {
+  max-width: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-bottom a.btn-filled {
+  grid-area: 2/1/3/4;
+  justify-self: center;
+  height: 100%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-connection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+}
 .navbar .bi-person-circle {
   margin-bottom: 2px;
 }
@@ -444,6 +469,26 @@ input[type=search]::-webkit-search-cancel-button {
   background-color: #f7f7ff;
 }
 
+@media screen and (min-width: 768px) {
+  .navbar .nav-bottom {
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .nav-bottom a.btn-filled {
+    grid-area: 1/4/2/5;
+    justify-self: center;
+    height: 100%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 /*
 Theme Name: FLHLMQ
 Author: Delphine, Kristy, Prethiah
@@ -779,6 +824,23 @@ Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilu
 Description: Thème pour FLHLMQ.
 Version: 1.0
 */
+#accueil .section-services {
+  display: flex;
+  flex-direction: column;
+}
+#accueil .section-services a {
+  font-family: "Nunito Italic";
+  color: #88b07e;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  align-self: end;
+  margin-bottom: 3%;
+}
+#accueil .section-services a:hover {
+  text-decoration-color: #88b07e;
+  color: #c4b091;
+}
 #accueil .services {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, auto));
@@ -857,6 +919,7 @@ Version: 1.0
 }
 .actualite a:hover {
   text-decoration-color: #88b07e;
+  color: #c4b091;
 }
 .actualite__title__lien {
   display: flex;
@@ -2045,6 +2108,7 @@ Version: 1.0
 }
 .section-nouvelle a:hover {
   text-decoration-color: #88b07e;
+  color: #c4b091;
 }
 .section-nouvelle a :hover {
   color: #88b07e;
@@ -2212,6 +2276,7 @@ Version: 1.0
 }
 .section-service a:hover {
   text-decoration-color: #88b07e;
+  color: #c4b091;
 }
 .section-service a :hover {
   color: #88b07e;

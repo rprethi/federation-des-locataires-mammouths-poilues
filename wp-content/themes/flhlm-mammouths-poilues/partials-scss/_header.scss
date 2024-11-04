@@ -3,6 +3,7 @@
 @use "buttons";
 @use "./mixins/lien";
 @use "./mixins/couleurs";
+@use "./mixins/formatecran";
 
 header {
   width: 100vw;
@@ -86,7 +87,6 @@ nav {
     margin: 0 5%;
     padding: 0;
   }
-
   background-color: couleurs.$argile;
   color: couleurs.$vertAlgue;
   padding: 10px;
@@ -97,6 +97,36 @@ nav {
 
   .navbar-brand {
     width: 6em;
+  }
+  
+  .nav-bottom {
+    max-width: 200px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+
+    a.btn-filled {
+      grid-area: 2 / 1 / 3 / 4;
+      justify-self: center;
+      height: 100%;
+        margin-bottom: 2%;
+        margin-left: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  }
+
+  .nav-connection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
   }
 
   .bi-person-circle {
@@ -187,3 +217,27 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 220px;
   background-color: couleurs.$argile;
 }
+
+
+@media screen and (min-width: formatecran.$version-tablette) { 
+  .navbar {
+    .nav-bottom {
+      max-width: 400px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      justify-content: center;
+      align-items: center;
+  
+      a.btn-filled {
+        grid-area: 1 / 4 / 2 / 5;
+        justify-self: center;
+        height: 100%;
+          margin-bottom: 2%;
+          margin-left: 2%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  }
+}}
