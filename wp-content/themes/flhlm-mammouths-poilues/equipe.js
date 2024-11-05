@@ -14,17 +14,32 @@ var swiper = new Swiper(".mySwiper2", {
   loop: true,
 });
 
+// Fonction pour ouvrir la modale
 function openModal(description) {
-  const name = description.split(':')[0]; // Extrait le nom de la description
-  document.getElementById("modal-name").textContent = name; // Affiche le nom dans la modale
-  document.getElementById("modal-description").textContent = description.substring(name.length + 1).trim(); // Affiche la description sans le nom
-  document.getElementById("modal").style.display = "block"; // Affiche la modale
-  document.body.style.overflow = 'hidden'; // Empêche le défilement de la page
+  // Vérifiez si le clic provient d'un swiper-slide actif
+  const activeSlide = document.querySelector(".swiper-slide-active"); // Sélectionne le slide actif
+
+  if (activeSlide) {
+    // Vérifiez si l'élément sur lequel on clique est un enfant du slide actif
+    const clickedElement = event.currentTarget; // L'élément sur lequel l'événement a été déclenché
+
+    // Assurez-vous que l'élément cliqué est l'active slide
+    if (activeSlide.contains(clickedElement)) {
+      const name = description.split(":")[0]; // Extrait le nom de la description
+      document.getElementById("modal-name").textContent = name; // Affiche le nom dans la modale
+      document.getElementById("modal-description").textContent = description
+        .substring(name.length + 1)
+        .trim(); // Affiche la description sans le nom
+      document.getElementById("modal").style.display = "block"; // Affiche la modale
+      document.body.style.overflow = "hidden"; // Empêche le défilement de la page
+    }
+  }
 }
 
+// Fonction pour fermer la modale
 function closeModal() {
   document.getElementById("modal").style.display = "none"; // Cache la modale
-  document.body.style.overflow = ''; // Réactive le défilement de la page
+  document.body.style.overflow = ""; // Réactive le défilement de la page
 }
 
 let next = document.querySelector(".next");

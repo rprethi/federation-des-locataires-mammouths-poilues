@@ -1838,6 +1838,7 @@ Version: 1.0
 .swiper-slide-equipe.swiper-slide-active:hover {
   filter: blur(0);
   background-color: #f5f5fa;
+  cursor: pointer;
 }
 
 .equipe-membres-box {
