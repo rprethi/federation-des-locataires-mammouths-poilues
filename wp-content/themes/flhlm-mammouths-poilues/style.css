@@ -1649,27 +1649,11 @@ Version: 1.0
 }
 
 @media (max-width: 768px) {
-  .container-hero {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    margin-top: 0 !important;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .slider {
-    position: absolute;
-    width: 100vh;
-    height: 80vh;
-    border-radius: 10px;
-  }
   .slider .slides {
     width: 150px;
     height: 150px;
     top: initial;
-    bottom: 5vh;
+    bottom: 15vh;
     z-index: 132;
   }
   .slider .slides:nth-child(1), .slider .slides:nth-child(2) {
@@ -1680,14 +1664,14 @@ Version: 1.0
     left: 150px;
   }
   .slider .slides:nth-child(4) {
-    left: 350px;
+    left: 320px;
   }
   .slider .slides:nth-child(5) {
-    left: 550px;
+    left: 490px;
   }
   .buttons-heros {
     position: absolute;
-    bottom: 100px;
+    bottom: 20px;
     display: flex;
     gap: 20px;
     z-index: 500;
