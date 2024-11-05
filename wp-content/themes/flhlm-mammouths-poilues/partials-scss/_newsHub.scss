@@ -7,51 +7,81 @@
 @use "./mixins/formatecran";
 @use "sass:color";
 
+/*-------------------------------------*/
+/* ----- LABEL STYLES ----- */
+/*-------------------------------------*/
 label {
-  font-size: 1rem;
-  color: couleurs.$encre;
+  /* Bloc Label */
+  font-size: 1rem; /* Taille de la police */
+  color: couleurs.$encre; /* Couleur du texte */
 }
 
+/*-------------------------------------*/
+/* ----- SORT ORDER STYLES ----- */
+/*-------------------------------------*/
 #sortOrder {
-  padding: 8px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  border: solid 2px couleurs.$vertAmande;
-  color: couleurs.$vertAmande;
-  appearance: none;
+  /* Bloc Sélecteur de Tri */
+  padding: 8px; /* Espacement interne */
+  font-size: 1rem; /* Taille de la police */
+  margin-bottom: 20px; /* Espacement inférieur */
+  border-radius: 20px; /* Coins arrondis */
+  border: solid 2px couleurs.$vertAmande; /* Bordure */
+  color: couleurs.$vertAmande; /* Couleur du texte */
+  appearance: none; /* Supprime le style par défaut */
 }
 
 #sortOrder:focus {
-  outline: none;
-  border-color: couleurs.$vertAmande;
+  /* État au focus du Sélecteur de Tri */
+  outline: none; /* Supprime le contour par défaut */
+  border-color: couleurs.$vertAmande; /* Change la couleur de la bordure */
 }
 
 #sortOrder:active {
-  border-color: couleurs.$vertAmande;
+  /* État actif du Sélecteur de Tri */
+  border-color: couleurs.$vertAmande; /* Change la couleur de la bordure */
 }
 
+/*-------------------------------------*/
+/* ----- LOAD MORE BUTTON STYLES ----- */
+/*-------------------------------------*/
 #loadMoreBtn {
-  display: block !important;
-  margin-top: 20px;
+  /* Bloc Bouton "Charger Plus" */
+  display: block !important; /* Affichage en bloc */
+  margin-top: 20px; /* Espacement supérieur */
 }
 
+/*-------------------------------------*/
+/* ----- FIRST ARTICLE STYLES ----- */
+/*-------------------------------------*/
 .first-article {
-  box-shadow: 0 0 5px rgb(108, 138, 100);
-  border-radius: 10px;
-  padding: 30px;
-  padding-top: 0;
+  /* Bloc Premier Article */
+  box-shadow: 0 0 5px rgb(108, 138, 100); /* Ombre portée */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 30px; /* Espacement interne */
+  padding-top: 0; /* Espacement supérieur nul */
 }
 
+/*-------------------------------------*/
+/* ----- FILTER CONTAINER STYLES ----- */
+/*-------------------------------------*/
 .container-flitre {
-  display: flex;
-  justify-content: flex-end;
+  /* Bloc Conteneur de Filtrage */
+  display: flex; /* Flexbox pour mise en page */
+  justify-content: flex-end; /* Aligne à droite */
 }
 
+/*-------------------------------------*/
+/* ----- ADDITIONAL INFO STYLES ----- */
+/*-------------------------------------*/
 .plus-info {
-  margin-bottom: 50px;
+  /* Bloc Informations Supplémentaires */
+  margin-bottom: 50px; /* Espacement inférieur */
 }
 
+/*-------------------------------------*/
+/* ----- NEWS SECTION STYLES ----- */
+/*-------------------------------------*/
 .section-actualite {
-  margin-top: 20px;
+  /* Bloc Section Actualités */
+  margin-top: 20px; /* Espacement supérieur */
 }

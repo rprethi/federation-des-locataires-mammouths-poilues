@@ -7,6 +7,12 @@
 @use "./mixins/formatecran";
 @use "sass:color";
 
+/*------------------------------------------------------------------*/
+
+/*----- VERSION MOBILE ---*/
+
+/*------------------------------------------------------------------*/
+
 .modal {
   display: none;
   position: fixed;
@@ -170,7 +176,13 @@
   margin-top: 20px;
 }
 
-@media (min-width: 768px) {
+/*------------------------------------------------------------------*/
+
+/*----- VERSION TABLETTE ---*/
+
+/*------------------------------------------------------------------*/
+
+@media (min-width: formatecran.$version-tablette) {
   .liste-equipe {
     position: relative;
     width: 100%;
@@ -270,7 +282,13 @@
   }
 }
 
-@media (min-width: 1440px) {
+/*------------------------------------------------------------------*/
+
+/*----- VERSION DESKTOP ---*/
+
+/*------------------------------------------------------------------*/
+
+@media (min-width: formatecran.$version-ordinateur) {
   .liste-equipe {
     position: relative;
     width: 100%;

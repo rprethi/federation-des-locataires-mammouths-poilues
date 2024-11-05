@@ -1694,55 +1694,85 @@ Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilu
 Description: Thème pour FLHLMQ.
 Version: 1.0
 */
+/*-------------------------------------*/
+/* ----- LABEL STYLES ----- */
+/*-------------------------------------*/
 label {
-  font-size: 1rem;
-  color: #0c0909;
+  /* Bloc Label */
+  font-size: 1rem; /* Taille de la police */
+  color: #0c0909; /* Couleur du texte */
 }
 
+/*-------------------------------------*/
+/* ----- SORT ORDER STYLES ----- */
+/*-------------------------------------*/
 #sortOrder {
-  padding: 8px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  border: solid 2px #88b07e;
-  color: #88b07e;
+  /* Bloc Sélecteur de Tri */
+  padding: 8px; /* Espacement interne */
+  font-size: 1rem; /* Taille de la police */
+  margin-bottom: 20px; /* Espacement inférieur */
+  border-radius: 20px; /* Coins arrondis */
+  border: solid 2px #88b07e; /* Bordure */
+  color: #88b07e; /* Couleur du texte */
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none;
+          appearance: none; /* Supprime le style par défaut */
 }
 
 #sortOrder:focus {
-  outline: none;
-  border-color: #88b07e;
+  /* État au focus du Sélecteur de Tri */
+  outline: none; /* Supprime le contour par défaut */
+  border-color: #88b07e; /* Change la couleur de la bordure */
 }
 
 #sortOrder:active {
-  border-color: #88b07e;
+  /* État actif du Sélecteur de Tri */
+  border-color: #88b07e; /* Change la couleur de la bordure */
 }
 
+/*-------------------------------------*/
+/* ----- LOAD MORE BUTTON STYLES ----- */
+/*-------------------------------------*/
 #loadMoreBtn {
-  display: block !important;
-  margin-top: 20px;
+  /* Bloc Bouton "Charger Plus" */
+  display: block !important; /* Affichage en bloc */
+  margin-top: 20px; /* Espacement supérieur */
 }
 
+/*-------------------------------------*/
+/* ----- FIRST ARTICLE STYLES ----- */
+/*-------------------------------------*/
 .first-article {
-  box-shadow: 0 0 5px rgb(108, 138, 100);
-  border-radius: 10px;
-  padding: 30px;
-  padding-top: 0;
+  /* Bloc Premier Article */
+  box-shadow: 0 0 5px rgb(108, 138, 100); /* Ombre portée */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 30px; /* Espacement interne */
+  padding-top: 0; /* Espacement supérieur nul */
 }
 
+/*-------------------------------------*/
+/* ----- FILTER CONTAINER STYLES ----- */
+/*-------------------------------------*/
 .container-flitre {
-  display: flex;
-  justify-content: flex-end;
+  /* Bloc Conteneur de Filtrage */
+  display: flex; /* Flexbox pour mise en page */
+  justify-content: flex-end; /* Aligne à droite */
 }
 
+/*-------------------------------------*/
+/* ----- ADDITIONAL INFO STYLES ----- */
+/*-------------------------------------*/
 .plus-info {
-  margin-bottom: 50px;
+  /* Bloc Informations Supplémentaires */
+  margin-bottom: 50px; /* Espacement inférieur */
 }
 
+/*-------------------------------------*/
+/* ----- NEWS SECTION STYLES ----- */
+/*-------------------------------------*/
 .section-actualite {
-  margin-top: 20px;
+  /* Bloc Section Actualités */
+  margin-top: 20px; /* Espacement supérieur */
 }
 
 /*
@@ -1752,6 +1782,9 @@ Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilu
 Description: Thème pour FLHLMQ.
 Version: 1.0
 */
+/*------------------------------------------------------------------*/
+/*----- VERSION MOBILE ---*/
+/*------------------------------------------------------------------*/
 .modal {
   display: none;
   position: fixed;
@@ -1900,6 +1933,9 @@ Version: 1.0
   margin-top: 20px;
 }
 
+/*------------------------------------------------------------------*/
+/*----- VERSION TABLETTE ---*/
+/*------------------------------------------------------------------*/
 @media (min-width: 768px) {
   .liste-equipe {
     position: relative;
@@ -1984,7 +2020,10 @@ Version: 1.0
     font-size: 20px;
   }
 }
-@media (min-width: 1440px) {
+/*------------------------------------------------------------------*/
+/*----- VERSION DESKTOP ---*/
+/*------------------------------------------------------------------*/
+@media (min-width: 1400px) {
   .liste-equipe {
     position: relative;
     width: 100%;
