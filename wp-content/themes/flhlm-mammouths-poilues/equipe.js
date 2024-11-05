@@ -60,6 +60,9 @@ setInterval(goToNextSlide, 8000);
 next.addEventListener("click", goToNextSlide);
 prev.addEventListener("click", goToPrevSlide);
 
+/*Nouvelles de ancienne à récente ne fonctionne pas quand on le reload,
+ Erreur approuvé par Marie-Michelle*/
+
 let currentIndex = 6; // Nombre d'articles à afficher à la fois
 let filteredArticles = []; // Cela contiendra les articles filtrés et triés
 

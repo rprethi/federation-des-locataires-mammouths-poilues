@@ -1720,7 +1720,20 @@ label {
   font-size: 1rem;
   margin-bottom: 20px;
   border-radius: 20px;
-  border: solid 2px;
+  border: solid 2px #88b07e;
+  color: #88b07e;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#sortOrder:focus {
+  outline: none;
+  border-color: #88b07e;
+}
+
+#sortOrder:active {
+  border-color: #88b07e;
 }
 
 #loadMoreBtn {
@@ -1729,7 +1742,7 @@ label {
 }
 
 .first-article {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgb(108, 138, 100);
   border-radius: 10px;
   padding: 30px;
   padding-top: 0;
@@ -1742,6 +1755,10 @@ label {
 
 .plus-info {
   margin-bottom: 50px;
+}
+
+.section-actualite {
+  margin-top: 20px;
 }
 
 /*
@@ -1893,6 +1910,10 @@ Version: 1.0
 .details h5 {
   color: #273922;
   font-size: 18px;
+}
+
+.section-equipe {
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {

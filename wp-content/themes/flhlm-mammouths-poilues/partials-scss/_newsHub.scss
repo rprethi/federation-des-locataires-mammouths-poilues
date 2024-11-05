@@ -17,7 +17,18 @@ label {
   font-size: 1rem;
   margin-bottom: 20px;
   border-radius: 20px;
-  border: solid 2px;
+  border: solid 2px couleurs.$vertAmande;
+  color: couleurs.$vertAmande;
+  appearance: none;
+}
+
+#sortOrder:focus {
+  outline: none;
+  border-color: couleurs.$vertAmande;
+}
+
+#sortOrder:active {
+  border-color: couleurs.$vertAmande;
 }
 
 #loadMoreBtn {
@@ -26,17 +37,21 @@ label {
 }
 
 .first-article {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgb(108, 138, 100);
   border-radius: 10px;
   padding: 30px;
   padding-top: 0;
 }
 
 .container-flitre {
-  display: flex; 
-  justify-content: flex-end; 
+  display: flex;
+  justify-content: flex-end;
 }
 
 .plus-info {
   margin-bottom: 50px;
+}
+
+.section-actualite {
+  margin-top: 20px;
 }
