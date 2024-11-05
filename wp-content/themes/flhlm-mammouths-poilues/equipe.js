@@ -15,14 +15,16 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 function openModal(description) {
-  document.getElementById("modal-description").textContent = description;
-  document.getElementById("modal").style.display = "block";
-  document.body.style.overflow = 'hidden';
+  const name = description.split(':')[0]; // Extrait le nom de la description
+  document.getElementById("modal-name").textContent = name; // Affiche le nom dans la modale
+  document.getElementById("modal-description").textContent = description.substring(name.length + 1).trim(); // Affiche la description sans le nom
+  document.getElementById("modal").style.display = "block"; // Affiche la modale
+  document.body.style.overflow = 'hidden'; // Empêche le défilement de la page
 }
- 
+
 function closeModal() {
-  document.getElementById("modal").style.display = "none";
-  document.body.style.overflow = '';
+  document.getElementById("modal").style.display = "none"; // Cache la modale
+  document.body.style.overflow = ''; // Réactive le défilement de la page
 }
 
 let next = document.querySelector(".next");

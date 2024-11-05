@@ -16,8 +16,7 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
- 
- 
+
   .modal-dialog {
     position: absolute;
     top: 50%;
@@ -29,7 +28,7 @@
     padding: 20px;
     border-radius: 10px;
   }
- 
+
   .modal-content {
     background-color: couleurs.$argile;
     border-radius: 10px;
@@ -37,7 +36,10 @@
     padding: 20px;
     width: 100%;
     text-align: justify;
-
+    
+    #modal-name {
+      color: couleurs.$vertAmande;
+    }
     .modal-header {
       display: flex;
       justify-content: space-between;
