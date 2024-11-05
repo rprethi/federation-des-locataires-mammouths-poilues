@@ -1550,6 +1550,9 @@ Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilu
 Description: Thème pour FLHLMQ.
 Version: 1.0
 */
+/*------------------------------------------------------------------*/
+/*----- SECTION PDF ---*/
+/*------------------------------------------------------------------*/
 .pdf-logo {
   width: 50px;
   height: 50px;
@@ -1557,6 +1560,9 @@ Version: 1.0
   margin-right: 15px;
 }
 
+/*------------------------------------------------------------------*/
+/*----- SECTION HERO ORDINATEUR ---*/
+/*------------------------------------------------------------------*/
 .container-hero {
   position: absolute;
   width: 100vw;
@@ -1648,6 +1654,12 @@ Version: 1.0
   margin-bottom: 50px;
 }
 
+/*------------------------------------------------------------------*/
+/*----- FIN SECTION HERO ORDINATEUR ---*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*----- DÉBUT SECTION HERO TABLETTE ---*/
+/*------------------------------------------------------------------*/
 @media (max-width: 768px) {
   .slider .slides {
     width: 150px;
@@ -1687,6 +1699,9 @@ Version: 1.0
     height: 15px;
   }
 }
+/*------------------------------------------------------------------*/
+/*----- FIN SECTION HERO TABLETTE ---*/
+/*------------------------------------------------------------------*/
 /*
 Theme Name: FLHLMQ
 Author: Delphine, Kristy, Prethiah
@@ -1785,6 +1800,7 @@ Version: 1.0
 /*------------------------------------------------------------------*/
 /*----- VERSION MOBILE ---*/
 /*------------------------------------------------------------------*/
+/*----- DÉBUT MODALE ---*/
 .modal {
   display: none;
   position: fixed;
@@ -1835,6 +1851,8 @@ Version: 1.0
   padding: 1rem;
 }
 
+/*----- FIN MODALE ---*/
+/*----- DÉBUT STYLE ÉQUIPE ---*/
 .liste-equipe {
   position: relative;
   width: 100%;

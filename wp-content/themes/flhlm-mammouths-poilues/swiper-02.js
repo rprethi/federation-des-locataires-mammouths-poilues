@@ -38,7 +38,6 @@ var swiper = new Swiper(".mySwiper2", {
 
 /*------------------------------------------------------------------------------------------*/
 
-
 /*------------------------------------------------------------------------------------------*/
 
 /*---------- DÉBUT MODALE SECTION ÉQUIPE  ----------*/
@@ -78,7 +77,6 @@ function closeModal() {
 
 /*------------------------------------------------------------------------------------------*/
 
-
 /*------------------------------------------------------------------------------------------*/
 
 /*---------- DÉBUT SLIDER SECTION ÉQUIPE  ----------*/
@@ -109,7 +107,6 @@ prev.addEventListener("click", goToPrevSlide);
 
 /*------------------------------------------------------------------------------------------*/
 
-
 /*---------- DÉBUT SECTION NOUVELLE RÉCENTE - ANCIENNE / AFFICHAGE TOGGLE NOUVELLES ----------*/
 /*Nouvelles de ancienne à récente ne fonctionne pas quand on le reload,
  Erreur approuvé par Marie-Michelle*/
@@ -119,9 +116,31 @@ let filteredArticles = []; // Cela contiendra les articles filtrés et triés
 
 // Fonction pour trier et afficher les articles
 function sortArticles() {
-  const sortOrder = document.getElementById("sortOrder").value;
+  // Vérifie si l'élément "sortOrder" existe
+  const sortOrderElement = document.getElementById("sortOrder");
+  if (!sortOrderElement) {
+    console.log("L'élément 'sortOrder' n'existe pas.");
+    return; // Sort de la fonction si l'élément n'existe pas
+  }
+
+  const sortOrder = sortOrderElement.value; // Récupère la valeur de tri
+
+  // Vérifie si l'élément "actualitesList" existe
   const actualitesList = document.getElementById("actualitesList");
+  if (!actualitesList) {
+    console.log("L'élément 'actualitesList' n'existe pas.");
+    return; // Sort de la fonction si l'élément n'existe pas
+  }
+
+  // Récupère les éléments d'articles
   const articleElements = Array.from(actualitesList.getElementsByTagName("li"));
+  if (articleElements.length === 0) {
+    console.log("Aucun article trouvé dans 'actualitesList'.");
+    return; // Sort de la fonction si aucun article n'est trouvé
+  }
+
+  // Ajoute ici la logique de tri pour articleElements
+  // (Ne pas oublier de gérer le tri selon sortOrder)
 
   const months = {
     janvier: "January",
@@ -200,9 +219,17 @@ function loadMoreArticles() {
 }
 
 // Écouter l'événement pour le bouton "Voir plus"
-document.getElementById("loadMoreBtn").addEventListener("click", () => {
-  loadMoreArticles(); // Charger plus d'articles lorsque le bouton est cliqué
-});
+// Sélectionne le bouton par son ID
+let loadMoreBtn = document.getElementById("loadMoreBtn");
+
+// Vérifie si l'élément existe avant d'ajouter l'écouteur d'événements
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener("click", () => {
+    loadMoreArticles(); // Charger plus d'articles lorsque le bouton est cliqué
+  });
+} else {
+  console.log("Le bouton 'loadMoreBtn' n'existe pas."); // Message affiché si le bouton n'existe pas
+}
 
 // Appeler la fonction de tri lors du chargement de la page
 sortArticles();
