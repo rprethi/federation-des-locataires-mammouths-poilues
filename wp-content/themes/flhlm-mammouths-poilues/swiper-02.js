@@ -1,18 +1,49 @@
+/*------------------------------------------------------------------------------------------*/
+
+/*---------- DÉBUT SWIPER SECTION ÉQUIPE  ----------*/
+
+/*------------------------------------------------------------------------------------------*/
+
+// Initialisation du Swiper pour la classe "mySwiper2"
 var swiper = new Swiper(".mySwiper2", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  initialSlide: 0,
+  // Définir l'effet de transition entre les diapositives
+  effect: "coverflow", // Utilise l'effet "coverflow" pour un effet 3D lors du défilement
+
+  // Options d'interaction
+  grabCursor: true, // Change le curseur pour indiquer que l'utilisateur peut faire glisser les diapositives
+  centeredSlides: true, // Centre la diapositive active dans la vue
+
+  // Configuration des diapositives visibles
+  slidesPerView: "auto", // Permet de définir le nombre de diapositives visibles automatiquement selon l'espace disponible
+
+  // Diapositive initiale à afficher au démarrage
+  initialSlide: 0, // Commence avec la première diapositive
+
+  // Configuration spécifique de l'effet coverflow
   coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 5,
-    slideShadows: true,
+    rotate: 0, // Rotation des diapositives en angle
+    stretch: 0, // Espace entre les diapositives
+    depth: 100, // Profondeur de l'effet coverflow
+    modifier: 5, // Modificateur de l'effet, influence la perspective
+    slideShadows: true, // Active les ombres sur les diapositives
   },
-  loop: true,
+
+  // Option de boucle
+  loop: true, // Permet à la galerie de faire une boucle infinie
 });
+
+/*------------------------------------------------------------------------------------------*/
+
+/*---------- FIN SWIPER SECTION ÉQUIPE  ----------*/
+
+/*------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------*/
+
+/*---------- DÉBUT MODALE SECTION ÉQUIPE  ----------*/
+
+/*------------------------------------------------------------------------------------------*/
 
 // Fonction pour ouvrir la modale
 function openModal(description) {
@@ -41,6 +72,18 @@ function closeModal() {
   document.getElementById("modal").style.display = "none"; // Cache la modale
   document.body.style.overflow = ""; // Réactive le défilement de la page
 }
+/*------------------------------------------------------------------------------------------*/
+
+/*---------- FIN MODALE SECTION ÉQUIPE  ----------*/
+
+/*------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------*/
+
+/*---------- DÉBUT SLIDER SECTION ÉQUIPE  ----------*/
+
+/*------------------------------------------------------------------------------------------*/
 
 let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
@@ -60,6 +103,14 @@ setInterval(goToNextSlide, 8000);
 next.addEventListener("click", goToNextSlide);
 prev.addEventListener("click", goToPrevSlide);
 
+/*------------------------------------------------------------------------------------------*/
+
+/*---------- FIN SLIDER SECTION ÉQUIPE  ----------*/
+
+/*------------------------------------------------------------------------------------------*/
+
+
+/*---------- DÉBUT SECTION NOUVELLE RÉCENTE - ANCIENNE / AFFICHAGE TOGGLE NOUVELLES ----------*/
 /*Nouvelles de ancienne à récente ne fonctionne pas quand on le reload,
  Erreur approuvé par Marie-Michelle*/
 
@@ -175,3 +226,8 @@ function displayArticles() {
     firstArticle.classList.add("first-article"); // Ajouter la classe au premier article
   }
 }
+/*------------------------------------------------------------------------------------------*/
+
+/*---------- FIN SECTION NOUVELLE RÉCENTE - ANCIENNE / AFFICHAGE TOGGLE NOUVELLES ----------*/
+
+/*------------------------------------------------------------------------------------------*/
