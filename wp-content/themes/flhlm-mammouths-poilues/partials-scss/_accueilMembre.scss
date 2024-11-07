@@ -4,6 +4,8 @@
 @use "./mixins/fonts";
 @use "./mixins/formatecran";
 
+//CSS SECTION ACCUEIL MEMBRE
+
 #accueil {
 .membre {
         background-color: couleurs.$vertAlgue;
@@ -26,6 +28,8 @@
                 max-width: 200px;
             }
         }
+
+        
 
         &__item-texte {
             padding: 10px;
@@ -51,6 +55,8 @@
             }
         }
     }
+
+//CSS SECTION ACCUEIL MEMBRE
 
     @media screen and (min-width: formatecran.$version-tablette) {
         .membre {

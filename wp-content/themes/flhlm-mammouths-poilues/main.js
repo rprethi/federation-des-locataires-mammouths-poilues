@@ -22,7 +22,42 @@ bannerClose.addEventListener("click", function () {
 });
 
 /*--------------------------------------*/
+/*---------- MENU HOVER ----------*/
+let dropdowns = document.querySelectorAll(".nav-link");
+let dropdownMenus = document.querySelectorAll(".dropdown-menu");
 
+dropdowns.forEach((dropdown, i) => {
+  let menu = dropdownMenus[i];
+
+  //Fonctions pour ajouter ou retier la classe "Show"
+  let addClass = function() {
+    dropdown.classList.add("show");
+    menu.classList.add("show");
+// Utilisation de AI pour aider avec le setAttribute pour le data-bs-popper
+    menu.setAttribute("data-bs-popper", "static");
+  }
+
+  let removeClass = function() {
+    dropdown.classList.remove("show");
+    menu.classList.remove("show");
+// Utilisation de AI pour aider avec le setAttribute pour le data-bs-popper
+    menu.removeAttribute("data-bs-popper");
+  }
+
+
+  dropdown.addEventListener("mouseover", () => {
+    addClass();
+  });
+  dropdown.addEventListener("mouseleave", () => {
+    removeClass();
+  });
+  menu.addEventListener("mouseover", () => {
+    addClass();
+  });
+  menu.addEventListener("mouseleave", () => {
+    removeClass();
+  });
+});
 /*---------- GSAP MENU BURGER* ----------*/
 let burgerIcon = document.getElementById("burgerMenu");
 let burgerAnim = gsap.timeline({

@@ -357,6 +357,25 @@ nav {
   top: 80px;
   z-index: 998;
 }
+.navbar .dropdown-menu {
+  width: auto;
+}
+.navbar .wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.navbar ul {
+  text-align: center;
+}
+.navbar ul-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .navbar .nav-centre {
   margin: 0 5%;
   padding: 0;
@@ -399,12 +418,12 @@ nav {
   transition: border-bottom, 1s;
 }
 .navbar .nav-item:hover {
-  color: #88b07e;
-  border-bottom: 1px solid #88b07e;
+  color: #88b07e !important;
+  border-bottom: 1px solid #88b07e !important;
 }
 .navbar .nav-active {
-  font-weight: bold;
-  color: #88b07e;
+  font-weight: bold !important;
+  color: #88b07e !important;
 }
 
 .nav__search {
@@ -470,6 +489,11 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 @media screen and (min-width: 768px) {
+  .navbar .wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
   .navbar .nav-bottom {
     max-width: 400px;
     display: grid;
@@ -743,7 +767,6 @@ Version: 1.0
 #accueil .membre {
   background-color: #273922;
   width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -752,14 +775,14 @@ Version: 1.0
 #accueil .membre p {
   color: #f7f7ff;
 }
+#accueil .membre__item-img {
+  height: 100%;
+}
 #accueil .membre__item-img img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
-  max-width: 150px;
-}
-#accueil .membre a.btn {
-  width: 20px !important;
+  max-width: 200px;
 }
 #accueil .membre__item-texte {
   padding: 10px;
@@ -825,6 +848,10 @@ Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilu
 Description: Thème pour FLHLMQ.
 Version: 1.0
 */
+#accueil .services__taille {
+  width: 100%;
+  padding: 20px;
+}
 #accueil .section-services {
   display: flex;
   flex-direction: column;
@@ -1462,6 +1489,11 @@ Version: 1.0
   color: white;
   width: 100%;
 }
+.services-hub .services .services__taille {
+  width: 100%;
+  height: 200px;
+  color: white;
+}
 .services-hub .services .services__item-bottom-text {
   position: relative;
   width: 100%;
@@ -1528,6 +1560,12 @@ Version: 1.0
   .services-hub .services .services__item-bottom-text {
     top: 0;
     margin-bottom: 10%;
+  }
+  .services-hub .services .services__taille {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    aspect-ratio: 1/1;
   }
   .services-hub .services__item {
     width: 100%;

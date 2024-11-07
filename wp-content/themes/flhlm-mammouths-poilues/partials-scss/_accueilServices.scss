@@ -8,6 +8,10 @@
 @use "sass:color";
 
 #accueil {
+  .services__taille {
+    width: 100%;
+      padding: 20px;
+  }
   .section-services {
     display: flex;
     flex-direction: column;
@@ -19,6 +23,7 @@
     }
   }
 
+ 
   .services {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(200px, auto));

@@ -45,158 +45,151 @@
 
       <!-- -=-=-=-=-=-=- HEADER - NAV -=-=-=-=-=-=- -->
       <nav
-        class="navbar navbar-light navbar-expand-xl position-fixed align-items-center"
-        id="navigation"
-      >
-        <div class="container-fluid nav-centre">
-          <a
-            class="navbar-brand justify-content-center align-items-center"
-            href="index.html"
+      class="navbar navbar-light navbar-expand-xl"
+      id="navigation"
+    >
+      <div class="container-fluid nav-centre">
+        <a
+          class="navbar-brand"
+          href="index.html"
+        >
+          <img src="./assets/logo_fonce.svg" alt="flhlmq" class="nav-logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            id="burgerMenu"
+            width="30px"
+            height="30px"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <img src="./assets/logo_fonce.svg" alt="flhlmq" class="nav-logo" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-            aria-controls="mainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            <path
+              class="burgerAnim1"
+              d="M4 7C4 6.44771 4.44772 6 5 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H5C4.44772 8 4 7.55229 4 7Z"
+              fill="#000000"
+            />
+            <path
+              class="burgerAnim2"
+              d="M4 13.9998C4 13.4475 4.44772 12.9997 5 12.9997L16 13C16.5523 13 17 13.4477 17 14C17 14.5523 16.5523 15 16 15L5 14.9998C4.44772 14.9998 4 14.552 4 13.9998Z"
+              fill="#000000"
+            />
+            <path
+              class="burgerAnim3"
+              d="M5 19.9998C4.44772 19.9998 4 20.4475 4 20.9998C4 21.552 4.44772 21.9997 5 21.9997H22C22.5523 21.9997 23 21.552 23 20.9998C23 20.4475 22.5523 19.9998 22 19.9998H5Z"
+              fill="#000000"
+            />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div
+            class="wrap"
           >
-            <svg
-              id="burgerMenu"
-              width="30px"
-              height="30px"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="burgerAnim1"
-                d="M4 7C4 6.44771 4.44772 6 5 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H5C4.44772 8 4 7.55229 4 7Z"
-                fill="#000000"
-              />
-              <path
-                class="burgerAnim2"
-                d="M4 13.9998C4 13.4475 4.44772 12.9997 5 12.9997L16 13C16.5523 13 17 13.4477 17 14C17 14.5523 16.5523 15 16 15L5 14.9998C4.44772 14.9998 4 14.552 4 13.9998Z"
-                fill="#000000"
-              />
-              <path
-                class="burgerAnim3"
-                d="M5 19.9998C4.44772 19.9998 4 20.4475 4 20.9998C4 21.552 4.44772 21.9997 5 21.9997H22C22.5523 21.9997 23 21.552 23 20.9998C23 20.4475 22.5523 19.9998 22 19.9998H5Z"
-                fill="#000000"
-              />
-            </svg>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNav">
-            <div
-              class="d-flex justify-content-center flex-column align-items-center flex-xl-row justify-content-xl-between w-100"
-            >
-              <div class="d-flex align-items-center justify-content-center">
-                <ul class="navbar-nav me-auto mb-2 mb-xl-0 d-flex text-center">
-                  <li class="nav-item dropdown">
-                    <a
-                      href="#"
-                      class="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      >À propos</a
-                    >
-                    <ul class="dropdown-menu" >
-                      <li><a href="./about.html" class="dropdown-item">Calendrier</a></li>
-                      <li><a href="./about.html" class="dropdown-item">Formation</a></li>
-                    </ul>
-                  </li>
-                  <!-- Voir si nécessaire -->
-                  <!--
+            <div class="ul-wrapper">
+              <ul class="navbar-nav mb-xl-0">
                 <li class="nav-item dropdown">
-                  <a href="./services-hub.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-           
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Le congrès</a></li>
-                    <li><a href="#" class="dropdown-item">Fondation d'association de locataire</a></li>
-                    <li><a href="#" class="dropdown-item">S'impliquer au CCR</a></li>
-                    <li><a href="#" class="dropdown-item">Être au CA de l'OMH</a></li>
-                    <li><a href="#" class="dropdown-item">Bulletin de la FLHLMQ</a></li>
-                    <li><a href="#" class="dropdown-item">Infolettre</a></li>
-                    <li><a href="#" class="dropdown-item">Guide pratiques</a></li>
-                    <li><a href="#" class="dropdown-item">Autres documents</a></li>
-                  </ul>
-                 
-                </li> -->
-                  <li class="nav-item">
-                    <a href="./services-hub.html" class="nav-link">Services</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a href="./news-hub.html" class="nav-link">Nouvelles</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="./team.html" class="nav-link">Équipe</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">FAQ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="./contact-us.html" class="nav-link"
-                      >Nous joindre</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="nav-bottom">
-                <div class="nav__search">
-                  <form
-                    role="search"
-                    method="get"
-                    class="search-form"
-                    action=""
+                  <a
+                    href="./about.html"
+                    class="nav-link"
+                    >À propos</a
                   >
-                    <label>
-                      <input
-                        type="search"
-                        class="search-field"
-                        placeholder="Rechercher …"
-                        value=""
-                        name=""
-                        title="Rechercher"
-                      />
-                      <input
-                        type="submit"
-                        class="search-submit"
-                        value="Rechercher"
-                      />
-                    </label>
-                  </form>
-                </div>
-                <span class="nav-connection">
-                  <button class="btn-empty">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
-                      fill="currentColor"
-                      class="bi bi-person-circle"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                      <path
-                        fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                      />
-                    </svg>
-                    <a href="#">Se connecter</a>
-                  </button>
-                </span>
-                <button class="btn-empty btn-langue">EN</button>
-                <a class="btn-filled" target="_blank"
-                href="https://flhlmq.com/fr/publication/adhesion-et-abonnement">Devenir membre</a>
+                  <ul class="dropdown-menu" >
+                    <li><a href="./about.html" class="dropdown-item">Calendrier</a></li>
+                    <li><a href="./about.html" class="dropdown-item">Formation</a></li>
+                  </ul>
+                </li>
+                <!-- Voir si nécessaire -->
+
+              <li class="nav-item dropdown">
+                <a href="./services-hub.html" class="nav-link">Services</a>
+         
+                <ul class="dropdown-menu">
+                  <li><a href="#" class="dropdown-item">Le congrès</a></li>
+                  <li><a href="./service.html" class="dropdown-item">Fondation d'association de locataire</a></li>
+                  <li><a href="#" class="dropdown-item">S'impliquer au CCR</a></li>
+                  <li><a href="#" class="dropdown-item">Être au CA de l'OMH</a></li>
+                  <li><a href="#" class="dropdown-item">Bulletin de la FLHLMQ</a></li>
+                  <li><a href="#" class="dropdown-item">Infolettre</a></li>
+                  <li><a href="#" class="dropdown-item">Guide pratiques</a></li>
+                  <li><a href="#" class="dropdown-item">Autres documents</a></li>
+                </ul>
+               
+              </li> 
+                <li class="nav-item">
+                  <a href="./news-hub.html" class="nav-link">Nouvelles</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./team.html" class="nav-link">Équipe</a>
+                </li>
+    
+                <li class="nav-item">
+                  <a href="./contact-us.html" class="nav-link"
+                    >Nous joindre</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav-bottom">
+              <div class="nav__search">
+                <form
+                  role="search"
+                  method="get"
+                  class="search-form"
+                  action=""
+                >
+                  <label>
+                    <input
+                      type="search"
+                      class="search-field"
+                      placeholder="Rechercher …"
+                      value=""
+                      name=""
+                      title="Rechercher"
+                    />
+                    <input
+                      type="submit"
+                      class="search-submit"
+                      value="Rechercher"
+                    />
+                  </label>
+                </form>
               </div>
+              <span class="nav-connection">
+                <button class="btn-empty">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                    />
+                  </svg>
+                  <a href="#">Se connecter</a>
+                </button>
+              </span>
+              <button class="btn-empty btn-langue">EN</button>
+              <a class="btn-filled" target="_blank"
+              href="https://flhlmq.com/fr/publication/adhesion-et-abonnement">Devenir membre</a>
             </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
     </header>
     <main id="accueil">
       <section class="hero">
@@ -237,30 +230,34 @@
       <section class="section-services section-center">
         <h2>Services</h2>
         <a href="./services-hub.html">Tous les services</a>
+       
         <div class="services">
-          <div class="services__item">
+
+          <!-- ----- SERVICE CONGRÈS ----- -->
+          <a class="services__taille" href="#">
+          <div class="services__item ">
             <div class="services__item-top">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-right-quote-fill"
-              viewBox="0 0 16 16">
-              <path
-                d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM7.194 4.766q.13.188.227.401c.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c.419-.416.672-.831.809-1.22-.269.165-.588.26-.93.26C4.775 7.333 4 6.587 4 5.667S4.776 4 5.734 4c.271 0 .528.06.756.166l.008.004c.169.07.327.182.469.324q.128.125.227.272M11 7.073c-.269.165-.588.26-.93.26-.958 0-1.735-.746-1.735-1.666S9.112 4 10.069 4c.271 0 .528.06.756.166l.008.004c.17.07.327.182.469.324q.128.125.227.272.131.188.228.401c.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c.42-.416.672-.831.81-1.22z" />
-            </svg>
+                viewBox="0 0 16 16">
+                <path
+                  d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM7.194 4.766q.13.188.227.401c.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c.419-.416.672-.831.809-1.22-.269.165-.588.26-.93.26C4.775 7.333 4 6.587 4 5.667S4.776 4 5.734 4c.271 0 .528.06.756.166l.008.004c.169.07.327.182.469.324q.128.125.227.272M11 7.073c-.269.165-.588.26-.93.26-.958 0-1.735-.746-1.735-1.666S9.112 4 10.069 4c.271 0 .528.06.756.166l.008.004c.17.07.327.182.469.324q.128.125.227.272.131.188.228.401c.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c.42-.416.672-.831.81-1.22z" />
+              </svg>
             </div>
             <div class="services__item-bottom">
-              <h3>Le congrès</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-arrow-right-short"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
-                />
+              <span class="services__item-bottom-text">
+                <h3>Le congrès</h3>
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
               </svg>
             </div>
           </div>
+            </a>
+  
+          <!-- ----- SERVICE Association de locataires ----- -->
+          <a class="services__taille" href="./service.html">
           <div class="services__item">
             <div class="services__item-top">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-fill-check" viewBox="0 0 16 16">
@@ -269,20 +266,21 @@
               </svg>
             </div>
             <div class="services__item-bottom">
-              <h3>Association de locataires</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-arrow-right-short"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
-                />
+              <span class="services__item-bottom-text">
+                <h3>Association de locataires</h3>
+     
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
               </svg>
             </div>
           </div>
+  </a>
+  
+          <!-- ----- SERVICE S'impliquer au CCR ----- -->
+          <a class="services__taille" href="#">
           <div class="services__item">
             <div class="services__item-top">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
@@ -291,21 +289,19 @@
               </svg>
             </div>
             <div class="services__item-bottom">
-              <h3>S'impliquer au CCR</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-arrow-right-short"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
-                />
+              <span class="services__item-bottom-text">
+                <h3>S'impliquer au CCR</h3>
+
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
               </svg>
             </div>
           </div>
-        </div>
+  </a>
+</div>  
       </section>
 
       <!-- -=-=-=-=-=-=- SECTION DEVENIR MEMBRE -=-=-=-=-=-=- -->
@@ -599,7 +595,6 @@
           <li><a href="">Services</a></li>
           <li><a href="">Nouvelles</a></li>
           <li><a href="">Équipe</a></li>
-          <li><a href="">FAQ</a></li>
         </ul>
       </div>
 

@@ -46,12 +46,12 @@
 
       <!-- -=-=-=-=-=-=- HEADER - NAV -=-=-=-=-=-=- -->
       <nav
-        class="navbar navbar-light navbar-expand-lg position-fixed align-items-center"
+        class="navbar navbar-light navbar-expand-xl"
         id="navigation"
       >
         <div class="container-fluid nav-centre">
           <a
-            class="navbar-brand justify-content-center align-items-center"
+            class="navbar-brand"
             href="index.html"
           >
             <img src="./assets/logo_fonce.svg" alt="flhlmq" class="nav-logo" />
@@ -92,30 +92,29 @@
           </button>
           <div class="collapse navbar-collapse" id="mainNav">
             <div
-              class="d-flex justify-content-center flex-column align-items-center flex-lg-row justify-content-lg-between w-100"
+              class="wrap"
             >
-              <div class="d-flex align-items-center justify-content-center">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex text-center">
+              <div class="ul-wrapper">
+                <ul class="navbar-nav mb-xl-0">
                   <li class="nav-item dropdown">
                     <a
-                      href="#"
-                      class="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
+                      href="./about.html"
+                      class="nav-link"
                       >À propos</a
                     >
-                    <ul class="dropdown-menu">
-                      <li><a href="#" class="dropdown-item">Calendrier</a></li>
-                      <li><a href="#" class="dropdown-item">Formation</a></li>
+                    <ul class="dropdown-menu" >
+                      <li><a href="./about.html" class="dropdown-item">Calendrier</a></li>
+                      <li><a href="./about.html" class="dropdown-item">Formation</a></li>
                     </ul>
                   </li>
                   <!-- Voir si nécessaire -->
-                  <!--
+
                 <li class="nav-item dropdown">
-                  <a href="./services-hub.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                  <a href="./services-hub.html" class="nav-link">Services</a>
            
                   <ul class="dropdown-menu">
                     <li><a href="#" class="dropdown-item">Le congrès</a></li>
-                    <li><a href="#" class="dropdown-item">Fondation d'association de locataire</a></li>
+                    <li><a href="./service.html" class="dropdown-item">Fondation d'association de locataire</a></li>
                     <li><a href="#" class="dropdown-item">S'impliquer au CCR</a></li>
                     <li><a href="#" class="dropdown-item">Être au CA de l'OMH</a></li>
                     <li><a href="#" class="dropdown-item">Bulletin de la FLHLMQ</a></li>
@@ -124,27 +123,22 @@
                     <li><a href="#" class="dropdown-item">Autres documents</a></li>
                   </ul>
                  
-                </li> -->
+                </li> 
                   <li class="nav-item">
-                    <a href="services-hub.html" class="nav-link">Services</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a href="news-hub.html" class="nav-link">Nouvelles</a>
+                    <a href="./news-hub.html" class="nav-link">Nouvelles</a>
                   </li>
                   <li class="nav-item">
-                    <a href="team.html" class="nav-link">Équipe</a>
+                    <a href="./team.html" class="nav-link nav-active">Équipe</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">FAQ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="contact-us.html" class="nav-link">Nous joindre</a>
+                    <a href="./contact-us.html" class="nav-link"
+                      >Nous joindre</a
+                    >
                   </li>
                 </ul>
               </div>
 
-              <div class="d-flex align-items-center justify-content-center">
+              <div class="nav-bottom">
                 <div class="nav__search">
                   <form
                     role="search"
@@ -169,7 +163,7 @@
                     </label>
                   </form>
                 </div>
-                <span class="nav-connection me-3 d-flex align-items-center">
+                <span class="nav-connection">
                   <button class="btn-empty">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -189,6 +183,8 @@
                   </button>
                 </span>
                 <button class="btn-empty btn-langue">EN</button>
+                <a class="btn-filled" target="_blank"
+                href="https://flhlmq.com/fr/publication/adhesion-et-abonnement">Devenir membre</a>
               </div>
             </div>
           </div>
@@ -636,7 +632,7 @@
           <li><a href="">Services</a></li>
           <li><a href="">Nouvelles</a></li>
           <li><a href="">Équipe</a></li>
-          <li><a href="">FAQ</a></li>
+          
         </ul>
       </div>
 
