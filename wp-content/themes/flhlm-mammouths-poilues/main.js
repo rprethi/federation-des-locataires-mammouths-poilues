@@ -5,6 +5,8 @@ let bannerStorage = localStorage.getItem("banner");
 let nav = document.querySelector("nav");
 let main = document.querySelector("main");
 
+
+//vérifie si la banner est dans le local storage
 if (bannerStorage) {
   banner.style.display = "none";
   document.body.classList.add("banner-hidden");
@@ -22,6 +24,8 @@ bannerClose.addEventListener("click", function () {
 });
 
 /*--------------------------------------*/
+
+
 /*---------- MENU HOVER ----------*/
 let dropdowns = document.querySelectorAll(".nav-link");
 let dropdownMenus = document.querySelectorAll(".dropdown-menu");
@@ -44,7 +48,7 @@ dropdowns.forEach((dropdown, i) => {
     menu.removeAttribute("data-bs-popper");
   }
 
-
+//Ajout d'eventlistener sur le hover pour ajouter ou retirer la classe
   dropdown.addEventListener("mouseover", () => {
     addClass();
   });
@@ -58,6 +62,10 @@ dropdowns.forEach((dropdown, i) => {
     removeClass();
   });
 });
+/*--------------------------------------*/
+
+
+
 /*---------- GSAP MENU BURGER* ----------*/
 let burgerIcon = document.getElementById("burgerMenu");
 let burgerAnim = gsap.timeline({

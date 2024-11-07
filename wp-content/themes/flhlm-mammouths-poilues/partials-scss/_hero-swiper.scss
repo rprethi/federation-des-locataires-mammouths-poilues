@@ -1,6 +1,7 @@
 @use "./mixins/couleurs";
 @use "./mixins/formatecran";
 
+/*---------- STYLE POUR LE SWIPER DU HÉRO DE L'ACCUEIL ----------*/
 
 .swiperhero {
   width: 100%;
@@ -14,7 +15,7 @@
   }
 }
 a {
-  margin-top: 10px;
+  margin-top: 10px; // Créer espace
 }
 .swiper-slide {
   display: flex;
@@ -23,11 +24,11 @@ a {
   object-fit: cover;
   position: relative;
 }
-
+//Appliquer un gradient vert sur le héro
 .swiper-slide .gradient-hero {
-  background-image: linear-gradient(
+  background-image: linear-gradient( 
     to top,
-    couleurs.$vertAlgue,
+    couleurs.$vertAlgue, 
     rgba(255, 255, 255, 0)
   );
   background-size: 500px 100%;

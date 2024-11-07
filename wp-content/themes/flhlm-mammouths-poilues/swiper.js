@@ -1,4 +1,5 @@
-var swiper3 = new Swiper(".mySwiper3", {
+/*---------- SWIPER HERO ACCUEIL ----------*/
+var swiperHero = new Swiper(".swiperHero", {
   centeredSlides: true,
   effect: "creative",
   autoplay: {
@@ -16,7 +17,8 @@ var swiper3 = new Swiper(".mySwiper3", {
   },
 });
 
-var swiper = new Swiper(".temoin", {
+/*---------- SWIPER TEMOIGNAGE ----------*/
+var swiperTemoin = new Swiper(".temoin", {
   effect: "cards",
   grabCursor: true,
   on: {
@@ -32,6 +34,8 @@ var swiper = new Swiper(".temoin", {
   },
 });
 
+
+/*---------- SWIPER NOUVELLES ----------*/
 const swiperNouv = new Swiper(".swiperNouvelles", {
   slidesPerView: 0.89,
   direction: "horizontal",

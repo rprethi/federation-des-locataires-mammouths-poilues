@@ -4,6 +4,8 @@
 @use "./mixins/fonts";
 @use "./mixins/formatecran";
 
+
+/*---------- SERVICE-HUB ----------*/
 .services-hub {
   .services {
 
@@ -13,7 +15,7 @@
           color: white;
     }
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(200px, auto)); //Auto fit selon les écrans
     gap: 15px;
     justify-items: center;
     color: white;
@@ -47,6 +49,7 @@
       padding: 20px;
       box-sizing: border-box;
       transition: background-color, color, box-shadow, 0.25s;
+      //Créer un effet d'animation ou le texte apparait lorsqu'on hover sur un service
       &:hover {
         .services__item-bottom-text {
           h3 {
@@ -87,6 +90,7 @@
     }
   }
 
+/*---------- SERVICES-HUB POUR TABLETTE + DESKTOP ----------*/
   @media screen and (min-width: formatecran.$version-tablette) {
     .services {
       grid-template-columns: repeat(2, 1fr);
@@ -112,7 +116,7 @@
       }
     }
   }
-
+/*---------- SERVICES-HUB POUR DESKTOP ----------*/
   @media screen and (min-width: formatecran.$version-ordinateur) {
     .services {
       grid-template-columns: repeat(3, 1fr);

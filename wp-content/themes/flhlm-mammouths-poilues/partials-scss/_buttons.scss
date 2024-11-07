@@ -3,6 +3,8 @@
 @use "./mixins/couleurs";
 @use 'sass:color';
 
+/* ----- STYLE DES BOUTONS ----- */
+
 .btn {
   &-filled {
     text-align: center;

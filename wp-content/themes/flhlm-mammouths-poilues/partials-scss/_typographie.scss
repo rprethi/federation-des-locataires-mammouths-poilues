@@ -4,6 +4,8 @@
 @use "./mixins/lien";
 @use "./mixins/formatecran";
 
+/*---------- STYLESHEET DES FONTS ET STYLES DES TEXTES ----------*/
+
 * {
   @include fonts.nunito;
 }
