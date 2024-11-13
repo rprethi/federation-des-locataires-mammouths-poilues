@@ -1,11 +1,11 @@
 <!---------- ACCUEIL ---------->
 # Accueil
-## TYPE DE CONTENU (POST TYPE)
+## TYPE DE CONTENU : index
 
-## MODÈLE (TEMPLATE)
+## MODÈLE : accueil
 
-## COMPOSANTES
-### NOM DU PARTIAL
+## COMPOSANTES : heroaccueil, nav, banniere, footer, listenouvelles, listeservices
+### NOM DU PARTIAL : parallax 
 ### CHAMPS PERSONNALISÉS
 
 ## AUTRES CHAMPS PERSONNALISÉS
@@ -13,9 +13,9 @@
 <!---------- À PROPOS ---------->
 
 # À propos
-## TYPE DE CONTENU (POST TYPE)
+## TYPE DE CONTENU : about
 
-## MODÈLE (TEMPLATE)
+## MODÈLE : about
 
 ## COMPOSANTES
 ### NOM DU PARTIAL
@@ -26,11 +26,11 @@
 <!---------- SERVICES ---------->
 
 # Services
-## TYPE DE CONTENU (POST TYPE)
+## TYPE DE CONTENU : service
 
-## MODÈLE (TEMPLATE)
+## MODÈLE : services
 
-## COMPOSANTES
+## COMPOSANTES : 
 ### NOM DU PARTIAL
 ### CHAMPS PERSONNALISÉS
 
@@ -43,8 +43,8 @@
 
 ## MODÈLE (TEMPLATE)
 
-## COMPOSANTES
-### NOM DU PARTIAL
+## COMPOSANTES : listenouvelles, hero-vide, footer, nav
+### NOM DU PARTIAL : 
 ### CHAMPS PERSONNALISÉS
 
 ## AUTRES CHAMPS PERSONNALISÉS
