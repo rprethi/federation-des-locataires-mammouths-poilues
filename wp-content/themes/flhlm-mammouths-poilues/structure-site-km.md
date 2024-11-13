@@ -2,27 +2,21 @@
 
 ## TYPE DE CONTENU (POST TYPE)
 
-#### None
-
 ## MODÈLE (TEMPLATE)
 
 #### Home
 
 ## COMPOSANTE DE LA PAGES
 
-#### Liste / Lien services
-
-#### Titre
+#### Image
 
 #### Texte
 
-#### Boutom
+#### Groupe
 
-#### Liste / Lien nouvelles (actualité)
+#### Icon
 
-#### Parallax
-
-#### Carte Témoignage
+#### Url
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
@@ -38,11 +32,13 @@
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### Liste / Lien nouvelles (actualité)
+#### Groupe
+
+#### Texte
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
-#### Nav et Footer
+#### oEmbed
 
 # News-hub
 
@@ -58,25 +54,18 @@
 
 #### Image (héros)
 
-#### Liste / Lien vers une nouvelle
-
-#### Titre
-
-#### Filtre
-
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
 #### \_\_newsHub.scss
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### Liste / Lien vers une nouvelle
+#### Select
+
+#### Texte
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
-#### Image (héros)
-
-#### Nav et Footer
 
 # À propos
 
@@ -90,13 +79,13 @@
 
 ## COMPOSANTE DE LA PAGES
 
-#### Image (heros)
-
-#### Titre
+#### Image
 
 #### Texte
 
-#### Lien
+#### Url
+
+#### Icon
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
@@ -104,11 +93,8 @@
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### None
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-
-#### Nav et Footer
 
 # Nous joindre
 
@@ -124,11 +110,11 @@
 
 #### Image / Icone
 
-#### Titre
+#### Link
 
-#### Liens
+#### Icon
 
-#### Formulaire
+#### Google Map
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
@@ -136,13 +122,13 @@
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### Liens
+#### Email
 
-#### Formulaire
+#### Text (name)
+
+#### Text area
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-
-#### Nav et Footer
 
 # Équipe
 
@@ -156,13 +142,9 @@
 
 ## COMPOSANTE DE LA PAGES
 
-#### Image (heros)
-
-#### Titre
+#### Image
 
 #### Texte
-
-#### Cartes (individu)
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
@@ -170,11 +152,7 @@
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### Cartes
-
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-
-#### Nav et Footer
 
 # Services-hub
 
@@ -188,19 +166,17 @@
 
 ## COMPOSANTE DE LA PAGES
 
-#### Cartes service (lien vers page d'un service)
-
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
 #### \_\_service-hub.scss
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### cards Service
+#### Icon
+
+#### Text
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-
-#### Nav et Footer
 
 # 404
 
@@ -214,11 +190,7 @@
 
 ## COMPOSANTE DE LA PAGES
 
-#### Titre
-
-#### Texte
-
-#### Animation
+#### Text
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
@@ -226,11 +198,7 @@
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### None
-
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-
-#### Nav et Footer
 
 # Service
 
@@ -244,12 +212,6 @@
 
 ## COMPOSANTE DE LA PAGES
 
-#### Image
-
-#### Title
-
-#### Texte
-
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
 #### \_\_pageService.scss
@@ -258,19 +220,13 @@
 
 #### Image
 
-#### Titre
-
 #### Texte
+
+#### Icon
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
-#### parallax
-
-#### Lien vers page service-hub
-
-#### cartes d'autres services
-
-#### Nav et Footer
+#### Link
 
 # News-article
 
@@ -284,32 +240,18 @@
 
 ## COMPOSANTE DE LA PAGES
 
-#### Image
-
-#### Titre
-
-#### Texte
-
-#### Liens vers l'article précédente et prochaine
-
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
 #### \_\_pageNouvelle.scss
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
+## Text
+
 #### Image
 
-#### Title
-
-#### Texte
+#### Gallery
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
-#### parallax
-
-#### Lien vers page newsHub
-
-#### cartes d'autres articles
-
-#### Nav et Footer
+#### Link
