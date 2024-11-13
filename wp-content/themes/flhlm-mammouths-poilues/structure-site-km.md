@@ -248,7 +248,7 @@
 
 ## Text
 
-#### Image
+#### Image 
 
 #### Gallery
 
