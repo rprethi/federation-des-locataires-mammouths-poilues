@@ -2,6 +2,8 @@
 
 ## TYPE DE CONTENU (POST TYPE)
 
+#### home
+
 ## MODÈLE (TEMPLATE)
 
 #### Accueil
@@ -10,17 +12,13 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_accueilActualite.scss
+#### \_\_accueilParallax.php
 
-#### \_\_accueilMembre.scss
+#### \_\_hero-swiper.php
 
-#### \_\_accueilParallax.scss
+#### \_\_ListeNouvelles.php
 
-#### \_\_accueilService.scss
-
-#### \_\_accueilTemoin.scss
-
-#### \_\_hero-swiper.scss
+#### \_\_ListeService.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
@@ -56,9 +54,9 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_newsHub.scss
+#### \_\_ListeService.php
 
-#### \_\_hero-swiper.scss
+#### \_\_hero-generique.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
@@ -84,9 +82,9 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_about.scss
+#### \_\_about.php
 
-#### \_\_hero-swiper.scss
+#### \_\_hero-generique.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
@@ -116,7 +114,7 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_contactUs.scss
+#### \_\_contactUs.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
@@ -150,13 +148,13 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_team.scss
+#### \_\_team.php
 
-#### \_\_hero-swiper.scss
+#### \_\_hero-generique.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
-#### Image (heros)
+#### Image (profile membre)
 
 #### Titre
 
@@ -182,7 +180,7 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_service-hub.scss
+#### \_\_ListeService.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
@@ -200,7 +198,7 @@
 
 ## TYPE DE CONTENU (POST TYPE)
 
-#### Erreur
+#### error
 
 ## MODÈLE (TEMPLATE)
 
@@ -210,7 +208,7 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_erreur.scss
+#### \_\_erreur.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
@@ -226,17 +224,17 @@
 
 ## TYPE DE CONTENU (POST TYPE)
 
-#### Service (page)
+#### service
 
 ## MODÈLE (TEMPLATE)
 
-#### Article - article
+#### Service
 
 ## COMPOSANTE DE LA PAGES
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_pageService.scss
+#### \_\_pageService.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
@@ -260,7 +258,7 @@
 
 ## TYPE DE CONTENU (POST TYPE)
 
-### Article - article
+### article
 
 ## MODÈLE (TEMPLATE)
 
@@ -270,7 +268,7 @@
 
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 
-#### \_\_pageNouvelle.scss
+#### \_\_pageNouvelle.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
