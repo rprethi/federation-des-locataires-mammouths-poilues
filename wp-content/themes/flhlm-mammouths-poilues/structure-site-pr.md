@@ -1,131 +1,209 @@
 # Accueil
+<!-- Définition des informations liées à la page d'accueil -->
+
 ## TYPE DE CONTENU (POST TYPE)
-### Rien
+### home
 
 ## MODÈLE (TEMPLATE)
+### Accueil
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `accueilParallax.php`
+- `heroSwiper.php`
+- `listeNouvelles.php`
+- `listeService.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+### CHAMPS PERSONNALISÉS
+- **Image** : héros
+- **Groupe/Liste** : Lien nouvelles (actualité)
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## AUTRES CHAMPS PERSONNALISÉS
+- **Title** : titre
+- **Url** : page original
+- **Image** : parallax
+- **Group/List** : témoignage
+- **Text** : description
 
-# About 
+---
+
+# À propos
+<!-- Informations spécifiques à la page "À propos" -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### about
 
 ## MODÈLE (TEMPLATE)
+### aPropos
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `about.php`
+- `heroGenerique.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### Text
-#### Url
-#### Icon
+### CHAMPS PERSONNALISÉS (CUSTOM FIELDS)
+- **Text** : description
+- **Icon** : icône PDF
+- **Link** : lien vers le PDF
+- **Gallery/Image** : héros
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+---
 
-# Contact us
+# Nous joindre
+<!-- Configuration de la page de contact -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### contactus
 
 ## MODÈLE (TEMPLATE)
+### contactUs
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `contactUs.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### Email
-#### Number
-#### Text Area
-#### Google Maps
+### CHAMPS PERSONNALISÉS (CUSTOM FIELDS)
+- **Email** : courriel
+- **Title** : titre
+- **Text Area** : message
+- **Google Maps** : adresse
+- **Link** : téléphone
+- **Link** : adresse
+- **Link** : courriel
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+---
 
 # Service
+<!-- Détails liés à la page des services -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### service
 
 ## MODÈLE (TEMPLATE)
+### Service
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### __pageServices.scss
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `pageServices.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### description:Text
-#### Url
+### CHAMPS PERSONNALISÉS
+- **Text** : description
+- **Image** : héros
+- **Title** : titre
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## AUTRES CHAMPS PERSONNALISÉS
+- **Image** : parallax
+- **Link** : `service-hub.php`
+- **Group/List** : services cliquables
+- **Icon** : icône
+
+---
 
 # 404
+<!-- Configuration pour la page d'erreur -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### error
 
 ## MODÈLE (TEMPLATE)
+### Erreur
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### __erreurs.scss
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `erreurs.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### Text
+## AUTRES CHAMPS PERSONNALISÉS
+- **Title** : titre
+- **Text** : description
+- **Image** : animation
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+---
 
-# Services hub
+# Services-hub
+<!-- Détails pour le hub des services -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### servicehub
 
 ## MODÈLE (TEMPLATE)
+### listeService
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### __services-hub.scss
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `listeServices.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### Text
-#### Icon
+### CHAMPS PERSONNALISÉS
+- **Text** : description
+- **Icon** : icône
+- **Title** : titre
+- **Group/List** : cartes services -> page service
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+---
 
-# News hub
+# News-hub
+<!-- Informations spécifiques au hub des actualités -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### newshub
 
 ## MODÈLE (TEMPLATE)
+### listeNouvelle
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### __newsHub.scss
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `listeNouvelle.php`
+- `heroGenerique.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### Select (choice)
-#### Text
+### CHAMPS PERSONNALISÉS
+- **Select** : ordre des nouvelles
+- **Text** : texte
+- **Title** : titre
+- **Group/List** : lien vers une page nouvelle
+- **Image/Gallery** : héros
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+---
 
 # News article
+<!-- Configuration pour une page d'article -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### article
 
 ## MODÈLE (TEMPLATE)
+### Actualite
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### __pageNouvelle.scss
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `pageNouvelle.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### Text
+### CHAMPS PERSONNALISÉS
+- **Text** : description
+- **Image** : héros
+- **Title** : titre
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## AUTRES CHAMPS PERSONNALISÉS
+- **Image** : parallax
+- **Group/List** : articles
+- **Link** : nouvelle précédente et suivante
+
+---
 
 # Teams
+<!-- Informations sur la page d'équipe -->
+
 ## TYPE DE CONTENU (POST TYPE)
+### team
 
 ## MODÈLE (TEMPLATE)
+### Equipe
 
-## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-#### __team.scss
+## COMPOSANTES DE LA PAGE
+### NOM DU PARTIAL
+- `team.php`
+- `heroGenerique.php`
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-#### Modale
-#### Text
-
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+### CHAMPS PERSONNALISÉS
+- **Group/List** : membres de l'équipe
+- **Text** : description
+- **Title** : titre
+- **Image** : photo de profil des membres
