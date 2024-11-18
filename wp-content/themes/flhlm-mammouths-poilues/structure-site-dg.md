@@ -2,11 +2,11 @@
 # Accueil
 ## TYPE DE CONTENU : index
 
-## MODÈLE : accueil
+## MODÈLE : Accueil
 
-## COMPOSANTES : heroaccueil, nav, banniere, footer, listenouvelles, listeservices
-### NOM DU PARTIAL : parallax 
-### CHAMPS PERSONNALISÉS
+## COMPOSANTES : heroaccueil, temoignagecartes, devenirmembre
+### NOM DU PARTIAL : parallax.php, serviceslist.php, newslist.php
+### CHAMPS PERSONNALISÉS : titre (hero), description(hero), image (hero)
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -15,37 +15,37 @@
 # À propos
 ## TYPE DE CONTENU : about
 
-## MODÈLE : about
+## MODÈLE : À propos
 
-## COMPOSANTES
-### NOM DU PARTIAL
-### CHAMPS PERSONNALISÉS
+## COMPOSANTES : 
+### NOM DU PARTIAL heroswiper.php
+### CHAMPS PERSONNALISÉS : 
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
 <!---------- SERVICES ---------->
 
 # Services
-## TYPE DE CONTENU : service
+## TYPE DE CONTENU : servicelist
 
-## MODÈLE : services
+## MODÈLE : Services
 
-## COMPOSANTES : 
-### NOM DU PARTIAL
-### CHAMPS PERSONNALISÉS
+## COMPOSANTES : unservice
+### NOM DU PARTIAL : serviceslist.php, herovide.php
+### CHAMPS PERSONNALISÉS : image (icon), titre, description
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
 <!---------- NOUVELLES ---------->
 
 # Nouvelles
-## TYPE DE CONTENU (POST TYPE)
+## TYPE DE CONTENU (POST TYPE) : newslist
 
-## MODÈLE (TEMPLATE)
+## MODÈLE (TEMPLATE) : Nouvelles
 
-## COMPOSANTES : listenouvelles, hero-vide, footer, nav
-### NOM DU PARTIAL : 
-### CHAMPS PERSONNALISÉS
+## COMPOSANTES unarticle, trierarticle
+### NOM DU PARTIAL : article.php, heroswiper.php, newslist.php
+### CHAMPS PERSONNALISÉS : image (pour chaque nouvelle), date, auteur, description
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -56,8 +56,8 @@
 
 ## MODÈLE (TEMPLATE)
 
-## COMPOSANTES
-### NOM DU PARTIAL : equipecard
+## COMPOSANTES : carteequipe, modaleequipe
+### NOM DU PARTIAL : heroswiper.php
 ### CHAMPS PERSONNALISÉS : titre, nom, image, bio, email, linkedin, instagram
 
 ## AUTRES CHAMPS PERSONNALISÉS
@@ -65,14 +65,14 @@
 
 <!---------- CONTACT ---------->
 
-# Contact
+# Nous joindre
 ## TYPE DE CONTENU : contact
 
-## MODÈLE : page
+## MODÈLE : Contact
 
-## COMPOSANTES : hero, footer, nav
-### NOM DU PARTIAL : 
-### CHAMPS PERSONNALISÉS : Google Map field
+## COMPOSANTES : form, infocontact, map
+### NOM DU PARTIAL : herovide.php
+### CHAMPS PERSONNALISÉS : Google Map field, adresse, email, phone, fax
 
 ## AUTRES CHAMPS PERSONNALISÉS : 
 
@@ -81,11 +81,11 @@
 # 404
 ## TYPE DE CONTENU : erreur
 
-## MODÈLE : page
+## MODÈLE : Erreur
 
-## COMPOSANTES : hero-vide, footer, nav
-### NOM DU PARTIAL
-### CHAMPS PERSONNALISÉS
+## COMPOSANTES 
+### NOM DU PARTIAL: herovide.php
+### CHAMPS PERSONNALISÉS 
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -94,10 +94,10 @@
 # Une nouvelle
 ## TYPE DE CONTENU : pagenouvelle
 
-## MODÈLE : page
+## MODÈLE : UneNouvelle
 
-## COMPOSANTES : heroimage, footer, nav, listenouvelles
-### NOM DU PARTIAL : listenouvelles
+## COMPOSANTES : unarticle
+### NOM DU PARTIAL : newslist.php, article.php, heroimage.php, parallax.php
 ### CHAMPS PERSONNALISÉS : date, auteur, titre, image
 
 ## AUTRES CHAMPS PERSONNALISÉS
@@ -107,11 +107,11 @@
 # Un service
 ## TYPE DE CONTENU : pageservice
 
-## MODÈLE : page
+## MODÈLE : UnService
 
-## COMPOSANTES : heroimage, footer, nav, listeservices
-### NOM DU PARTIAL : listeservices
-### CHAMPS PERSONNALISÉS : 
+## COMPOSANTES : unservice
+### NOM DU PARTIAL : service.php, heroimage.php, parallax.php
+### CHAMPS PERSONNALISÉS : image (icon), titre, description
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
