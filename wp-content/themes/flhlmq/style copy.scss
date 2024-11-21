@@ -1,0 +1,30 @@
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 1.0
+*/
+
+
+@use "./partials-scss/variables";
+@use "./partials-scss/typographie";
+@use "./partials-scss/hero-swiper";
+@use "./partials-scss/header";
+@use "./partials-scss/buttons";
+@use "./partials-scss/footer";
+@use "./partials-scss/main";
+@use "./partials-scss/accueilMembre";
+@use "./partials-scss/accueilServices";
+@use "./partials-scss/accueilActualite";
+@use "./partials-scss/accueilParallax";
+@use "./partials-scss/accueilTemoin";
+@use "./partials-scss/contactUs";
+@use "./partials-scss/services-hub";
+@use "./partials-scss/about";
+@use "./partials-scss/newsHub";
+@use "./partials-scss/team";
+@use "./partials-scss/pageNouvelle";
+@use "./partials-scss/pageService";
+@use "./partials-scss/erreur";
+

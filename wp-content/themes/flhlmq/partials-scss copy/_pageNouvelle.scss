@@ -1,0 +1,194 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/formatecran";
+@use "./mixins/lien";
+@use "./mixins/text";
+@use "sass:color";
+
+// desktop first
+
+.hero__img {
+  object-position: 50% 0%;
+}
+.hero__nouvelle {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.section-nouvelle {
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow-x: hidden;
+  .contenu {
+    position: relative;
+  }
+  .gradiant {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      couleurs.$argile 70%
+    );
+  }
+
+  .plus-info {
+    display: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    & a:link {
+      text-decoration: none;
+    }
+  }
+  & p {
+    @include fonts.nunito;
+    font-size: 20px;
+    & span {
+      & a {
+        font-size: 20px;
+      }
+    }
+  }
+  & .nouvelle__navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+  & .nouvelle__title__lien {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  & a {
+    @include lien.lien;
+    font-size: bold;
+    text-decoration: none;
+    & :hover {
+      color: couleurs.$vertAmande;
+    }
+  }
+
+  .content-nouv {
+    overflow: hidden;
+    display: grid;
+    & .nouvelles {
+      gap: 25px;
+      display: grid;
+      grid-template-columns: repeat(6, 32%);
+      justify-content: start;
+      a:link {
+        text-decoration: none;
+        &:hover {
+          color: couleurs.$vertAlgue;
+        }
+      }
+
+      .swiper-slide {
+        width: fit-content !important;
+      }
+
+      & .cartes {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: start;
+        padding: 5px;
+        transition: background 0.5s;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        &:hover {
+          transition-duration: 0.5s;
+          background: color.adjust(couleurs.$argile, $whiteness: 10%);
+        }
+        &__date {
+          text-decoration: none;
+          @include text.text;
+          color: couleurs.$vertAmande;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          object-position: 0 20%;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+
+        hr {
+          opacity: 75%;
+          width: 100%;
+          grid-column: 2 / 2;
+          border-top: 5px couleurs.$vertAmande solid;
+        }
+
+        &__title {
+          @include text.text;
+          color: couleurs.$vertAlgue;
+          font-size: 24px;
+          justify-items: center;
+          // text-align: center;
+          font-weight: bold;
+        }
+        p {
+          font-weight: normal;
+          color: couleurs.$encre;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.hero__nouvelle {
+  object-fit: cover;
+  object-position: 0 15%;
+}
+
+@media screen and (max-width: formatecran.$version-tablette) {
+  .section-nouvelle {
+    .gradiant {
+      display: block;
+    }
+    .plus-info {
+      display: block;
+      bottom: 250px;
+    }
+    .active {
+      display: none;
+    }
+    & span {
+      & a {
+        font-size: 20px;
+      }
+    }
+    .content-nouv {
+      .nouvelles {
+        & .cartes {
+          grid-column: 1fr;
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
