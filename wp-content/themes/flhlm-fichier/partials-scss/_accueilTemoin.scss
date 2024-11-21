@@ -1,0 +1,322 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/formatecran";
+
+/* ----- STYLE DE L'ACCUEIL SECTION TÉMOIN ----- */
+
+.swiper-temoin {
+	width: 350px;
+	height: 300px;
+  }
+  
+  .silde-temoin {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 5px solid couleurs.$vertAlgue;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: couleurs.$argile;
+	box-shadow: 0 4px 15px rgba(couleurs.$encre, 0.1);
+  }
+  
+  .gradient-text {
+	font-size: 14px !important;
+	background: linear-gradient(to bottom, couleurs.$encre, couleurs.$vertAmande);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	display: inline-block;
+	transition: color 0.3s ease;
+  }
+  
+  .black-text {
+	color: couleurs.$encre !important;
+	background: none;
+	transition: color 0.3s ease;
+  }
+  
+  .hidden-text {
+	font-size: 14px !important;
+	display: none;
+	background: couleurs.$encre;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: all 0.3s ease;
+  }
+  
+  .section-temoignage .show {
+	display: inline;
+	-webkit-text-fill-color: transparent;
+	font-size: 14px !important;
+  }
+  
+  .voir-plus {
+	background: none;
+	border: none;
+	color: couleurs.$encre;
+	cursor: pointer;
+	font-size: 14px;
+	text-decoration: underline;
+	margin-top: 10px;
+	display: block;
+  }
+  
+  .contenue__temoin {
+	width: 50px !important;
+	height: 50px !important;
+	border-radius: 50%;
+	display: flex;
+	justify-content: flex-start;
+	box-shadow: 0 4px 15px rgba(couleurs.$encre, 0.1);
+  }
+  
+  .silde-temoin {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 5px solid couleurs.$vertAlgue;
+	padding: 30px;
+	border-radius: 20px;
+	background-color: couleurs.$argile;
+	box-shadow: 0 4px 20px rgba(couleurs.$encre, 0.1);
+  }
+  
+  .etoile {
+	width: 70px !important;
+	display: block;
+	margin-top: 15px;
+  }
+  
+  .active-card {
+	background-color: couleurs.$vertAmande;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .silde-temoin {
+	transition: background-color 0.9s ease;
+  }
+  
+  .commentaire {
+	br {
+	  content: "";
+	  display: block;
+	  margin: 10px 0;
+	}
+  }
+  
+  .temoin-details {
+	display: flex;
+	flex-direction: column;
+	span {
+	  &:nth-child(2) {
+		font-weight: 300 !important;
+		font-size: 12px !important;
+	  }
+	  &:nth-child(1) {
+		font-weight: 700 !important;
+		font-size: 14px !important;
+	  }
+	}
+  }
+  
+  .personne {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+  }
+  
+  .commentaire {
+	line-height: 1.5;
+	font-size: 12px !important;
+  }
+  
+  @media (min-width: 768px) {
+	.swiper-temoin {
+	  width: 450px;
+	  height: 300px;
+	}
+  
+	.gradient-text {
+	  font-size: 14px !important;
+	  color: couleurs.$encre;
+	}
+  
+	.hidden-text {
+	  font-size: 14px !important;
+	  color: couleurs.$encre;
+	  display: inline-block;
+	}
+  
+	.contenue__temoin {
+	  width: 50px !important;
+	  height: 50px !important;
+	  border-radius: 50%;
+	  display: flex;
+	  justify-content: flex-start;
+	}
+  
+	.silde-temoin {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  border: 5px solid couleurs.$vertAlgue;
+	  padding: 30px;
+	  border-radius: 20px;
+	  background-color: couleurs.$argile;
+	  box-shadow: 0 4px 20px rgba(couleurs.$encre, 0.1);
+	}
+  
+	.etoile {
+	  width: 100px !important;
+	  display: block;
+	  margin-top: 15px;
+	}
+  
+	.active-card {
+	  background-color: couleurs.$vertAmande;
+	  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+  
+	.silde-temoin {
+	  transition: background-color 0.9s ease;
+	}
+  
+	.commentaire {
+	  br {
+		content: "";
+		display: block;
+		margin: 10px 0;
+	  }
+	}
+  
+	.temoin-details {
+	  display: flex;
+	  flex-direction: column;
+	  span {
+		&:nth-child(2) {
+		  font-weight: 300 !important;
+		  font-size: 14px !important;
+		}
+		&:nth-child(1) {
+		  font-weight: 500 !important;
+		  font-size: 18px !important;
+		}
+	  }
+	}
+  
+	.personne {
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+	  line-height: 1.5;
+	  margin-bottom: 15px;
+	}
+  
+	.commentaire {
+	  line-height: 1.5;
+	}
+  
+	.voir-plus {
+	  display: none;
+	}
+  }
+  
+  @media (min-width: 1440px) {
+	.swiper-temoin {
+	  width: 500px;
+	  height: 300px;
+	}
+  
+	.gradient-text {
+	  font-size: 16px !important;
+	  color: couleurs.$encre;
+	}
+  
+	.hidden-text {
+	  font-size: 16px !important;
+	  color: couleurs.$encre;
+	  display: inline-block;
+	}
+  
+	.contenue__temoin {
+	  width: 50px !important;
+	  height: 50px !important;
+	  border-radius: 50%;
+	  display: flex;
+	  justify-content: flex-start;
+	}
+  
+	.silde-temoin {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  border: 5px solid couleurs.$vertAlgue;
+	  padding: 30px;
+	  border-radius: 20px;
+	  background-color: couleurs.$argile;
+	  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	}
+  
+	.etoile {
+	  width: 100px !important;
+	  display: block;
+	  margin-top: 15px;
+	}
+  
+	.active-card {
+	  background-color: couleurs.$vertAmande;
+	  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+  
+	.silde-temoin {
+	  transition: background-color 0.9s ease;
+	}
+  
+	.commentaire {
+	  br {
+		content: "";
+		display: block;
+		margin: 10px 0;
+	  }
+	}
+  
+	.temoin-details {
+	  display: flex;
+	  flex-direction: column;
+  
+	  span {
+		&:nth-child(2) {
+		  font-weight: 300 !important;
+		  font-size: 18px !important;
+		}
+  
+		&:nth-child(1) {
+		  font-weight: 500 !important;
+		  font-size: 20px !important;
+		}
+	  }
+	}
+	.commentaire {
+	  line-height: 1.5;
+	  font-size: 16px;
+	}
+  
+	.voir-plus {
+	  display: none;
+	}
+  }
+  
+  .personne {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+  }
+  

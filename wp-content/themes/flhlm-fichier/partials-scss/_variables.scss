@@ -1,0 +1,30 @@
+@use "./mixins/couleurs";
+@use "./mixins/formatecran";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: couleurs.$argile;
+}
+
+
+
+@media (min-width: formatecran.$version-mobile) {
+  body {
+    min-width: formatecran.$version-mobile;
+  }
+}
+
+@media (min-width: formatecran.$version-tablette) {
+  body {
+    min-width: formatecran.$version-tablette;
+  }
+}
+
+@media (min-width: formatecran.$version-ordinateur) {
+  body {
+    min-width: formatecran.$version-ordinateur;
+  }
+}

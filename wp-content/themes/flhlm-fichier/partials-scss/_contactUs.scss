@@ -1,0 +1,133 @@
+@use "./mixins/couleurs";
+@use "./mixins/formatecran";
+@use "./mixins/text";
+@use "./typographie";
+@use 'sass:color';
+
+/* ----- STYLE PAGE NOUS JOINDRE ----- */
+
+.pageNousJoindre {
+  .contact {
+    display: grid;
+    grid-row: auto auto auto;
+    width: 100%;
+    margin: 0 0;
+
+    h2 {
+      margin-bottom: 30px;
+      margin-top: -20px;
+    }
+
+
+    &__text {
+      width: 100%;
+      .informations {
+        display: flex;
+        align-items: center;
+      }
+      .icon-contour {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        margin-right: 20px;
+        box-sizing: border-box; //enlever
+        border-radius: 50%;
+        background-color: couleurs.$vertAlgue;
+        color: couleurs.$argile;
+      }
+    }
+    &__form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: couleurs.$vertAlgue;
+      border-radius: 25px;
+      padding: 15px;
+      min-width: 400px;
+      input {
+        width: 100%;
+        height: 15%;
+        margin: 10px 0;
+        
+        color: couleurs.$argile;
+        padding-left: 10px;
+        border-radius: 25px;
+        background-color: color.adjust(couleurs.$vertAlgue, $lightness: 15%, $saturation: -10%); 
+
+        &::placeholder {
+            color: couleurs.$argile;
+            opacity: 1;
+          }
+      }
+    }
+
+    textarea {
+        resize: none;
+        border-radius: 25px;
+        color: couleurs.$argile;
+        width: 100%;
+        height: 15%;
+        padding-left: 10px;
+        margin: 10px 0;
+        background-color: color.adjust(couleurs.$vertAlgue, $lightness: 15%, $saturation: -10%);
+        &::placeholder {
+            transform: translateY(13px);
+            color: couleurs.$argile;
+            opacity: 1;
+          } 
+
+    }
+    &__map {
+      width: 100%;
+      height: 400px;
+      margin-top: 4%;
+    }
+  }
+
+  .informations {
+    margin: 10px 0;
+    display: flex;
+    a {
+      margin-bottom: 12px;
+    }
+    span {
+      margin-bottom: 4px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    
+  }
+}
+
+@media screen and (min-width: formatecran.$version-tablette) {
+  .contact {
+    &-top {
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: 1fr;
+      display: grid;
+
+      h2 {
+        grid-area: 1 / 1 / 2 / 3;
+      }
+    }
+  }
+}
+
+.contact__map {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+}
+
+.contact__map iframe {
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
