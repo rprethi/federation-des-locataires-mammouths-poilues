@@ -129,6 +129,7 @@
 .section-about {
   margin-top: 20px;
 
+
   .texte {
     margin-bottom: 50px;
   }
@@ -145,6 +146,11 @@
 /*----- DÉBUT SECTION HERO TABLETTE ---*/
 
 /*------------------------------------------------------------------*/
+
+.hero-about {
+  display: block;
+  background-color: red;
+}
 
 @media (max-width: formatecran.$version-tablette) {
   .slider {

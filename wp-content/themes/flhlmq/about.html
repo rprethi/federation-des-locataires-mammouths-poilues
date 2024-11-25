@@ -17,9 +17,26 @@
 
   <body>
     <!-- -=-=-=-=-=-=- HEADER -=-=-=-=-=-=- -->
-    <header class="header-hero">
-      <div class="nav__banniere fixed-top">
-        <div class="ban__centre">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>FLHLMQ - Mammouths poilues</title>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <link rel="stylesheet" href="style.css" />
+    </head>
+  
+    <body>
+      <!-- -=-=-=-=-=-=- HEADER -=-=-=-=-=-=- -->
+      <header>
+        <div class="nav__banniere fixed-top">
+          <div class="ban__centre">
           <span class="ban__centre-left">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,200 +58,168 @@
             ><button class="banner__close">&times;</button></span
           >
         </div>
-      </div>
+        </div>
+  
+        <!-- -=-=-=-=-=-=- HEADER - NAV -=-=-=-=-=-=- -->
+        <nav
+        class="navbar navbar-light navbar-expand-xl"
+        id="navigation"
+      >
+        <div class="container-fluid nav-centre">
+          <a
+            class="navbar-brand"
+            href="index.html"
+          >
+            <img src="./assets/logo_fonce.svg" alt="flhlmq" class="nav-logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              id="burgerMenu"
+              width="30px"
+              height="30px"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="burgerAnim1"
+                d="M4 7C4 6.44771 4.44772 6 5 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H5C4.44772 8 4 7.55229 4 7Z"
+                fill="#000000"
+              />
+              <path
+                class="burgerAnim2"
+                d="M4 13.9998C4 13.4475 4.44772 12.9997 5 12.9997L16 13C16.5523 13 17 13.4477 17 14C17 14.5523 16.5523 15 16 15L5 14.9998C4.44772 14.9998 4 14.552 4 13.9998Z"
+                fill="#000000"
+              />
+              <path
+                class="burgerAnim3"
+                d="M5 19.9998C4.44772 19.9998 4 20.4475 4 20.9998C4 21.552 4.44772 21.9997 5 21.9997H22C22.5523 21.9997 23 21.552 23 20.9998C23 20.4475 22.5523 19.9998 22 19.9998H5Z"
+                fill="#000000"
+              />
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <div
+              class="wrap"
+            >
+              <div class="ul-wrapper">
+                <ul class="navbar-nav mb-xl-0">
+                  <li class="nav-item dropdown">
+                    <a
+                      href="./about.html"
+                      class="nav-link nav-active"
+                      >À propos</a
+                    >
+                    <ul class="dropdown-menu" >
+                      <li><a href="./about.html" class="dropdown-item">Calendrier</a></li>
+                      <li><a href="./about.html" class="dropdown-item">Formation</a></li>
+                    </ul>
+                  </li>
+                  <!-- Voir si nécessaire -->
 
-      <!-- -=-=-=-=-=-=- HEADER - NAV -=-=-=-=-=-=- -->
-      <nav
-      class="navbar navbar-light navbar-expand-xl"
-      id="navigation"
-    >
-      <div class="container-fluid nav-centre">
-        <a
-          class="navbar-brand"
-          href="index.html"
-        >
-          <img src="./assets/logo_fonce.svg" alt="flhlmq" class="nav-logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <svg
-            id="burgerMenu"
-            width="30px"
-            height="30px"
-            viewBox="0 0 28 28"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="burgerAnim1"
-              d="M4 7C4 6.44771 4.44772 6 5 6H24C24.5523 6 25 6.44771 25 7C25 7.55229 24.5523 8 24 8H5C4.44772 8 4 7.55229 4 7Z"
-              fill="#000000"
-            />
-            <path
-              class="burgerAnim2"
-              d="M4 13.9998C4 13.4475 4.44772 12.9997 5 12.9997L16 13C16.5523 13 17 13.4477 17 14C17 14.5523 16.5523 15 16 15L5 14.9998C4.44772 14.9998 4 14.552 4 13.9998Z"
-              fill="#000000"
-            />
-            <path
-              class="burgerAnim3"
-              d="M5 19.9998C4.44772 19.9998 4 20.4475 4 20.9998C4 21.552 4.44772 21.9997 5 21.9997H22C22.5523 21.9997 23 21.552 23 20.9998C23 20.4475 22.5523 19.9998 22 19.9998H5Z"
-              fill="#000000"
-            />
-          </svg>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <div
-            class="wrap"
-          >
-            <div class="ul-wrapper">
-              <ul class="navbar-nav mb-xl-0">
                 <li class="nav-item dropdown">
-                  <a
-                    href="./about.html"
-                    class="nav-link nav-active"
-                    >À propos</a
-                  >
-                  <ul class="dropdown-menu" >
-                    <li><a href="./about.html" class="dropdown-item">Calendrier</a></li>
-                    <li><a href="./about.html" class="dropdown-item">Formation</a></li>
+                  <a href="./services-hub.html" class="nav-link">Services</a>
+           
+                  <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Le congrès</a></li>
+                    <li><a href="./service.html" class="dropdown-item nav-active">Fondation d'association de locataire</a></li>
+                    <li><a href="#" class="dropdown-item">S'impliquer au CCR</a></li>
+                    <li><a href="#" class="dropdown-item">Être au CA de l'OMH</a></li>
+                    <li><a href="#" class="dropdown-item">Bulletin de la FLHLMQ</a></li>
+                    <li><a href="#" class="dropdown-item">Infolettre</a></li>
+                    <li><a href="#" class="dropdown-item">Guide pratiques</a></li>
+                    <li><a href="#" class="dropdown-item">Autres documents</a></li>
                   </ul>
-                </li>
-                <!-- Voir si nécessaire -->
-
-              <li class="nav-item dropdown">
-                <a href="./services-hub.html" class="nav-link">Services</a>
-         
-                <ul class="dropdown-menu">
-                  <li><a href="#" class="dropdown-item">Le congrès</a></li>
-                  <li><a href="./service.html" class="dropdown-item">Fondation d'association de locataire</a></li>
-                  <li><a href="#" class="dropdown-item">S'impliquer au CCR</a></li>
-                  <li><a href="#" class="dropdown-item">Être au CA de l'OMH</a></li>
-                  <li><a href="#" class="dropdown-item">Bulletin de la FLHLMQ</a></li>
-                  <li><a href="#" class="dropdown-item">Infolettre</a></li>
-                  <li><a href="#" class="dropdown-item">Guide pratiques</a></li>
-                  <li><a href="#" class="dropdown-item">Autres documents</a></li>
+                 
+                </li> 
+                  <li class="nav-item">
+                    <a href="./news-hub.html" class="nav-link">Nouvelles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./team.html" class="nav-link">Équipe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./contact-us.html" class="nav-link"
+                      >Nous joindre</a
+                    >
+                  </li>
                 </ul>
-               
-              </li> 
-                <li class="nav-item">
-                  <a href="./news-hub.html" class="nav-link">Nouvelles</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./team.html" class="nav-link">Équipe</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./contact-us.html" class="nav-link"
-                    >Nous joindre</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="nav-bottom">
-              <div class="nav__search">
-                <form
-                  role="search"
-                  method="get"
-                  class="search-form"
-                  action=""
-                >
-                  <label>
-                    <input
-                      type="search"
-                      class="search-field"
-                      placeholder="Rechercher …"
-                      value=""
-                      name=""
-                      title="Rechercher"
-                    />
-                    <input
-                      type="submit"
-                      class="search-submit"
-                      value="Rechercher"
-                    />
-                  </label>
-                </form>
               </div>
-              <span class="nav-connection">
-                <button class="btn-empty">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    class="bi bi-person-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                    <path
-                      fill-rule="evenodd"
-                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                    />
-                  </svg>
-                  <a href="#">Se connecter</a>
-                </button>
-              </span>
-              <button class="btn-empty btn-langue">EN</button>
-              <a class="btn-filled" target="_blank"
-              href="https://flhlmq.com/fr/publication/adhesion-et-abonnement">Devenir membre</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    </header>
-    <!-- -=-=-=-=-=-=- DEBUT SECTION HERO -=-=-=-=-=-=- -->
-    <main>
-      <section class="hero about-hero">
-        <div class="container-hero">
-          <div class="slider slidess">
-            <div
-              class="slides"
-              style="--img: url('./assets/medias/article-3.png')"
-            >
-              <div class="content"></div>
-            </div>
-            <div
-              class="slides"
-              style="--img: url('./assets/medias/article-5.png')"
-            >
-              <div class="content"></div>
-            </div>
-            <div
-              class="slides"
-              style="--img: url('./assets/medias/article-6.png')"
-            >
-              <div class="content"></div>
-            </div>
-            <div
-              class="slides"
-              style="--img: url('./assets/medias/article-7.png')"
-            >
-              <div class="content"></div>
-            </div>
-            <div
-              class="slides"
-              style="--img: url('./assets/medias/article-8.png')"
-            >
-              <div class="content"></div>
-            </div>
-          </div>
-          <div class="buttons-heros">
-            <span class="prev"></span>
-            <span class="next"></span>
-          </div>
-        </div>
-      </section>
-      <!-- -=-=-=-=-=-=- FIN SECTION HERO -=-=-=-=-=-=- -->
 
-      <!-- -=-=-=-=-=-=- DÉBUT SECTION ABOUT -=-=-=-=-=-=- -->
+              <div class="nav-bottom">
+                <div class="nav__search">
+                  <form
+                    role="search"
+                    method="get"
+                    class="search-form"
+                    action=""
+                  >
+                    <label>
+                      <input
+                        type="search"
+                        class="search-field"
+                        placeholder="Rechercher …"
+                        value=""
+                        name=""
+                        title="Rechercher"
+                      />
+                      <input
+                        type="submit"
+                        class="search-submit"
+                        value="Rechercher"
+                      />
+                    </label>
+                  </form>
+                </div>
+                <span class="nav-connection">
+                  <button class="btn-empty">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      fill="currentColor"
+                      class="bi bi-person-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                      />
+                    </svg>
+                    <a href="#">Se connecter</a>
+                  </button>
+                </span>
+                <button class="btn-empty btn-langue">EN</button>
+                <a class="btn-filled" target="_blank"
+                href="https://flhlmq.com/fr/publication/adhesion-et-abonnement">Devenir membre</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      </header>
+    <main id="accueil">
+      <section class="hero__service">
+            <div class="swiper-slide">
+              <div class="gradient-hero"></div>
+              <img
+                class="hero__img"
+                src="assets/medias/article-4.jpg"
+                alt=""
+              />
+            </div>
+      </section>
+
+      <!-- -=-=-=-=-=-=- SECTION Contenu -=-=-=-=-=-=- -->
       <section class="section-about section-center">
         <h2>Présentation de la FLHLMQ</h2>
         <br />
@@ -298,8 +283,9 @@
         </div>
         <!-- -=-=-=-=-=-=- FIN TÉLÉCHARGEMENT PDF -=-=-=-=-=-=- -->
       </section>
-      <!-- -=-=-=-=-=-=- FIN SECTION ABOUT -=-=-=-=-=-=- -->
+  
     </main>
+
     <!-- -=-=-=-=-=-=- FOOTER -=-=-=-=-=-=- -->
     <footer class="footer">
       <div class="footer__logo">
@@ -353,7 +339,7 @@
       <div class="footer__section footer__membre">
         <h4>Membre</h4>
         <a
-          class="btn-filled"
+          class="btn-filled  "
           target="_blank"
           href="https://flhlmq.com/fr/publication/adhesion-et-abonnement"
           >Devenir membre</a
@@ -404,8 +390,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="./swiper-02.js"></script>
+    <script src="./swiper.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

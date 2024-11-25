@@ -726,6 +726,7 @@ Version: 1.0
 /*---------- STYLES GÉNÉRAUX ----------*/
 body {
   overflow-x: hidden;
+  margin: 0;
 }
 
 #accueil {
@@ -1715,6 +1716,11 @@ Version: 1.0
 /*------------------------------------------------------------------*/
 /*----- DÉBUT SECTION HERO TABLETTE ---*/
 /*------------------------------------------------------------------*/
+.hero-about {
+  display: block;
+  background-color: red;
+}
+
 @media (max-width: 768px) {
   .slider .slides {
     width: 150px;
