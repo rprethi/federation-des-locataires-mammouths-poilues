@@ -20,9 +20,13 @@
 
     a {
       @include lien.lien;
-      align-self: end;
-      margin-bottom: 3%;
     }
+    .align-lien{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
   }
 
  

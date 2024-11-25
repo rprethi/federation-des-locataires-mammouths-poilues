@@ -869,12 +869,15 @@ Version: 1.0
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
-  align-self: end;
-  margin-bottom: 3%;
 }
 #accueil .section-services a:hover {
   text-decoration-color: #88b07e;
   color: #c4b091;
+}
+#accueil .section-services .align-lien {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #accueil .services {
   display: grid;
