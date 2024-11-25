@@ -2394,6 +2394,11 @@ Version: 1.0
   height: 100vh;
   width: 100%;
 }
+.hero__service .swiper-text h2 {
+  position: absolute;
+  color: #f7f7ff;
+  top: -20%;
+}
 
 .section-service {
   margin: 0 auto;
