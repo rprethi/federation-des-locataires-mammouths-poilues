@@ -723,6 +723,10 @@ Version: 1.0
     margin: 0;
   }
 }
+:root {
+  --size: 10px;
+}
+
 /*---------- STYLES GÉNÉRAUX ----------*/
 body {
   overflow-x: hidden;
@@ -1291,8 +1295,8 @@ Version: 1.0
 }
 @media (min-width: 1440px) {
   .swiper-temoin {
-    width: 500px;
-    height: 300px;
+    width: 700px;
+    height: 400px;
   }
   .gradient-text {
     font-size: 16px !important;

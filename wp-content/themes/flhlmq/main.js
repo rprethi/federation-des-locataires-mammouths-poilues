@@ -1,3 +1,4 @@
+
 /*---------- BANNIÈRE ----------*/
 let bannerClose = document.querySelector(".banner__close");
 let banner = document.querySelector(".nav__banniere");
@@ -127,3 +128,8 @@ if (btnVoirPlus) {
 } else {
   console.log("L'élément .plus-info n'existe pas.");
 }
+
+
+
+
+ 
