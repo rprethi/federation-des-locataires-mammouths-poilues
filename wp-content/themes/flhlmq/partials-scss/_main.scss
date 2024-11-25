@@ -3,6 +3,10 @@
 @use "./mixins/text";
 @use "./typographie";
 
+:root {
+  --size : 10px;
+}
+
 /*---------- STYLES GÉNÉRAUX ----------*/
 
 body {
@@ -44,3 +48,6 @@ body {
     padding: 20px;
   }
 }
+
+
+
