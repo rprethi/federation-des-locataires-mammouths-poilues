@@ -876,6 +876,10 @@ Version: 1.0
   text-decoration-color: #88b07e;
   color: #c4b091;
 }
+#accueil .section-services .align-lien {
+  display: flex;
+  justify-content: space-between;
+}
 #accueil .services {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, auto));
