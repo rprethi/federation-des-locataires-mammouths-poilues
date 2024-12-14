@@ -1,0 +1,13 @@
+{
+  "post_types": {
+    "contactlink": {},
+    "footer" :{},
+    "memberscard":{},
+    "member" : {},
+    "navbar": {},
+    "newscard": {},
+    "parallaxe": {},
+    "service" : {}, 
+    "temoignage" : {}
+  }
+}

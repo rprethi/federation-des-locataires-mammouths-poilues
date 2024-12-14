@@ -1,0 +1,25 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/text";
+@use "./mixins/lien";
+@use "./mixins/formatecran";
+@use "sass:color";
+
+
+/* ----- STYLE DE ;A PROPOS----- */
+
+
+/*------------------------------------------------------------------*/
+
+/*----- SECTION PDF ---*/
+
+/*------------------------------------------------------------------*/
+
+.pdf-logo {
+  width: 50px;
+  height: 50px;
+  fill: couleurs.$vertAmande;
+  margin-right: 15px;
+}

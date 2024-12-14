@@ -1,0 +1,18 @@
+@use "fonts";
+
+@mixin text {
+  @include fonts.nunito;
+  font-size: 24px;
+}
+
+@mixin text-header {
+  @include fonts.nunito;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@mixin text-bannier-scholaire {
+  @include fonts.nunito;
+  font-weight: bolder;
+  font-size: 24px;
+}

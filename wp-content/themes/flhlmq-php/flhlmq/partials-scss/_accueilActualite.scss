@@ -1,0 +1,112 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/text";
+@use "./mixins/lien";
+@use "./mixins/formatecran";
+@use "sass:color";
+
+
+/* ----- STYLE DE L'ACCUEIL ACTUALITÉ----- */
+// mobile à switch
+
+.actualite {
+  padding: 20px;
+  img {
+    height: 275px;
+    object-fit: cover;
+  }
+  & a {
+    @include lien.lien;
+  }
+  &__title__lien {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul {
+    list-style: none;
+    a:link {
+      text-decoration: none;
+    }
+  }
+  &__item {
+    display: grid;
+    justify-items: start;
+    align-items: start;
+    grid-template-columns: 1fr 1fr 2fr 0fr;
+    transition: background 0.5s;
+    &:hover {
+      transition-duration: 0.5s;
+      background: color.adjust(couleurs.$argile, $whiteness: 10%);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    &__date {
+      text-decoration: none;
+      @include text.text;
+      color: couleurs.$vertAmande;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__img {
+      display: none;
+      width: 100%;
+      height: 400px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    &__title {
+      @include text.text;
+      padding: 0 20px 0 20px;
+      color: couleurs.$vertAlgue;
+      font-size: 16px;
+
+      text-wrap: wrap;
+      font-weight: bold;
+      & p {
+        display: none;
+        position: relative;
+        top: 5%;
+        font-weight: normal;
+        color: couleurs.$encre;
+      }
+    }
+    hr {
+      opacity: 75%;
+      width: 100%;
+      grid-column: 2 / 2;
+      border-top: 5px couleurs.$vertAmande solid;
+    }
+  }
+
+  @media screen and (min-width: formatecran.$version-ordinateur) {
+    .actualite {
+      &__item {
+        grid-template-columns: 1fr 1fr 3fr 4fr;
+        &__date {
+          font-size: 24px;
+        }
+        &__img {
+          display: block;
+          object-position: 0% 10%;
+        }
+
+        &__title {
+          font-size: 24px;
+          text-wrap: balance;
+          padding: 0 50px 0 50px;
+          & p {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

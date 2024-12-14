@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: "Nunito";
+    src: url(./assets/fonts/Nunito.ttf) format(truetype);
+  }
+  
+  @font-face {
+    font-family: "Nunito Italic";
+    src: url(./assets/fonts/NunitoItallic.ttf) format(truetype);
+  }
+  
+  @mixin nunito {
+    font-family: "Nunito";
+  }
+  
+  @mixin italic {
+    font-family: "Nunito Italic";
+  }

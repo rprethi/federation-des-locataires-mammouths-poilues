@@ -1,0 +1,83 @@
+@use "./mixins/couleurs";
+@use "./mixins/formatecran";
+
+/*---------- STYLE POUR LE SWIPER DU HÉRO DE L'ACCUEIL ----------*/
+
+.swiperhero {
+  width: 100%;
+  height: 100%;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    position: relative;
+  }
+}
+a {
+  margin-top: 10px; // Créer espace
+}
+.swiper-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+//Appliquer un gradient vert sur le héro
+.swiper-slide .gradient-hero {
+  background-image: linear-gradient( 
+    to top,
+    couleurs.$vertAlgue, 
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 500px 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 65%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.swiper-text {
+  position: absolute;
+  z-index: 100;
+
+  &-top {
+    top: 40%;
+    left: 5%;
+width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: end;
+    & p {
+      color: white;
+      font-weight: bold;
+      max-width: 300px;
+    }
+    bottom: 5%;
+    right: 5%;
+    width: 40%;
+    height: 20%;
+  }
+}
+
+

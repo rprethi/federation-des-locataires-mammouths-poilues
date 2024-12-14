@@ -1,0 +1,2391 @@
+@charset "UTF-8";
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7ff;
+}
+
+@media (min-width: 375px) {
+  body {
+    min-width: 375px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    min-width: 1400px;
+  }
+}
+@font-face {
+  font-family: "Nunito";
+  src: url(./assets/fonts/Nunito.ttf) format(truetype);
+}
+@font-face {
+  font-family: "Nunito Italic";
+  src: url(./assets/fonts/NunitoItallic.ttf) format(truetype);
+}
+/*---------- STYLESHEET DES FONTS ET STYLES DES TEXTES ----------*/
+* {
+  font-family: "Nunito";
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+h1, .h1 {
+  color: #f7f7ff;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 48px;
+  color: #273922;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 32px;
+  color: #88b07e;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 32px;
+  color: #273922;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 24px;
+  color: #88b07e;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 24px;
+  color: #273922;
+  font-weight: bold;
+}
+
+p, button, span, .p, a {
+  color: #273922;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #88b07e;
+}
+
+a:active {
+  color: #c4b091;
+}
+
+p {
+  color: #0c0909;
+}
+
+.vertAmande {
+  color: #88b07e;
+}
+
+.vertAlgue {
+  color: #273922;
+}
+
+@media (max-width: 375px) {
+  h1, .h1, h2 {
+    font-size: 24px;
+  }
+  h3, h4 {
+    font-size: 16px;
+  }
+  h5, h6 {
+    font-size: 12px;
+  }
+  p, button, span, .p, a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  h1, .h1, h2 {
+    font-size: 32px;
+  }
+  h3, h4 {
+    font-size: 24px;
+  }
+  h5, h6 {
+    font-size: 16px;
+  }
+  p, button, span, .p, a {
+    font-size: 14px;
+  }
+}
+/*---------- STYLE POUR LE SWIPER DU HÉRO DE L'ACCUEIL ----------*/
+.swiperhero {
+  width: 100%;
+  height: 100%;
+}
+.swiperhero .swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  position: relative;
+}
+
+a {
+  margin-top: 10px;
+}
+
+.swiper-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.swiper-slide .gradient-hero {
+  background-image: linear-gradient(to top, #273922, rgba(255, 255, 255, 0));
+  background-size: 500px 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 65%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.swiper-text {
+  position: absolute;
+  z-index: 100;
+}
+.swiper-text-top {
+  top: 40%;
+  left: 5%;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.swiper-text-bottom {
+  display: flex;
+  justify-content: end;
+  bottom: 5%;
+  right: 5%;
+  width: 40%;
+  height: 20%;
+}
+.swiper-text-bottom p {
+  color: white;
+  font-weight: bold;
+  max-width: 300px;
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/* ----- STYLE DES BOUTONS ----- */
+.btn-filled {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: #88b07e;
+  border: none;
+  font-weight: bolder;
+  width: 25%;
+  height: 40%;
+  min-width: 200px;
+  max-width: 250px;
+  padding: 15px 10px;
+  color: #273922;
+  transition: box-shadow, transform, 0.5s;
+}
+.btn-filled:hover {
+  box-shadow: 2px 2px 10px 5px rgba(18, 34, 7, 0.5);
+  background-color: #4d6147;
+  color: #f7f7ff;
+}
+.btn-form {
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  font-weight: bolder;
+  width: 100%;
+  height: 25%;
+  padding: 15px 10px;
+  color: #273922;
+  transition: box-shadow, transform, 0.5s;
+  background-color: #88b07e;
+}
+.btn-form:hover {
+  box-shadow: 2px 2px 10px 5px rgba(18, 34, 7, 0.5);
+  background-color: #b8c6b4;
+}
+.btn-empty {
+  background-color: transparent;
+  border: none;
+}
+.btn-empty:hover {
+  color: #88b07e;
+  font-weight: bold;
+}
+.btn-empty:hover a {
+  color: #88b07e;
+  font-weight: bold;
+}
+.btn-footer {
+  padding: 15px 35px;
+}
+
+input, textarea {
+  border: none;
+}
+
+/*---------- STYLE DES HEADER ET NAV ----------*/
+header {
+  width: 100vw;
+  height: 175px;
+}
+
+.header-hero {
+  height: 0px;
+}
+
+nav {
+  border-bottom: 2px solid #273922;
+}
+
+.nav__banniere {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  color: #f7f7ff;
+  width: 100%;
+  height: 80px;
+  background-color: #273922;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: transform 0.4s ease;
+}
+.nav__banniere .ban__centre {
+  width: 100%;
+  margin: 0 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav__banniere .ban__centre-left {
+  display: flex;
+  align-items: center;
+}
+.nav__banniere .ban__centre-left svg {
+  margin-right: 7px;
+}
+.nav__banniere .ban__centre-right {
+  display: flex;
+  align-items: center;
+}
+.nav__banniere .ban__centre-right a {
+  margin-top: 0;
+}
+.nav__banniere .ban__centre-right a:hover {
+  color: #88b07e;
+  font-weight: bold;
+}
+.nav__banniere .ban__centre-right .banner__close {
+  background: none;
+  border: none;
+  font-size: 25px;
+  margin-left: 20px;
+  color: #f7f7ff;
+}
+.nav__banniere .ban__centre-right .banner__close:hover {
+  color: #88b07e;
+  font-weight: bold;
+}
+.nav__banniere span,
+.nav__banniere #closeBanner,
+.nav__banniere a {
+  color: #f7f7ff;
+}
+
+.navbar {
+  background-color: #f7f7ff;
+  color: #273922;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  top: 80px;
+  z-index: 998;
+}
+.navbar .dropdown-menu {
+  width: auto;
+}
+.navbar .wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.navbar ul {
+  text-align: center;
+}
+.navbar ul-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navbar .nav-centre {
+  margin: 0 5%;
+  padding: 0;
+}
+.navbar .navbar-brand {
+  width: 6em;
+}
+.navbar .nav-bottom {
+  max-width: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-bottom a.btn-filled {
+  grid-area: 2/1/3/4;
+  justify-self: center;
+  height: 100%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-connection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+}
+.navbar .bi-person-circle {
+  margin-bottom: 2px;
+}
+.navbar .nav-search {
+  border: none;
+}
+.navbar .nav-item {
+  transition: border-bottom, 1s;
+}
+.navbar .nav-item:hover {
+  color: #88b07e !important;
+  border-bottom: 1px solid #88b07e !important;
+}
+.navbar .nav-active {
+  font-weight: bold !important;
+  color: #88b07e !important;
+}
+
+.nav__search {
+  position: relative;
+}
+
+.container {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.search-form {
+  right: 200px;
+  top: 200px;
+}
+
+.search-field {
+  background-color: transparent;
+  background-image: url(https://wp-themes.com/wp-content/themes/twentythirteen/images/search-icon.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  margin: 3px 0;
+  padding: 0 0 0 34px;
+  position: relative;
+  transition: width 400ms ease, background 400ms ease;
+  width: 0px;
+  cursor: pointer;
+}
+
+.search-form .search-submit {
+  display: none;
+}
+
+.search-field:focus {
+  border-bottom: 2px solid #273922;
+  cursor: text;
+  outline: 0;
+  width: 250px;
+}
+.search-field:focus .search-submit {
+  display: inline;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  content: url();
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  text-transform: none;
+  border: none;
+  display: none;
+  position: absolute;
+  top: -10px;
+  width: 220px;
+  background-color: #f7f7ff;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar .wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navbar .nav-bottom {
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .nav-bottom a.btn-filled {
+    grid-area: 1/4/2/5;
+    justify-self: center;
+    height: 80%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+.footer {
+  display: grid;
+  bottom: 0;
+  width: 100%;
+  grid-column: 1/4;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  background-color: #273922;
+  font-family: "Nunito";
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  row-gap: 30px;
+}
+.footer__section {
+  text-decoration: none;
+}
+.footer__section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f7f7ff;
+  margin-bottom: 30px;
+}
+.footer__section li {
+  line-height: 2;
+}
+.footer__section li a,
+.footer__section .footer__bottom p,
+.footer__section .footer__membre {
+  font-size: 16px;
+  color: #f7f7ff;
+  list-style-type: none;
+  text-decoration: none;
+}
+.footer__section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.footer__section ul li {
+  padding-left: 0;
+  margin-left: 0;
+}
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+}
+.footer__logo a {
+  color: #f7f7ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer__logo .logo-footer {
+  width: 75px;
+  height: 35px;
+}
+.footer__logo .footer__addrese {
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.footer__logo .mail-flhlmq {
+  margin-right: 10px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.footer__bottom {
+  grid-column: 1/-1;
+  grid-row: 4;
+}
+.footer__bottom p {
+  font-size: 12px;
+  color: #f7f7ff;
+  margin: 0;
+  padding: 0;
+}
+.footer__social-icons {
+  grid-column: 2;
+  grid-row: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 0;
+}
+.footer__social-icons svg {
+  fill: #f7f7ff;
+  height: 21px;
+  width: 21px;
+}
+.footer__membre {
+  grid-column: 2;
+  grid-row: 1;
+}
+.footer .mail-flhlmq,
+.footer .tel-flhlmq {
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.footer__section.footer_partenaires {
+  grid-column: 1/-1;
+  grid-row: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__section.footer_partenaires img {
+  width: 100px !important;
+  height: auto !important;
+  margin: 5px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 50px;
+  }
+  .footer a {
+    font-size: 16px !important;
+  }
+  .footer__section h4 {
+    font-size: 20px;
+  }
+  .footer__social-icons svg {
+    width: 20px;
+    height: 20px;
+  }
+  .footer__logo .logo-footer {
+    width: 150px;
+    height: 50px;
+  }
+  .footer__section.footer_partenaires img {
+    width: 150px !important;
+    height: auto !important;
+  }
+  .footer__bottom p {
+    font-size: 16px;
+  }
+  .footer__social-icons svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .footer__membre {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .footer__social-icons {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .footer__bottom {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    align-items: end;
+  }
+  .footer .logo-footer {
+    width: 183px;
+    height: 59px;
+  }
+  .footer__section h4 {
+    font-size: 24px;
+  }
+  .footer__section li {
+    font-size: 16px;
+  }
+  .footer .footer__social-icons svg {
+    height: 35px;
+    width: 35px;
+  }
+  .footer footer a {
+    font-size: 16px !important;
+  }
+  .footer .footer__section.footer_partenaires {
+    grid-column: 2/-2;
+    grid-row: 2;
+  }
+  .footer .footer__section.footer_partenaires img {
+    width: 150px !important;
+    height: auto !important;
+    margin: 5px;
+  }
+  .footer .footer__bottom p {
+    justify-self: start;
+    margin: 0;
+  }
+}
+:root {
+  --size: 10px;
+}
+
+/*---------- STYLES GÉNÉRAUX ----------*/
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#accueil {
+  width: 100%;
+  position: relative;
+  top: -150px;
+}
+#accueil section {
+  margin: 5% 0;
+}
+#accueil section.section-center {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 20px;
+}
+
+#burgerMenu path {
+  fill: #88b07e;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.section-center {
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-center {
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 20px;
+  }
+}
+.taille {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+#accueil .membre {
+  background-color: #273922;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+#accueil .membre h1,
+#accueil .membre h2,
+#accueil .membre p {
+  color: #f7f7ff;
+}
+#accueil .membre__item-img {
+  height: 100%;
+}
+#accueil .membre__item-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  max-width: 200px;
+}
+#accueil .membre__item-texte {
+  padding: 10px;
+  display: flex;
+  margin: 30px 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+#accueil .membre__item-texte p {
+  margin: 10px 0;
+}
+#accueil .membre__item-texte button {
+  margin-top: 10px;
+}
+#accueil .membre__item-texte h1 {
+  margin-bottom: 0;
+}
+#accueil .membre__item-texte h3 {
+  margin-top: -5px;
+}
+@media screen and (min-width: 768px) {
+  #accueil .membre {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  #accueil .membre img {
+    width: 100%;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #accueil .membre__item-texte {
+    display: flex;
+    margin: 10% 5%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #accueil .membre__item-texte h1,
+  #accueil .membre__item-texte h2 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+ul.dropdown-menu.show {
+  text-align: center;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.dropdown-item:hover:hover {
+  background-color: #273922;
+  color: #f7f7ff;
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/* ----- STYLE DE L'ACCUEIL SECTION SERVICES----- */
+#accueil .services__taille {
+  width: 100%;
+  padding: 20px;
+}
+#accueil .section-services {
+  display: flex;
+  flex-direction: column;
+}
+#accueil .section-services a {
+  font-family: "Nunito Italic";
+  color: #88b07e;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+#accueil .section-services a:hover {
+  text-decoration-color: #88b07e;
+  color: #c4b091;
+}
+#accueil .section-services .align-lien {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#accueil .services {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+  gap: 15px;
+  justify-items: center;
+  color: white;
+  width: 100%;
+}
+#accueil .services__item {
+  width: 100%;
+  height: 200px;
+  background-color: #273922;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color, color, box-shadow, 0.25s;
+}
+#accueil .services__item:hover {
+  background-color: #88b07e;
+  color: #273922;
+  box-shadow: 5px 5px 10px 5px rgba(29, 59, 9, 0.5);
+  transform: scale(1.005) translateY(1%);
+}
+#accueil .services__item:hover h3 {
+  color: #273922;
+}
+#accueil .services__item-top svg {
+  width: 3em;
+}
+#accueil .services__item-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#accueil .services__item-bottom svg {
+  align-self: end;
+  width: 3em;
+}
+@media screen and (min-width: 768px) {
+  #accueil .services {
+    display: flex;
+    max-width: 1500px;
+    justify-content: space-between;
+  }
+  #accueil .services__item {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+  }
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/* ----- STYLE DE L'ACCUEIL ACTUALITÉ----- */
+.actualite {
+  padding: 20px;
+}
+.actualite img {
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.actualite a {
+  font-family: "Nunito Italic";
+  color: #88b07e;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+.actualite a:hover {
+  text-decoration-color: #88b07e;
+  color: #c4b091;
+}
+.actualite__title__lien {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.actualite ul {
+  list-style: none;
+}
+.actualite ul a:link {
+  text-decoration: none;
+}
+.actualite__item {
+  display: grid;
+  justify-items: start;
+  align-items: start;
+  grid-template-columns: 1fr 1fr 2fr 0fr;
+  transition: background 0.5s;
+}
+.actualite__item:hover {
+  transition-duration: 0.5s;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.actualite__item__date {
+  text-decoration: none;
+  font-family: "Nunito";
+  font-size: 24px;
+  color: #88b07e;
+  font-size: 16px;
+  font-weight: bold;
+}
+.actualite__item__img {
+  display: none;
+  width: 100%;
+  height: 400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.actualite__item__title {
+  font-family: "Nunito";
+  font-size: 24px;
+  padding: 0 20px 0 20px;
+  color: #273922;
+  font-size: 16px;
+  text-wrap: wrap;
+  font-weight: bold;
+}
+.actualite__item__title p {
+  display: none;
+  position: relative;
+  top: 5%;
+  font-weight: normal;
+  color: #0c0909;
+}
+.actualite__item hr {
+  opacity: 75%;
+  width: 100%;
+  grid-column: 2/2;
+  border-top: 5px #88b07e solid;
+}
+@media screen and (min-width: 1400px) {
+  .actualite .actualite__item {
+    grid-template-columns: 1fr 1fr 3fr 4fr;
+  }
+  .actualite .actualite__item__date {
+    font-size: 24px;
+  }
+  .actualite .actualite__item__img {
+    display: block;
+    -o-object-position: 0% 10%;
+       object-position: 0% 10%;
+  }
+  .actualite .actualite__item__title {
+    font-size: 24px;
+    text-wrap: balance;
+    padding: 0 50px 0 50px;
+  }
+  .actualite .actualite__item__title p {
+    display: block;
+  }
+}
+
+/* ----- STYLE DU PARALLAX----- */
+.section-parallax {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  z-index: -2;
+  height: 45vh;
+  position: relative;
+  top: 0;
+  margin: 0;
+}
+.section-parallax img {
+  width: 100%;
+  position: absolute;
+  background: transparent;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 100%;
+     object-position: 0 100%;
+  animation-name: parallax-effect;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes parallax-effect {
+  0% {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+  100% {
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/* ----- STYLE DE L'ACCUEIL SECTION TÉMOIN ----- */
+.swiper-temoin {
+  width: 350px;
+  height: 300px;
+}
+
+.silde-temoin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #273922;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #f7f7ff;
+  box-shadow: 0 4px 15px rgba(12, 9, 9, 0.1);
+}
+
+.gradient-text {
+  font-size: 14px !important;
+  background: linear-gradient(to bottom, #0c0909, #88b07e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.black-text {
+  color: #0c0909 !important;
+  background: none;
+  transition: color 0.3s ease;
+}
+
+.hidden-text {
+  font-size: 14px !important;
+  display: none;
+  background: #0c0909;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.section-temoignage .show {
+  display: inline;
+  -webkit-text-fill-color: transparent;
+  font-size: 14px !important;
+}
+
+.voir-plus {
+  background: none;
+  border: none;
+  color: #0c0909;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: block;
+}
+
+.contenue__temoin {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 4px 15px rgba(12, 9, 9, 0.1);
+}
+
+.silde-temoin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #273922;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #f7f7ff;
+  box-shadow: 0 4px 20px rgba(12, 9, 9, 0.1);
+}
+
+.etoile {
+  width: 70px !important;
+  display: block;
+  margin-top: 15px;
+}
+
+.active-card {
+  background-color: #88b07e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.silde-temoin {
+  transition: background-color 0.9s ease;
+}
+
+.commentaire br {
+  content: "";
+  display: block;
+  margin: 10px 0;
+}
+
+.temoin-details {
+  display: flex;
+  flex-direction: column;
+}
+.temoin-details span:nth-child(2) {
+  font-weight: 300 !important;
+  font-size: 12px !important;
+}
+.temoin-details span:nth-child(1) {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+
+.personne {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.commentaire {
+  line-height: 1.5;
+  font-size: 12px !important;
+}
+
+@media (min-width: 768px) {
+  .swiper-temoin {
+    width: 450px;
+    height: 300px;
+  }
+  .gradient-text {
+    font-size: 14px !important;
+    color: #0c0909;
+  }
+  .hidden-text {
+    font-size: 14px !important;
+    color: #0c0909;
+    display: inline-block;
+  }
+  .contenue__temoin {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .silde-temoin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #273922;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #f7f7ff;
+    box-shadow: 0 4px 20px rgba(12, 9, 9, 0.1);
+  }
+  .etoile {
+    width: 100px !important;
+    display: block;
+    margin-top: 15px;
+  }
+  .active-card {
+    background-color: #88b07e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .silde-temoin {
+    transition: background-color 0.9s ease;
+  }
+  .commentaire br {
+    content: "";
+    display: block;
+    margin: 10px 0;
+  }
+  .temoin-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .temoin-details span:nth-child(2) {
+    font-weight: 300 !important;
+    font-size: 14px !important;
+  }
+  .temoin-details span:nth-child(1) {
+    font-weight: 500 !important;
+    font-size: 18px !important;
+  }
+  .personne {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  .commentaire {
+    line-height: 1.5;
+  }
+  .voir-plus {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .swiper-temoin {
+    width: 700px;
+    height: 400px;
+  }
+  .gradient-text {
+    font-size: 16px !important;
+    color: #0c0909;
+  }
+  .hidden-text {
+    font-size: 16px !important;
+    color: #0c0909;
+    display: inline-block;
+  }
+  .contenue__temoin {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .silde-temoin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #273922;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #f7f7ff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .etoile {
+    width: 100px !important;
+    display: block;
+    margin-top: 15px;
+  }
+  .active-card {
+    background-color: #88b07e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .silde-temoin {
+    transition: background-color 0.9s ease;
+  }
+  .commentaire br {
+    content: "";
+    display: block;
+    margin: 10px 0;
+  }
+  .temoin-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .temoin-details span:nth-child(2) {
+    font-weight: 300 !important;
+    font-size: 18px !important;
+  }
+  .temoin-details span:nth-child(1) {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+  }
+  .commentaire {
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .voir-plus {
+    display: none;
+  }
+}
+.personne {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* ----- STYLE PAGE NOUS JOINDRE ----- */
+.pageNousJoindre .contact {
+  display: grid;
+  grid-row: auto auto auto;
+  width: 100%;
+  margin: 0 0;
+}
+.pageNousJoindre .contact h2 {
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+.pageNousJoindre .contact__text {
+  width: 100%;
+}
+.pageNousJoindre .contact__text .informations {
+  display: flex;
+  align-items: center;
+}
+.pageNousJoindre .contact__text .icon-contour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #273922;
+  color: #f7f7ff;
+}
+.pageNousJoindre .contact__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #273922;
+  border-radius: 25px;
+  padding: 15px;
+  min-width: 400px;
+}
+.pageNousJoindre .contact__form input {
+  width: 100%;
+  height: 15%;
+  margin: 10px 0;
+  color: #f7f7ff;
+  padding-left: 10px;
+  border-radius: 25px;
+  background-color: #4d6147;
+}
+.pageNousJoindre .contact__form input::-moz-placeholder {
+  color: #f7f7ff;
+  opacity: 1;
+}
+.pageNousJoindre .contact__form input::placeholder {
+  color: #f7f7ff;
+  opacity: 1;
+}
+.pageNousJoindre .contact textarea {
+  resize: none;
+  border-radius: 25px;
+  color: #f7f7ff;
+  width: 100%;
+  height: 15%;
+  padding-left: 10px;
+  margin: 10px 0;
+  background-color: #4d6147;
+}
+.pageNousJoindre .contact textarea::-moz-placeholder {
+  transform: translateY(13px);
+  color: #f7f7ff;
+  opacity: 1;
+}
+.pageNousJoindre .contact textarea::placeholder {
+  transform: translateY(13px);
+  color: #f7f7ff;
+  opacity: 1;
+}
+.pageNousJoindre .contact__map {
+  width: 100%;
+  height: 400px;
+  margin-top: 4%;
+}
+.pageNousJoindre .informations {
+  margin: 10px 0;
+  display: flex;
+}
+.pageNousJoindre .informations a {
+  margin-bottom: 12px;
+}
+.pageNousJoindre .informations span {
+  margin-bottom: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-top {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    display: grid;
+  }
+  .contact-top h2 {
+    grid-area: 1/1/2/3;
+  }
+}
+.contact__map {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+}
+
+.contact__map iframe {
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  position: absolute; /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/*---------- SERVICE-HUB ----------*/
+.services-hub {
+  /*---------- SERVICES-HUB POUR TABLETTE + DESKTOP ----------*/
+  /*---------- SERVICES-HUB POUR DESKTOP ----------*/
+}
+.services-hub .services {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+  gap: 15px;
+  justify-items: center;
+  color: white;
+  width: 100%;
+}
+.services-hub .services .services__taille {
+  width: 100%;
+  height: 200px;
+  color: white;
+}
+.services-hub .services .services__item-bottom-text {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5%;
+  top: 20%;
+}
+.services-hub .services .services__item-bottom-text h3 {
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+.services-hub .services .services__item-bottom-text span {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.services-hub .services__item {
+  width: 100%;
+  height: 200px;
+  background-color: #273922;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color, color, box-shadow, 0.25s;
+}
+.services-hub .services__item:hover {
+  background-color: #88b07e;
+  color: #273922;
+  box-shadow: 5px 5px 10px 5px rgba(29, 59, 9, 0.5);
+  transform: scale(1.005) translateY(1%);
+}
+.services-hub .services__item:hover .services__item-bottom-text h3 {
+  transform: translateY(-100%);
+}
+.services-hub .services__item:hover .services__item-bottom-text span {
+  transition: opacity 1s ease;
+  opacity: 1;
+  visibility: visible;
+}
+.services-hub .services__item:hover h3 {
+  color: #273922;
+}
+.services-hub .services__item-top svg {
+  width: 3em;
+}
+.services-hub .services__item-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.services-hub .services__item-bottom svg {
+  align-self: end;
+  width: 3em;
+}
+@media screen and (min-width: 768px) {
+  .services-hub .services {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 50px;
+  }
+  .services-hub .services .services__item-bottom-text {
+    top: 0;
+    margin-bottom: 10%;
+  }
+  .services-hub .services .services__taille {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    aspect-ratio: 1/1;
+  }
+  .services-hub .services__item {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    aspect-ratio: 1/1;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .services-hub .services {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 50px;
+  }
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/* ----- STYLE DE ;A PROPOS----- */
+/*------------------------------------------------------------------*/
+/*----- SECTION PDF ---*/
+/*------------------------------------------------------------------*/
+.pdf-logo {
+  width: 50px;
+  height: 50px;
+  fill: #88b07e;
+  margin-right: 15px;
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/*-------------------------------------*/
+/* ----- LABEL STYLES ----- */
+/*-------------------------------------*/
+label {
+  /* Bloc Label */
+  font-size: 1rem; /* Taille de la police */
+  color: #0c0909; /* Couleur du texte */
+}
+
+/*-------------------------------------*/
+/* ----- SORT ORDER STYLES ----- */
+/*-------------------------------------*/
+#sortOrder {
+  /* Bloc Sélecteur de Tri */
+  padding: 8px; /* Espacement interne */
+  font-size: 1rem; /* Taille de la police */
+  margin-bottom: 20px; /* Espacement inférieur */
+  border-radius: 20px; /* Coins arrondis */
+  border: solid 2px #88b07e; /* Bordure */
+  color: #88b07e; /* Couleur du texte */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* Supprime le style par défaut */
+}
+
+#sortOrder:focus {
+  /* État au focus du Sélecteur de Tri */
+  outline: none; /* Supprime le contour par défaut */
+  border-color: #88b07e; /* Change la couleur de la bordure */
+}
+
+#sortOrder:active {
+  /* État actif du Sélecteur de Tri */
+  border-color: #88b07e; /* Change la couleur de la bordure */
+}
+
+/*-------------------------------------*/
+/* ----- LOAD MORE BUTTON STYLES ----- */
+/*-------------------------------------*/
+#loadMoreBtn {
+  /* Bloc Bouton "Charger Plus" */
+  display: block !important; /* Affichage en bloc */
+  margin-top: 20px; /* Espacement supérieur */
+}
+
+/*-------------------------------------*/
+/* ----- FIRST ARTICLE STYLES ----- */
+/*-------------------------------------*/
+.first-article {
+  /* Bloc Premier Article */
+  box-shadow: 0 0 5px rgb(108, 138, 100); /* Ombre portée */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 30px; /* Espacement interne */
+  padding-top: 0; /* Espacement supérieur nul */
+}
+
+/*-------------------------------------*/
+/* ----- FILTER CONTAINER STYLES ----- */
+/*-------------------------------------*/
+.container-flitre {
+  /* Bloc Conteneur de Filtrage */
+  display: flex; /* Flexbox pour mise en page */
+  justify-content: flex-end; /* Aligne à droite */
+}
+
+/*-------------------------------------*/
+/* ----- ADDITIONAL INFO STYLES ----- */
+/*-------------------------------------*/
+.plus-info {
+  /* Bloc Informations Supplémentaires */
+  margin-bottom: 50px; /* Espacement inférieur */
+}
+
+/*-------------------------------------*/
+/* ----- NEWS SECTION STYLES ----- */
+/*-------------------------------------*/
+.section-actualite {
+  /* Bloc Section Actualités */
+  margin-top: 20px; /* Espacement supérieur */
+}
+
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/*------------------------------------------------------------------*/
+/*----- VERSION MOBILE ---*/
+/*------------------------------------------------------------------*/
+/*----- DÉBUT MODALE ---*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal .modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100001;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.modal .modal-content {
+  background-color: #f7f7ff;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  text-align: justify;
+}
+.modal .modal-content #modal-name {
+  color: #88b07e;
+}
+.modal .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.modal .modal-content .modal-header .btn-close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.modal .modal-content .modal-body {
+  padding: 1rem;
+}
+
+/*----- FIN MODALE ---*/
+/*----- DÉBUT STYLE ÉQUIPE ---*/
+.liste-equipe {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.liste-equipe h5 {
+  text-align: center;
+}
+
+.swiper-container-equipe {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide-equipe {
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  background-color: #88b07e;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(2px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide-equipe.swiper-slide-active {
+  filter: blur(0);
+  background-color: #f7f7ff;
+}
+.swiper-slide-equipe.swiper-slide-active:hover {
+  filter: blur(0);
+  background-color: #f5f5fa;
+  cursor: pointer;
+}
+
+.equipe-membres-box {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.equipe-membres-box .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.equipe-membres-box .details .ImgBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.equipe-membres-box .details .ImgBx img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.content-membre p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.membres-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.membres-socials a svg {
+  width: 15px;
+  height: 15px;
+  fill: #273922;
+  cursor: pointer;
+}
+.membres-socials a svg:hover {
+  fill: #88b07e;
+}
+
+.details h5 {
+  color: #273922;
+  font-size: 18px;
+}
+
+.section-equipe {
+  margin-top: 20px;
+}
+
+/*------------------------------------------------------------------*/
+/*----- VERSION TABLETTE ---*/
+/*------------------------------------------------------------------*/
+@media (min-width: 768px) {
+  .liste-equipe {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .liste-equipe h5 {
+    text-align: center;
+  }
+  .swiper-container-equipe {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide-equipe {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    background-color: #88b07e;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    filter: blur(2px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide-equipe.swiper-slide-active {
+    filter: blur(0);
+    background-color: #f7f7ff;
+  }
+  .equipe-membres-box {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details .ImgBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+  }
+  .equipe-membres-box .details .ImgBx img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  .content-membre p {
+    text-align: center;
+    font-size: 16px;
+  }
+  .membres-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  .membres-socials a svg {
+    width: 20px;
+    height: 20px;
+    fill: #273922;
+    cursor: pointer;
+  }
+  .membres-socials a svg:hover {
+    fill: #88b07e;
+  }
+  .details h5 {
+    color: #273922;
+    font-size: 20px;
+  }
+}
+/*------------------------------------------------------------------*/
+/*----- VERSION DESKTOP ---*/
+/*------------------------------------------------------------------*/
+@media (min-width: 1400px) {
+  .liste-equipe {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .liste-equipe h5 {
+    text-align: center;
+  }
+  .swiper-container-equipe {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide-equipe {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    background-color: #88b07e;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    filter: blur(2px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide-equipe.swiper-slide-active {
+    filter: blur(0);
+    background-color: #f7f7ff;
+  }
+  .equipe-membres-box {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .equipe-membres-box .details .ImgBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .equipe-membres-box .details .ImgBx img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  .equipe-membres-box .details h5 {
+    color: #273922;
+    font-size: 24px;
+  }
+  .content-membre p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .membres-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  .membres-socials a svg {
+    width: 25px;
+    height: 25px;
+    fill: #273922;
+    cursor: pointer;
+  }
+  .membres-socials a svg:hover {
+    fill: #88b07e;
+  }
+}
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+.hero__img {
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+}
+
+.hero__nouvelle {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.section-nouvelle {
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow-x: hidden;
+}
+.section-nouvelle .contenu {
+  position: relative;
+}
+.section-nouvelle .gradiant {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #f7f7ff 70%);
+}
+.section-nouvelle .plus-info {
+  display: none;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.section-nouvelle .plus-info a:link {
+  text-decoration: none;
+}
+.section-nouvelle p {
+  font-family: "Nunito";
+  font-size: 20px;
+}
+.section-nouvelle p span a {
+  font-size: 20px;
+}
+.section-nouvelle .nouvelle__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.section-nouvelle .nouvelle__title__lien {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section-nouvelle a {
+  font-family: "Nunito Italic";
+  color: #88b07e;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  font-size: bold;
+  text-decoration: none;
+}
+.section-nouvelle a:hover {
+  text-decoration-color: #88b07e;
+  color: #c4b091;
+}
+.section-nouvelle a :hover {
+  color: #88b07e;
+}
+.section-nouvelle .content-nouv {
+  overflow: hidden;
+  display: grid;
+}
+.section-nouvelle .content-nouv .nouvelles {
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(6, 32%);
+  justify-content: start;
+}
+.section-nouvelle .content-nouv .nouvelles a:link {
+  text-decoration: none;
+}
+.section-nouvelle .content-nouv .nouvelles a:link:hover {
+  color: #273922;
+}
+.section-nouvelle .content-nouv .nouvelles .swiper-slide {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+.section-nouvelle .content-nouv .nouvelles .cartes {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: start;
+  padding: 5px;
+  transition: background 0.5s;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.section-nouvelle .content-nouv .nouvelles .cartes:hover {
+  transition-duration: 0.5s;
+  background: white;
+}
+.section-nouvelle .content-nouv .nouvelles .cartes__date {
+  text-decoration: none;
+  font-family: "Nunito";
+  font-size: 24px;
+  color: #88b07e;
+  font-size: 16px;
+  font-weight: bold;
+}
+.section-nouvelle .content-nouv .nouvelles .cartes__img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 20%;
+     object-position: 0 20%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.section-nouvelle .content-nouv .nouvelles .cartes hr {
+  opacity: 75%;
+  width: 100%;
+  grid-column: 2/2;
+  border-top: 5px #88b07e solid;
+}
+.section-nouvelle .content-nouv .nouvelles .cartes__title {
+  font-family: "Nunito";
+  font-size: 24px;
+  color: #273922;
+  font-size: 24px;
+  justify-items: center;
+  font-weight: bold;
+}
+.section-nouvelle .content-nouv .nouvelles .cartes p {
+  font-weight: normal;
+  color: #0c0909;
+  font-size: 16px;
+}
+
+.hero__nouvelle {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 15%;
+     object-position: 0 15%;
+}
+
+@media screen and (max-width: 768px) {
+  .section-nouvelle .gradiant {
+    display: block;
+  }
+  .section-nouvelle .plus-info {
+    display: block;
+    bottom: 250px;
+  }
+  .section-nouvelle .active {
+    display: none;
+  }
+  .section-nouvelle span a {
+    font-size: 20px;
+  }
+  .section-nouvelle .content-nouv .nouvelles .cartes {
+    grid-column: 1fr;
+  }
+  .section-nouvelle .content-nouv .nouvelles .cartes p {
+    display: none;
+  }
+}
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+.hero__img {
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+}
+
+.hero__service {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+.hero__service .swiper-text h2 {
+  position: absolute;
+  color: #f7f7ff;
+  top: -20%;
+}
+
+.section-service {
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  position: relative;
+}
+.section-service .gradiant {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #f7f7ff 70%);
+}
+.section-service p {
+  font-family: "Nunito";
+  font-size: 20px;
+}
+.section-service .plus-info {
+  display: none;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.section-service .plus-info a:link {
+  text-decoration: none;
+}
+.section-service span a {
+  font-size: 20px;
+}
+.section-service .service__title__lien {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section-service a {
+  font-family: "Nunito Italic";
+  color: #88b07e;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  font-size: bold;
+  text-decoration: none;
+}
+.section-service a:hover {
+  text-decoration-color: #88b07e;
+  color: #c4b091;
+}
+.section-service a :hover {
+  color: #88b07e;
+}
+
+.hero__service {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 15%;
+     object-position: 0 15%;
+}
+
+@media screen and (max-width: 768px) {
+  .section-service #test {
+    display: none;
+  }
+  .section-service .gradiant {
+    display: block;
+  }
+  .section-service .plus-info {
+    display: block;
+    bottom: 280px;
+  }
+  .section-service .active {
+    display: none;
+  }
+  .section-service .appear {
+    display: block;
+  }
+  .section-service span a {
+    font-size: 20px;
+  }
+}
+/*
+Theme Name: FLHLMQ
+Author: Delphine, Kristy, Prethiah
+Author URI: https://github.com/rprethi/federation-des-locataires-mammouths-poilues
+Description: Thème pour FLHLMQ.
+Version: 2.0
+*/
+/* ----- STYLE PAGE 404 ----- */
+#erreur {
+  margin-bottom: 10%;
+}
+
+.erreur {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.erreur .erreur__anim {
+  justify-self: center;
+  height: 329px;
+  width: 329px;
+  animation-name: maison;
+  animation-duration: 3.4s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: steps(96, end);
+}
+
+@keyframes maison {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -32768px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .erreur {
+    grid-template-columns: 1fr 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+@use "fonts";
+@use "couleurs";
+
+@mixin lien {
+  @include fonts.italic;
+  color: couleurs.$vertAmande;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  &:hover {
+    text-decoration-color: couleurs.$vertAmande;
+    color: couleurs.$baguette;
+  }
+}
+
+@mixin lien-pdf {
+  @include fonts.italic;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration-color: couleurs.$vertAmande;
+}
+
+@mixin lien-nav {
+  @include fonts.nunito;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  color: couleurs.$vertAlgue;
+  &:focus {
+    color: couleurs.$baguette;
+  }
+}

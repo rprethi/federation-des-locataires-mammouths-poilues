@@ -1,0 +1,109 @@
+@use "variables";
+@use "typographie";
+@use "./mixins/couleurs";
+@use "./mixins/fonts";
+@use "./mixins/formatecran";
+@use "./mixins/lien";
+
+
+.hero__img {
+  object-position: 50% 0%;
+}
+.hero__service {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  .swiper-text {
+    h2{
+      position: absolute;
+      color: couleurs.$argile;
+      top:-20%;
+    }
+  } 
+}
+
+.section-service {
+  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  position: relative;
+  .gradiant {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      couleurs.$argile 70%
+    );
+  }
+  & p {
+    @include fonts.nunito;
+    font-size: 20px;
+  }
+  .plus-info {
+    display: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    & a:link {
+      text-decoration: none;
+    }
+  }
+  & span {
+    & a {
+      font-size: 20px;
+    }
+  }
+  & .service__title__lien {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  & a {
+    @include lien.lien;
+    font-size: bold;
+    text-decoration: none;
+    & :hover {
+      color: couleurs.$vertAmande;
+    }
+  }
+}
+
+.hero__service {
+  object-fit: cover;
+  object-position: 0 15%;
+}
+
+@media screen and (max-width: formatecran.$version-tablette) {
+  .section-service {
+    #test {
+      display: none;
+    }
+    .gradiant {
+      display: block;
+    }
+
+    .plus-info {
+      display: block;
+      bottom: 280px;
+    }
+    .active {
+      display: none;
+    }
+    .appear {
+      display: block;
+    }
+    & span {
+      & a {
+        font-size: 20px;
+      }
+    }
+  }
+}
